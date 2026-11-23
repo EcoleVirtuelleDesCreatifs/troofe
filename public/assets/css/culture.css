@@ -1,0 +1,121 @@
+/* ============================================================
+   Trôofê — Culture & savoir-faire
+   Groupes de danse, prestations artistiques, artisans
+   ============================================================ */
+
+/* Menu principal : sous-menu Culture */
+.nav-dd{ position:relative; display:flex; align-items:center; }
+.navlinks .nav-dd > a.dd-t{ cursor:pointer; }
+/* 8 entrées : espacement resserré pour garder la barre sur une ligne */
+.navlinks.desk > a,.navlinks.desk .nav-dd > a{ margin-inline:.55rem; }
+.dd-caret{ font-size:.7em; margin-left:.15rem; display:inline-block; transition:transform .25s; }
+.nav-dd > a[aria-expanded="true"] .dd-caret{ transform:rotate(180deg); }
+.nav-dd-menu{ min-width:320px; padding:.5rem; border:1px solid var(--line); border-radius:var(--r); background:var(--surface); box-shadow:var(--shadow); margin-top:.6rem!important; }
+.navlinks .nav-dd-menu a.dropdown-item{ display:flex; gap:.75rem; align-items:flex-start; margin:0; padding:.6rem .7rem; border-radius:10px; white-space:normal; color:var(--ink); font-weight:500; }
+.navlinks .nav-dd-menu a.dropdown-item::after{ display:none; }
+.navlinks .nav-dd-menu a.dropdown-item:hover,.navlinks .nav-dd-menu a.dropdown-item.on{ background:var(--surface-2); color:var(--ink); }
+.nav-dd-menu .dropdown-item > i{ font-size:1.1rem; color:var(--ocre); width:1.6rem; height:1.6rem; display:grid; place-items:center; background:var(--ocre-soft); border-radius:8px; flex:none; }
+.nav-dd-menu .dropdown-item b{ display:block; font-weight:600; font-size:.92rem; }
+.nav-dd-menu .dropdown-item small{ display:block; color:var(--muted); font-size:.78rem; }
+.offcanvas .navlinks a.sub{ padding-left:1.6rem; font-size:.95rem; color:var(--muted); }
+.offcanvas .navlinks a.sub.active{ color:var(--brun); }
+
+/* Badges et cartes */
+.cu-verif{ color:var(--ocre); font-size:.9em; vertical-align:baseline; }
+.cu-clamp{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.cu-card .body{ gap:.45rem; }
+.cu-foot{ display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-top:auto; padding-top:.65rem; border-top:1px solid var(--line); font-size:.9rem; }
+.cu-chip-pub{ background:transparent; border:1px solid var(--line); }
+
+/* Sélecteur de rubriques */
+.cu-switch{ display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+.cu-switch a{ display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .95rem; border:1px solid var(--line); border-radius:999px; color:var(--ink); font-weight:550; font-size:.9rem; background:var(--surface); }
+.cu-switch a:hover{ border-color:var(--brun); color:var(--ink); }
+.cu-switch a.on{ background:var(--brun); border-color:var(--brun); color:var(--brun-ink); }
+.cu-switch .n{ font-size:.72rem; font-weight:700; background:var(--surface-2); color:var(--muted); border-radius:999px; padding:.05rem .45rem; }
+.cu-switch a.on .n{ background:rgba(255,255,255,.18); color:inherit; }
+
+/* Page carrefour */
+.cu-tiles{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
+@media (max-width:900px){ .cu-tiles{ grid-template-columns:1fr; } }
+.cu-tile{ position:relative; display:flex; align-items:flex-end; min-height:360px; border-radius:var(--r); overflow:hidden; color:#F6EEE6; background:#130D0A; isolation:isolate; }
+.cu-tile > img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; transition:transform .8s var(--ease, ease); }
+.cu-tile::before{ content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg, rgba(19,13,10,0) 25%, rgba(19,13,10,.88) 78%); }
+.cu-tile:hover > img{ transform:scale(1.05); }
+.cu-tile:hover{ color:#fff; }
+.cu-tile-in{ padding:1.4rem; display:flex; flex-direction:column; gap:.4rem; }
+.cu-tile-in .eyebrow{ color:#E2A65A; }
+.cu-tile-in h2{ color:#fff; font-size:1.55rem; margin:0; }
+.cu-tile-in p{ margin:0; font-size:.9rem; color:#E8DDD2; }
+.cu-tile-in .link-arrow{ color:#E2A65A; margin-top:.35rem; }
+
+.cu-pack{ padding:1.6rem; border-color:var(--ocre); background:linear-gradient(135deg, var(--ocre-soft), var(--surface) 60%); }
+.cu-est{ border-top:1px dashed var(--line); padding-top:1rem; }
+.cu-est-lines{ display:grid; gap:.5rem; margin-bottom:1rem; }
+.cu-est-lines > div{ display:flex; gap:.75rem; align-items:center; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:.6rem .8rem; }
+.cu-est-lines i{ color:var(--ocre); font-size:1.1rem; }
+.cu-est-lines .min-w-0{ flex:1; }
+.cu-est-total{ display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; background:var(--brun); color:var(--brun-ink); border-radius:var(--r); padding:1rem 1.2rem; }
+.cu-est-total b{ font-family:var(--f-display); font-size:1.7rem; line-height:1.1; }
+.cu-est-total .muted{ color:inherit!important; opacity:.75; }
+.cu-est-total .btn-brand{ background:var(--ocre); border-color:var(--ocre); color:#fff; }
+
+.cu-cta{ display:flex; justify-content:space-between; align-items:center; gap:1.5rem; flex-wrap:wrap; background:var(--brun); color:var(--brun-ink); border-radius:var(--r); padding:2rem; }
+.cu-cta h2{ color:inherit; } .cu-cta p{ opacity:.85; max-width:60ch; } .cu-cta .eyebrow{ color:#E2A65A; }
+
+/* Fiche : formules */
+.cu-offers{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:1rem; }
+.cu-offer{ position:relative; display:flex; flex-direction:column; gap:.35rem; border:1px solid var(--line); border-radius:var(--r); padding:1.2rem; background:var(--surface); }
+.cu-offer.feat{ border-color:var(--brun); box-shadow:0 0 0 1px var(--brun) inset; }
+.cu-offer .tag{ position:absolute; top:-.7rem; left:1rem; }
+.cu-offer h3{ font-size:1.08rem; margin:0; }
+.cu-offer .price,.cu-book .price,.cu-product .price{ font-family:var(--f-display); font-weight:700; font-size:1.35rem; color:var(--brun); }
+.cu-rep{ columns:2; column-gap:2rem; margin:0; padding-left:1.2rem; } .cu-rep li{ padding:.2rem 0; break-inside:avoid; }
+@media (max-width:600px){ .cu-rep{ columns:1; } }
+
+/* Calendrier */
+.cu-cal-h,.cu-cal-g{ display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:.35rem; }
+.cu-cal-h{ margin-bottom:.35rem; } .cu-cal-h span{ font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); text-align:center; }
+.cu-day{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; aspect-ratio:1.25; border-radius:10px; border:1px solid var(--line); background:var(--surface); font:inherit; color:var(--ink); padding:0; min-width:0; }
+.cu-day b{ font-weight:600; font-variant-numeric:tabular-nums; }
+.cu-day i{ font-style:normal; font-size:.62rem; text-transform:uppercase; color:var(--muted); line-height:1; }
+.cu-day.free{ cursor:pointer; background:color-mix(in srgb, var(--ok, #2F7A4A) 8%, var(--surface)); border-color:color-mix(in srgb, var(--ok, #2F7A4A) 30%, var(--line)); }
+.cu-day.free:hover{ background:var(--brun); color:var(--brun-ink); border-color:var(--brun); } .cu-day.free:hover i{ color:inherit; }
+.cu-day.today{ outline:2px solid var(--ocre); outline-offset:1px; }
+.cu-day.off{ opacity:.4; }
+.cu-day.busy{ background:repeating-linear-gradient(135deg, var(--surface-2) 0 6px, transparent 6px 11px); color:var(--muted); } .cu-day.busy b{ text-decoration:line-through; }
+.cu-dot{ display:inline-block; width:10px; height:10px; border-radius:3px; vertical-align:middle; margin-right:.2rem; border:1px solid var(--line); }
+.cu-dot.free{ background:color-mix(in srgb, var(--ok, #2F7A4A) 18%, var(--surface)); }
+.cu-dot.busy{ background:repeating-linear-gradient(135deg, var(--surface-2) 0 3px, transparent 3px 5px); }
+
+/* Fiche artisan */
+.cu-products{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:1rem; }
+.cu-product{ display:flex; flex-direction:column; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; background:var(--surface); }
+.cu-product img{ width:100%; aspect-ratio:16/10; object-fit:cover; display:block; }
+.cu-product .price{ font-size:1.15rem; }
+.cu-visit{ display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+.cu-visit > i{ font-size:1.6rem; color:var(--ocre); width:3rem; height:3rem; display:grid; place-items:center; background:var(--ocre-soft); border-radius:12px; }
+
+/* Encart de réservation */
+.cu-ticks{ list-style:none; padding:0; display:grid; gap:.35rem; font-size:.86rem; }
+.cu-ticks i{ color:var(--ok, #2F7A4A); margin-right:.35rem; }
+
+/* Mes réservations */
+.cu-res{ display:flex; gap:1rem; align-items:flex-start; }
+.cu-res > img{ width:96px; height:72px; border-radius:10px; object-fit:cover; flex:none; }
+.cu-msg{ background:var(--surface-2); border-radius:8px; padding:.5rem .7rem; }
+@media (max-width:560px){ .cu-res{ flex-direction:column; } .cu-res > img{ width:100%; height:120px; } }
+
+/* Accueil */
+.cu-home{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
+@media (max-width:900px){ .cu-home{ grid-template-columns:1fr; } }
+.cu-hcard{ display:flex; flex-direction:column; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; background:var(--surface); color:var(--ink); transition:border-color .3s; }
+.cu-hcard:hover{ border-color:var(--brun); color:var(--ink); }
+.cu-hcard-img{ display:block; aspect-ratio:16/10; overflow:hidden; }
+.cu-hcard-img img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s ease; } .cu-hcard:hover .cu-hcard-img img{ transform:scale(1.04); }
+.cu-hcard-b{ display:flex; flex-direction:column; gap:.35rem; padding:1.1rem 1.2rem 1.3rem; }
+.cu-hcard-b h3{ font-size:1.35rem; margin:0; }
+.cu-hnames{ font-size:.85rem; color:var(--muted); }
+
+/* Pied de page : colonne Culture */
+@media (min-width:801px){ footer.site .cols{ grid-template-columns:1.4fr repeat(4,1fr); } }

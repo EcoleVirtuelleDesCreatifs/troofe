@@ -1,0 +1,6 @@
+# Hébergement mutualisé (LWS) : si la racine web pointe sur ce dossier,
+# toutes les requêtes sont renvoyées vers /public.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

@@ -1,0 +1,1 @@
+<div class="notice warn"><i class="bi bi-pencil-square"></i><div>Texte à rédiger et faire valider par votre conseil juridique avant la mise en ligne (raison sociale, RCCM, hébergeur, responsable de publication, durées de conservation, droits des personnes, conditions de vente et de remboursement).</div></div>

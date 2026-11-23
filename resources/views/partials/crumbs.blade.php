@@ -1,0 +1,1 @@
+<nav aria-label="{{ __('Fil d\'Ariane') }}" class="small mb-3"><a href="{{ route('home') }}">{{ __('Accueil') }}</a>@foreach ($items as $label => $url) <span class="muted">/</span> @if ($url)<a href="{{ $url }}">{{ $label }}</a>@else<span class="muted">{{ $label }}</span>@endif @endforeach</nav>

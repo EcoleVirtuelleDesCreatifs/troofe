@@ -1,0 +1,3 @@
+<!DOCTYPE html><html lang="{{ app()->getLocale() }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Trôofê</title>
+<style>body{font-family:system-ui,sans-serif;background:#FBF6F0;color:#2A1A12;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;padding:1rem}b{font-size:4rem;color:#B5802A;display:block}a{color:#5A1E0E}</style></head>
+<body><div><img src="/assets/img/logo/logo-horizontal.svg" alt="Trôofê" height="44"><b>500</b><p>{{ 500 === 503 ? 'Maintenance en cours, revenez dans quelques minutes. / Under maintenance, back shortly.' : 'Une erreur est survenue. / Something went wrong.' }}</p><a href="/">Accueil / Home</a></div></body></html>

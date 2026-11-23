@@ -1,0 +1,5029 @@
+{
+ "users": [
+  {
+   "id": "u1",
+   "nom": "Awa Koné",
+   "email": "admin@troofe.ci",
+   "pwd": "demo",
+   "roles": [
+    "admin",
+    "membre"
+   ],
+   "statut": "actif",
+   "tel": "+225 07 08 11 22 33",
+   "ville": "Abidjan",
+   "created": "2025-10-19T12:40:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": true
+   },
+   "favoris": {
+    "restaurants": [
+     "r2"
+    ],
+    "plats": [
+     "p1"
+    ]
+   },
+   "points": 0,
+   "avatar": null,
+   "cover": "nuit",
+   "bio": "Responsable plateforme et partenariats. Je valide les fiches, les événements et les campagnes.",
+   "naissance": "",
+   "genre": "Femme",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Cocody Ambassades",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false,
+    "adminHome": "dashboard"
+   },
+   "twofa": true,
+   "sessions": [
+    {
+     "id": "s0a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Abidjan",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s0b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Abidjan",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": [],
+   "poste": "Responsable plateforme",
+   "departement": "Direction digitale",
+   "telPro": "+225 27 22 00 11 22",
+   "signature": "Awa Koné — Trôofê · contact@troofe.net",
+   "alertes": {
+    "demandes": true,
+    "incidents": true,
+    "avis": true,
+    "campagnes": true,
+    "digest": "quotidien"
+   }
+  },
+  {
+   "id": "u2",
+   "nom": "Kouadio Yao",
+   "email": "chef@troofe.ci",
+   "pwd": "demo",
+   "roles": [
+    "membre",
+    "restaurateur"
+   ],
+   "statut": "actif",
+   "tel": "+225 05 44 21 90 10",
+   "ville": "Abidjan",
+   "created": "2026-01-27T12:00:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": true,
+    "push": true
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 120,
+   "avatar": null,
+   "cover": "terre",
+   "bio": "Chef et propriétaire de deux maquis à Abidjan. Braise, canari et produits du marché de Cocody.",
+   "naissance": "",
+   "genre": "Homme",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Angré",
+   "langue": "Français",
+   "cuisines": [
+    "Ivoirienne"
+   ],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "@chefkouadio",
+    "facebook": "Maquis Tantie Rose",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s1a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Abidjan",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s1b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Abidjan",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u3",
+   "nom": "Aya Traoré",
+   "email": "aya@troofe.ci",
+   "pwd": "demo",
+   "roles": [
+    "membre"
+   ],
+   "statut": "actif",
+   "tel": "+225 01 23 45 67 89",
+   "ville": "Abidjan",
+   "created": "2026-07-26T12:00:00.000Z",
+   "consent": false,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": false
+   },
+   "favoris": {
+    "restaurants": [
+     "r1",
+     "r4"
+    ],
+    "plats": [
+     "p3",
+     "p6"
+    ]
+   },
+   "points": 340,
+   "avatar": null,
+   "cover": "ocre",
+   "bio": "Gourmande assumée, je teste un maquis par semaine et je note tout. Fan absolue de garba et de thiéb du vendredi.",
+   "naissance": "1994-05-12",
+   "genre": "Femme",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Riviera 3",
+   "langue": "Français",
+   "cuisines": [
+    "Ivoirienne",
+    "Sénégalaise",
+    "Ghanéenne"
+   ],
+   "regime": [
+    "Sans porc"
+   ],
+   "allergies": "Arachides (légère)",
+   "piment": 3,
+   "adresses": [
+    {
+     "id": "ad1",
+     "label": "Maison",
+     "adresse": "Riviera 3, rue des Ambassades, villa 12",
+     "defaut": true
+    },
+    {
+     "id": "ad2",
+     "label": "Bureau",
+     "adresse": "Plateau, Immeuble CCIA, 8e étage",
+     "defaut": false
+    }
+   ],
+   "socials": {
+    "instagram": "@aya.mange",
+    "facebook": "",
+    "tiktok": "@ayafood"
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s2a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Abidjan",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s2b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Abidjan",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [
+    "r1",
+    "r3"
+   ],
+   "pointsLog": [
+    {
+     "date": "2026-11-19T12:28:00.000Z",
+     "pts": 10,
+     "motif": "Avis publié — Maquis Chez Tantie Rose"
+    },
+    {
+     "date": "2026-11-08T12:15:00.000Z",
+     "pts": 10,
+     "motif": "Avis publié — Teranga Saveurs"
+    },
+    {
+     "date": "2026-11-03T12:20:00.000Z",
+     "pts": 25,
+     "motif": "Commande TRF-26040"
+    },
+    {
+     "date": "2026-10-14T12:40:00.000Z",
+     "pts": 50,
+     "motif": "Bonus de bienvenue"
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "nom": "Kwame Mensah",
+   "email": "event@troofe.ci",
+   "pwd": "demo",
+   "roles": [
+    "membre",
+    "organisateur"
+   ],
+   "statut": "actif",
+   "tel": "+233 24 555 0101",
+   "ville": "Accra",
+   "created": "2026-05-07T12:20:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": true
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 60,
+   "avatar": null,
+   "cover": "vert",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Ghana",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s3a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Accra",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s3b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Accra",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u5",
+   "nom": "Fatou Ndiaye",
+   "email": "fatou@exemple.sn",
+   "pwd": "demo",
+   "roles": [
+    "membre",
+    "restaurateur"
+   ],
+   "statut": "actif",
+   "tel": "+221 77 400 12 12",
+   "ville": "Dakar",
+   "created": "2026-05-27T12:00:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": true
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 0,
+   "avatar": null,
+   "cover": "brun",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Sénégal",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s4a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Dakar",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s4b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Dakar",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u6",
+   "nom": "Serge Bamba",
+   "email": "serge@exemple.ci",
+   "pwd": "demo",
+   "roles": [
+    "membre"
+   ],
+   "statut": "en_attente",
+   "tel": "+225 07 77 00 11",
+   "ville": "Bouaké",
+   "created": "2026-11-20T12:51:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": false
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 0,
+   "avatar": null,
+   "cover": "nuit",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Côte d'Ivoire",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s5a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Bouaké",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s5b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Bouaké",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u7",
+   "nom": "Mariam Diallo",
+   "email": "mariam@exemple.ci",
+   "pwd": "demo",
+   "roles": [
+    "membre"
+   ],
+   "statut": "actif",
+   "tel": "+225 05 12 12 12",
+   "ville": "Abidjan",
+   "created": "2026-09-24T12:00:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": true
+   },
+   "favoris": {
+    "restaurants": [
+     "r3"
+    ],
+    "plats": []
+   },
+   "points": 90,
+   "avatar": null,
+   "cover": "terre",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Côte d'Ivoire",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s6a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Abidjan",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s6b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Abidjan",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u8",
+   "nom": "Jean-Marc Eboué",
+   "email": "jm@exemple.cm",
+   "pwd": "demo",
+   "roles": [
+    "membre"
+   ],
+   "statut": "desactive",
+   "tel": "+237 6 77 12 34 56",
+   "ville": "Douala",
+   "created": "2026-03-28T12:00:00.000Z",
+   "consent": false,
+   "notif": {
+    "email": false,
+    "sms": false,
+    "push": false
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 0,
+   "avatar": null,
+   "cover": "ocre",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Cameroun",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s7a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Douala",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s7b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Douala",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u9",
+   "nom": "Adjoa Asante",
+   "email": "adjoa@exemple.gh",
+   "pwd": "demo",
+   "roles": [
+    "membre"
+   ],
+   "statut": "actif",
+   "tel": "+233 20 111 2233",
+   "ville": "Accra",
+   "created": "2026-10-09T12:45:00.000Z",
+   "consent": true,
+   "notif": {
+    "email": true,
+    "sms": false,
+    "push": true
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 15,
+   "avatar": null,
+   "cover": "vert",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Ghana",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s8a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Accra",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s8b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Accra",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  },
+  {
+   "id": "u10",
+   "nom": "Agent Contrôle",
+   "email": "controle@troofe.ci",
+   "pwd": "demo",
+   "roles": [
+    "controleur"
+   ],
+   "statut": "actif",
+   "tel": "",
+   "ville": "Abidjan",
+   "created": "2026-10-24T12:30:00.000Z",
+   "consent": false,
+   "notif": {
+    "email": false,
+    "sms": false,
+    "push": false
+   },
+   "favoris": {
+    "restaurants": [],
+    "plats": []
+   },
+   "points": 0,
+   "avatar": null,
+   "cover": "brun",
+   "bio": "",
+   "naissance": "",
+   "genre": "",
+   "pays": "Côte d'Ivoire",
+   "quartier": "",
+   "langue": "Français",
+   "cuisines": [],
+   "regime": [],
+   "allergies": "",
+   "piment": 2,
+   "adresses": [],
+   "socials": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+   },
+   "prefs": {
+    "theme": "system",
+    "densite": "confort",
+    "publicProfile": true,
+    "showFavs": true,
+    "newsletter": false
+   },
+   "twofa": false,
+   "sessions": [
+    {
+     "id": "s9a",
+     "appareil": "Chrome · Windows",
+     "lieu": "Abidjan",
+     "date": "2026-11-23T09:00:00.000Z",
+     "courant": true
+    },
+    {
+     "id": "s9b",
+     "appareil": "Safari · iPhone",
+     "lieu": "Abidjan",
+     "date": "2026-11-20T20:51:00.000Z"
+    }
+   ],
+   "logins": [
+    "2026-11-23T09:00:00.000Z",
+    "2026-11-22T08:37:00.000Z",
+    "2026-11-20T20:51:00.000Z",
+    "2026-11-17T13:42:00.000Z"
+   ],
+   "suivis": [],
+   "pointsLog": []
+  }
+ ],
+ "restaurants": [
+  {
+   "id": "r1",
+   "ownerId": "u2",
+   "nom": "Maquis Chez Tantie Rose",
+   "cuisine": "Ivoirienne",
+   "ville": "Abidjan",
+   "quartier": "Cocody Angré",
+   "adresse": "Rue des Jardins, Angré 8e tranche",
+   "tel": "+225 27 22 41 10 10",
+   "whatsapp": "2250544219010",
+   "description": "Le maquis de quartier qui a fait la réputation du poisson braisé à Angré. Attiéké frais du jour, alloco doré à la commande et kedjenou mijoté au canari le week-end.",
+   "horaires": {
+    "lun": "11:00–23:00",
+    "mar": "11:00–23:00",
+    "mer": "11:00–23:00",
+    "jeu": "11:00–23:00",
+    "ven": "11:00–01:00",
+    "sam": "11:00–01:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait",
+    "livraison_resto"
+   ],
+   "budget": 1,
+   "statut": "publie",
+   "sponsorise": true,
+   "vues": 4820,
+   "plan": "pro",
+   "created": "2026-02-16T12:40:00.000Z",
+   "verifie": "2026-11-17T12:42:00.000Z"
+  },
+  {
+   "id": "r2",
+   "ownerId": "u2",
+   "nom": "Le Kedjenou Royal",
+   "cuisine": "Ivoirienne",
+   "ville": "Abidjan",
+   "quartier": "Plateau",
+   "adresse": "Avenue Chardy, Plateau",
+   "tel": "+225 27 20 33 44 55",
+   "whatsapp": "2250544219010",
+   "description": "Table du midi pour le Plateau : foutou banane, sauce graine et kedjenou de pintade servis en 20 minutes. Salle climatisée, terrasse ombragée.",
+   "horaires": {
+    "lun": "11:30–16:00",
+    "mar": "11:30–16:00",
+    "mer": "11:30–16:00",
+    "jeu": "11:30–16:00",
+    "ven": "11:30–22:30",
+    "sam": "11:30–22:30",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait",
+    "livraison_externe"
+   ],
+   "budget": 2,
+   "statut": "publie",
+   "sponsorise": false,
+   "vues": 2310,
+   "plan": "pro",
+   "created": "2026-05-07T12:20:00.000Z",
+   "verifie": "2026-11-03T12:20:00.000Z"
+  },
+  {
+   "id": "r3",
+   "ownerId": "u5",
+   "nom": "Teranga Saveurs",
+   "cuisine": "Sénégalaise",
+   "ville": "Abidjan",
+   "quartier": "Marcory Zone 4",
+   "adresse": "Rue du Dr Blanchard, Zone 4",
+   "tel": "+225 27 21 25 00 00",
+   "whatsapp": "221774001212",
+   "description": "Thiéboudienne au poisson le vendredi, yassa poulet tous les jours et bissap maison. Une adresse sénégalaise tenue par une famille de Saint-Louis.",
+   "horaires": {
+    "lun": "12:00–22:00",
+    "mar": "12:00–22:00",
+    "mer": "12:00–22:00",
+    "jeu": "12:00–22:00",
+    "ven": "12:00–22:00",
+    "sam": "12:00–22:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait",
+    "livraison_resto"
+   ],
+   "budget": 2,
+   "statut": "publie",
+   "sponsorise": false,
+   "vues": 1890,
+   "plan": "essentiel",
+   "created": "2026-06-06T12:50:00.000Z",
+   "verifie": "2026-11-11T12:24:00.000Z"
+  },
+  {
+   "id": "r4",
+   "ownerId": null,
+   "nom": "Accra Chop Bar",
+   "cuisine": "Ghanéenne",
+   "ville": "Accra",
+   "quartier": "Osu",
+   "adresse": "Oxford Street, Osu",
+   "tel": "+233 30 277 0000",
+   "whatsapp": "233245550101",
+   "description": "Waakye du matin, banku et tilapia grillé, kelewele épicé au gingembre : le chop bar d'Osu qui nourrit le quartier depuis 2009.",
+   "horaires": {
+    "lun": "07:00–21:00",
+    "mar": "07:00–21:00",
+    "mer": "07:00–21:00",
+    "jeu": "07:00–21:00",
+    "ven": "07:00–21:00",
+    "sam": "07:00–21:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait"
+   ],
+   "budget": 1,
+   "statut": "publie",
+   "sponsorise": true,
+   "vues": 3120,
+   "plan": "essentiel",
+   "created": "2026-03-08T12:20:00.000Z",
+   "verifie": "2026-10-14T12:40:00.000Z"
+  },
+  {
+   "id": "r5",
+   "ownerId": null,
+   "nom": "Mama Ndolé",
+   "cuisine": "Camerounaise",
+   "ville": "Abidjan",
+   "quartier": "Riviera 2",
+   "adresse": "Carrefour Riviera 2",
+   "tel": "+225 07 00 00 12 12",
+   "whatsapp": "",
+   "description": "Ndolé aux crevettes, poulet DG et plantain mûr. Plats généreux, cuisine faite maison par Mama Esther, originaire de Douala.",
+   "horaires": {
+    "lun": "12:00–22:00",
+    "mar": "12:00–22:00",
+    "mer": "12:00–22:00",
+    "jeu": "12:00–22:00",
+    "ven": "12:00–22:00",
+    "sam": "12:00–22:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "livraison_externe"
+   ],
+   "budget": 2,
+   "statut": "publie",
+   "sponsorise": false,
+   "vues": 980,
+   "plan": "gratuit",
+   "created": "2026-06-26T12:30:00.000Z",
+   "verifie": "2026-08-20T12:35:00.000Z"
+  },
+  {
+   "id": "r6",
+   "ownerId": null,
+   "nom": "Bistrot Jollof & Co",
+   "cuisine": "Nigériane",
+   "ville": "Lagos",
+   "quartier": "Victoria Island",
+   "adresse": "Adeola Odeku Street",
+   "tel": "+234 1 270 0000",
+   "whatsapp": "",
+   "description": "Party jollof fumé au bois, suya de bœuf et egusi aux légumes. Ambiance afrobeats le samedi soir.",
+   "horaires": {
+    "lun": "12:00–23:00",
+    "mar": "12:00–23:00",
+    "mer": "12:00–23:00",
+    "jeu": "12:00–23:00",
+    "ven": "12:00–23:00",
+    "sam": "12:00–23:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait",
+    "livraison_externe"
+   ],
+   "budget": 3,
+   "statut": "publie",
+   "sponsorise": false,
+   "vues": 1450,
+   "plan": "gratuit",
+   "created": "2026-07-06T12:20:00.000Z",
+   "verifie": "2026-10-24T12:30:00.000Z"
+  },
+  {
+   "id": "r7",
+   "ownerId": null,
+   "nom": "Le Garbadrome",
+   "cuisine": "Ivoirienne",
+   "ville": "Abidjan",
+   "quartier": "Yopougon",
+   "adresse": "Sideci, près du marché",
+   "tel": "+225 05 05 05 05 05",
+   "whatsapp": "2250505050505",
+   "description": "Le garba comme on l'aime : attiéké, thon frit, piment frais et oignon. Service rapide, prix serrés, ouvert tard.",
+   "horaires": {
+    "lun": "10:00–00:00",
+    "mar": "10:00–00:00",
+    "mer": "10:00–00:00",
+    "jeu": "10:00–00:00",
+    "ven": "10:00–00:00",
+    "sam": "10:00–00:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait"
+   ],
+   "budget": 1,
+   "statut": "publie",
+   "sponsorise": false,
+   "vues": 2670,
+   "plan": "gratuit",
+   "created": "2026-08-25T12:30:00.000Z",
+   "verifie": "2026-11-19T12:28:00.000Z"
+  },
+  {
+   "id": "r8",
+   "ownerId": null,
+   "nom": "Saveurs du Bénin",
+   "cuisine": "Béninoise",
+   "ville": "Cotonou",
+   "quartier": "Haie Vive",
+   "adresse": "Rue de la Haie Vive",
+   "tel": "+229 21 30 00 00",
+   "whatsapp": "",
+   "description": "Amiwô, pâte rouge et poulet bicyclette. Une cuisine béninoise du dimanche, servie toute la semaine.",
+   "horaires": {
+    "lun": "11:00–22:00",
+    "mar": "11:00–22:00",
+    "mer": "11:00–22:00",
+    "jeu": "11:00–22:00",
+    "ven": "11:00–22:00",
+    "sam": "11:00–22:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait"
+   ],
+   "budget": 2,
+   "statut": "publie",
+   "sponsorise": false,
+   "vues": 640,
+   "plan": "gratuit",
+   "created": "2026-08-05T12:50:00.000Z",
+   "verifie": "2026-07-06T12:20:00.000Z"
+  },
+  {
+   "id": "r9",
+   "ownerId": "u5",
+   "nom": "Dibi Corner",
+   "cuisine": "Sénégalaise",
+   "ville": "Abidjan",
+   "quartier": "Treichville",
+   "adresse": "Avenue 16, Treichville",
+   "tel": "+225 07 66 55 44 33",
+   "whatsapp": "221774001212",
+   "description": "Dibi d'agneau grillé au feu de bois, oignons et moutarde, à partager tard le soir.",
+   "horaires": {
+    "lun": "18:00–02:00",
+    "mar": "18:00–02:00",
+    "mer": "18:00–02:00",
+    "jeu": "18:00–02:00",
+    "ven": "18:00–02:00",
+    "sam": "18:00–02:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place",
+    "retrait"
+   ],
+   "budget": 2,
+   "statut": "en_attente",
+   "sponsorise": false,
+   "vues": 0,
+   "plan": "gratuit",
+   "created": "2026-11-21T12:14:00.000Z",
+   "verifie": null
+  },
+  {
+   "id": "r10",
+   "ownerId": null,
+   "nom": "Placali Express",
+   "cuisine": "Ivoirienne",
+   "ville": "Bouaké",
+   "quartier": "Commerce",
+   "adresse": "Rue du Commerce",
+   "tel": "+225 07 12 00 99",
+   "whatsapp": "",
+   "description": "Placali sauce kopè et sauce gombo, recettes du centre de la Côte d'Ivoire.",
+   "horaires": {
+    "lun": "10:00–21:00",
+    "mar": "10:00–21:00",
+    "mer": "10:00–21:00",
+    "jeu": "10:00–21:00",
+    "ven": "10:00–21:00",
+    "sam": "10:00–21:00",
+    "dim": "Fermé"
+   },
+   "services": [
+    "sur_place"
+   ],
+   "budget": 1,
+   "statut": "suspendu",
+   "sponsorise": false,
+   "vues": 210,
+   "plan": "gratuit",
+   "created": "2026-01-27T12:00:00.000Z",
+   "verifie": "2026-04-17T12:40:00.000Z"
+  }
+ ],
+ "menus": [
+  {
+   "id": "m1",
+   "restoId": "r1",
+   "nom": "Attiéké poisson braisé (capitaine)",
+   "prix": 5500,
+   "categorie": "Plats",
+   "platId": "p1",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m2",
+   "restoId": "r1",
+   "nom": "Garba spécial",
+   "prix": 1500,
+   "categorie": "Plats",
+   "platId": "p1",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m3",
+   "restoId": "r1",
+   "nom": "Kedjenou de poulet",
+   "prix": 6000,
+   "categorie": "Plats",
+   "platId": "p2",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m4",
+   "restoId": "r1",
+   "nom": "Alloco œuf",
+   "prix": 1500,
+   "categorie": "Accompagnements",
+   "platId": "p8",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m5",
+   "restoId": "r1",
+   "nom": "Poulet braisé entier",
+   "prix": 8000,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": false,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m6",
+   "restoId": "r1",
+   "nom": "Bissap maison 50 cl",
+   "prix": 800,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m7",
+   "restoId": "r1",
+   "nom": "Gnamakoudji (gingembre)",
+   "prix": 800,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m8",
+   "restoId": "r2",
+   "nom": "Kedjenou de pintade",
+   "prix": 8500,
+   "categorie": "Plats",
+   "platId": "p2",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m9",
+   "restoId": "r2",
+   "nom": "Foutou banane sauce graine",
+   "prix": 6500,
+   "categorie": "Plats",
+   "platId": "p10",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m10",
+   "restoId": "r2",
+   "nom": "Attiéké poisson",
+   "prix": 6000,
+   "categorie": "Plats",
+   "platId": "p1",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m11",
+   "restoId": "r2",
+   "nom": "Alloco",
+   "prix": 1500,
+   "categorie": "Accompagnements",
+   "platId": "p8",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m12",
+   "restoId": "r2",
+   "nom": "Jus de baobab",
+   "prix": 1200,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m13",
+   "restoId": "r3",
+   "nom": "Thiéboudienne (vendredi)",
+   "prix": 7000,
+   "categorie": "Plats",
+   "platId": "p4",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m14",
+   "restoId": "r3",
+   "nom": "Poulet yassa",
+   "prix": 5500,
+   "categorie": "Plats",
+   "platId": "p7",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m15",
+   "restoId": "r3",
+   "nom": "Mafé d'agneau",
+   "prix": 6500,
+   "categorie": "Plats",
+   "platId": "p9",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m16",
+   "restoId": "r3",
+   "nom": "Pastels (6 pièces)",
+   "prix": 2500,
+   "categorie": "Entrées",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m17",
+   "restoId": "r3",
+   "nom": "Bissap",
+   "prix": 1000,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m18",
+   "restoId": "r4",
+   "nom": "Waakye complet",
+   "prix": 4000,
+   "categorie": "Plats",
+   "platId": "p6",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m19",
+   "restoId": "r4",
+   "nom": "Banku & tilapia",
+   "prix": 7500,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m20",
+   "restoId": "r4",
+   "nom": "Kelewele",
+   "prix": 2000,
+   "categorie": "Accompagnements",
+   "platId": "p8",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m21",
+   "restoId": "r4",
+   "nom": "Jollof rice & poulet",
+   "prix": 5000,
+   "categorie": "Plats",
+   "platId": "p3",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m22",
+   "restoId": "r4",
+   "nom": "Sobolo",
+   "prix": 1000,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m23",
+   "restoId": "r5",
+   "nom": "Ndolé crevettes",
+   "prix": 7500,
+   "categorie": "Plats",
+   "platId": "p5",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m24",
+   "restoId": "r5",
+   "nom": "Poulet DG",
+   "prix": 8000,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m25",
+   "restoId": "r5",
+   "nom": "Plantain mûr",
+   "prix": 1500,
+   "categorie": "Accompagnements",
+   "platId": "p8",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m26",
+   "restoId": "r6",
+   "nom": "Party jollof",
+   "prix": 6000,
+   "categorie": "Plats",
+   "platId": "p3",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m27",
+   "restoId": "r6",
+   "nom": "Suya de bœuf",
+   "prix": 4500,
+   "categorie": "Entrées",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m28",
+   "restoId": "r6",
+   "nom": "Egusi & pounded yam",
+   "prix": 7000,
+   "categorie": "Plats",
+   "platId": "p11",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m29",
+   "restoId": "r6",
+   "nom": "Dodo",
+   "prix": 1500,
+   "categorie": "Accompagnements",
+   "platId": "p8",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m30",
+   "restoId": "r6",
+   "nom": "Chapman",
+   "prix": 2000,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m31",
+   "restoId": "r7",
+   "nom": "Garba simple",
+   "prix": 1000,
+   "categorie": "Plats",
+   "platId": "p1",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m32",
+   "restoId": "r7",
+   "nom": "Garba thon double",
+   "prix": 2000,
+   "categorie": "Plats",
+   "platId": "p1",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m33",
+   "restoId": "r7",
+   "nom": "Alloco piment",
+   "prix": 1000,
+   "categorie": "Accompagnements",
+   "platId": "p8",
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m34",
+   "restoId": "r7",
+   "nom": "Eau 1,5 L",
+   "prix": 500,
+   "categorie": "Boissons",
+   "platId": null,
+   "dispo": true,
+   "description": "Préparé maison, servi frais.",
+   "options": []
+  },
+  {
+   "id": "m35",
+   "restoId": "r8",
+   "nom": "Amiwô & poulet",
+   "prix": 5500,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m36",
+   "restoId": "r8",
+   "nom": "Poulet bicyclette braisé",
+   "prix": 7000,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m37",
+   "restoId": "r8",
+   "nom": "Akassa",
+   "prix": 1000,
+   "categorie": "Accompagnements",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m38",
+   "restoId": "r9",
+   "nom": "Dibi d'agneau (500 g)",
+   "prix": 8000,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  },
+  {
+   "id": "m39",
+   "restoId": "r9",
+   "nom": "Frites de manioc",
+   "prix": 1500,
+   "categorie": "Accompagnements",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": []
+  },
+  {
+   "id": "m40",
+   "restoId": "r10",
+   "nom": "Placali sauce kopè",
+   "prix": 3000,
+   "categorie": "Plats",
+   "platId": null,
+   "dispo": true,
+   "description": "Portion généreuse, préparée à la commande.",
+   "options": [
+    "Piment à part",
+    "Sans oignon",
+    "Supplément alloco (+500)"
+   ]
+  }
+ ],
+ "plats": [
+  {
+   "id": "p1",
+   "nom": "Attiéké poisson braisé",
+   "variantes": "Garba (thon frit), attiéké-alloco",
+   "origines": [
+    "Côte d'Ivoire"
+   ],
+   "originNote": "Semoule de manioc fermentée originaire du sud lagunaire ivoirien (peuples Adjoukrou, Ébrié, Avikam). Protégée par une indication géographique depuis 2024.",
+   "famille": "Manioc",
+   "ingredients": [
+    "Manioc fermenté",
+    "Poisson (capitaine, carpe)",
+    "Tomate",
+    "Oignon",
+    "Piment",
+    "Huile"
+   ],
+   "presentation": "L'attiéké se sert tiède, légèrement acidulé, avec un poisson braisé entier et une salade de tomates, oignons et piments.",
+   "preparation": "Le manioc est épluché, râpé, fermenté puis pressé, granulé, séché et cuit à la vapeur. Le poisson est mariné à l'ail, au gingembre et au piment avant d'être braisé.",
+   "statut": "publie",
+   "refs": "Office ivoirien de la propriété intellectuelle (IG Attiéké des Lagunes)"
+  },
+  {
+   "id": "p2",
+   "nom": "Kedjenou",
+   "variantes": "Kedjenou de pintade, de poulet",
+   "origines": [
+    "Côte d'Ivoire"
+   ],
+   "originNote": "Plat baoulé du centre ivoirien, traditionnellement cuit à l'étouffée dans un canari en terre.",
+   "famille": "Ragoûts",
+   "ingredients": [
+    "Poulet ou pintade",
+    "Aubergine",
+    "Tomate",
+    "Oignon",
+    "Gingembre",
+    "Piment"
+   ],
+   "presentation": "Servi avec de l'attiéké ou du riz. La sauce, très concentrée, ne contient presque pas d'eau ajoutée.",
+   "preparation": "La viande et les légumes cuisent dans leur jus, le canari fermé. On secoue le récipient au lieu de remuer pour ne pas briser la viande.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p3",
+   "nom": "Jollof rice",
+   "variantes": "Thiéboudienne (ancêtre revendiqué), party jollof",
+   "origines": [
+    "Sénégal",
+    "Ghana",
+    "Nigeria"
+   ],
+   "originNote": "Généralement rattaché à l'empire Wolof (Sénégal). Ghana et Nigeria en ont chacun une version emblématique ; la rivalité amicale entre ces pays fait partie de l'histoire du plat.",
+   "famille": "Riz",
+   "ingredients": [
+    "Riz long",
+    "Tomate",
+    "Poivron",
+    "Oignon",
+    "Piment scotch bonnet",
+    "Thym",
+    "Laurier"
+   ],
+   "presentation": "Riz rouge orangé, parfois fumé au fond de la marmite, servi avec poulet, plantain frit ou salade.",
+   "preparation": "Une base de tomates, poivrons et oignons mixés est réduite longuement avant d'y cuire le riz à l'étouffée.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p4",
+   "nom": "Thiéboudienne",
+   "variantes": "Thiébou yapp (viande), thiébou guinar (poulet)",
+   "origines": [
+    "Sénégal"
+   ],
+   "originNote": "Plat national sénégalais attribué à Penda Mbaye, cuisinière de Saint-Louis. Inscrit au patrimoine culturel immatériel de l'UNESCO en 2021.",
+   "famille": "Riz",
+   "ingredients": [
+    "Riz brisé",
+    "Poisson (thiof)",
+    "Manioc",
+    "Carotte",
+    "Chou",
+    "Aubergine",
+    "Tomate",
+    "Persil (roof)"
+   ],
+   "presentation": "Le riz est servi dans un grand plat commun, poisson et légumes au centre, avec le « xooñ » croustillant du fond de marmite.",
+   "preparation": "Le poisson farci au roof est cuit dans la sauce tomate avec les légumes, puis le riz est cuit dans ce bouillon.",
+   "statut": "publie",
+   "refs": "UNESCO, 2021"
+  },
+  {
+   "id": "p5",
+   "nom": "Ndolé",
+   "variantes": "Ndolé crevettes, ndolé viande",
+   "origines": [
+    "Cameroun"
+   ],
+   "originNote": "Plat des peuples Sawa du littoral camerounais (Douala).",
+   "famille": "Sauces feuilles",
+   "ingredients": [
+    "Feuilles de ndolé",
+    "Arachides",
+    "Crevettes",
+    "Bœuf",
+    "Oignon",
+    "Ail"
+   ],
+   "presentation": "Accompagné de plantain mûr, de miondo ou de bâtons de manioc.",
+   "preparation": "Les feuilles amères sont lavées plusieurs fois puis cuites avec une pâte d'arachide fraîche et les viandes.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p6",
+   "nom": "Waakye",
+   "variantes": "Waakye avec shito, gari, spaghetti",
+   "origines": [
+    "Ghana"
+   ],
+   "originNote": "Originaire du nord du Ghana (peuple Hausa), aujourd'hui petit-déjeuner populaire dans tout le pays.",
+   "famille": "Riz",
+   "ingredients": [
+    "Riz",
+    "Haricots niébé",
+    "Feuilles de sorgho",
+    "Shito",
+    "Œuf"
+   ],
+   "presentation": "Servi sur feuille, avec shito (piment noir), gari, œuf dur et parfois spaghetti.",
+   "preparation": "Riz et haricots cuisent ensemble avec des feuilles de sorgho séchées qui donnent la couleur brune.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p7",
+   "nom": "Poulet yassa",
+   "variantes": "Yassa poisson",
+   "origines": [
+    "Sénégal"
+   ],
+   "originNote": "Plat de Casamance, au sud du Sénégal.",
+   "famille": "Ragoûts",
+   "ingredients": [
+    "Poulet",
+    "Oignons",
+    "Citron",
+    "Moutarde",
+    "Ail",
+    "Piment"
+   ],
+   "presentation": "Servi avec du riz blanc, sauce aux oignons confits et citronnés.",
+   "preparation": "Le poulet mariné longuement au citron et aux oignons est grillé puis mijoté dans la marinade.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p8",
+   "nom": "Alloco",
+   "variantes": "Kelewele (Ghana), dodo (Nigeria)",
+   "origines": [
+    "Côte d'Ivoire",
+    "Ghana",
+    "Nigeria"
+   ],
+   "originNote": "Banane plantain frite présente dans toute l'Afrique de l'Ouest sous différents noms.",
+   "famille": "Plantain",
+   "ingredients": [
+    "Banane plantain mûre",
+    "Huile de palme ou arachide",
+    "Sel",
+    "Piment"
+   ],
+   "presentation": "En accompagnement ou seul, avec sauce pimentée et œuf.",
+   "preparation": "Le plantain bien mûr est coupé en rondelles ou en biais puis frit.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p9",
+   "nom": "Mafé",
+   "variantes": "Tigadèguèna (Mali), domoda (Gambie)",
+   "origines": [
+    "Mali",
+    "Sénégal",
+    "Gambie"
+   ],
+   "originNote": "Sauce d'arachide d'origine mandingue, répandue en Afrique de l'Ouest.",
+   "famille": "Sauces",
+   "ingredients": [
+    "Pâte d'arachide",
+    "Bœuf ou agneau",
+    "Tomate",
+    "Patate douce",
+    "Chou"
+   ],
+   "presentation": "Servi avec du riz blanc.",
+   "preparation": "La viande est saisie, puis mijotée dans une sauce tomate liée à la pâte d'arachide.",
+   "statut": "publie",
+   "refs": ""
+  },
+  {
+   "id": "p10",
+   "nom": "Foutou sauce graine",
+   "variantes": "Foutou igname, foutou banane",
+   "origines": [
+    "Côte d'Ivoire"
+   ],
+   "originNote": "Plat des peuples Akan de l'est et du centre ivoirien.",
+   "famille": "Sauces",
+   "ingredients": [
+    "Igname ou banane",
+    "Graine de palme",
+    "Viande ou poisson fumé",
+    "Aubergine"
+   ],
+   "presentation": "Boule de foutou pilé dans une sauce rouge orangée.",
+   "preparation": "Le foutou est pilé au mortier ; la sauce est préparée à partir du jus de noix de palme.",
+   "statut": "a_verifier",
+   "refs": ""
+  },
+  {
+   "id": "p11",
+   "nom": "Egusi soup",
+   "variantes": "Egusi aux légumes",
+   "origines": [
+    "Nigeria"
+   ],
+   "originNote": "Soupe des peuples Yoruba et Igbo à base de graines de courge.",
+   "famille": "Sauces feuilles",
+   "ingredients": [
+    "Graines d'egusi",
+    "Épinards",
+    "Huile de palme",
+    "Poisson séché",
+    "Bœuf"
+   ],
+   "presentation": "Servie avec pounded yam, eba ou fufu.",
+   "preparation": "Les graines moulues sont frites dans l'huile de palme avant d'ajouter bouillon et légumes.",
+   "statut": "brouillon",
+   "refs": ""
+  }
+ ],
+ "articles": [
+  {
+   "id": "a1",
+   "titre": "Nuit des saveurs : vingt restaurants réunis à Treichville",
+   "chapo": "Un parcours de dégustation, six assiettes par pass et un concert en plein air : voici le programme de la soirée.",
+   "categorie": "Annonces",
+   "auteur": "Rédaction Trôofê",
+   "date": "2026-11-21T12:14:00.000Z",
+   "statut": "publie",
+   "liens": {
+    "eventId": "e1"
+   },
+   "seoTitle": "Nuit des saveurs d'Abidjan",
+   "seoDesc": "Programme, restaurants participants et billetterie de la Nuit des saveurs.",
+   "contenu": "Un parcours de dégustation, six assiettes par pass et un concert en plein air : voici le programme de la soirée.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a2",
+   "titre": "Tantie Rose, trente ans de braise à Angré",
+   "chapo": "Portrait d'une cheffe qui a transformé un étal de quartier en adresse incontournable du poisson braisé.",
+   "categorie": "Portraits de chefs",
+   "auteur": "Mariam Diallo",
+   "date": "2026-11-17T12:42:00.000Z",
+   "statut": "publie",
+   "liens": {
+    "restoId": "r1"
+   },
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "Portrait d'une cheffe qui a transformé un étal de quartier en adresse incontournable du poisson braisé.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a3",
+   "titre": "Jollof : qui a la meilleure recette ?",
+   "chapo": "Ghana, Nigeria, Sénégal : on a goûté, comparé et interrogé les cuisiniers. Le débat reste ouvert, et c'est tant mieux.",
+   "categorie": "Tendances",
+   "auteur": "Kwame Mensah",
+   "date": "2026-11-12T12:47:00.000Z",
+   "statut": "publie",
+   "liens": {},
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "Ghana, Nigeria, Sénégal : on a goûté, comparé et interrogé les cuisiniers. Le débat reste ouvert, et c'est tant mieux.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a4",
+   "titre": "Recette : le kedjenou au canari, pas à pas",
+   "chapo": "La technique de l'étouffée expliquée par un chef baoulé, avec les erreurs à éviter.",
+   "categorie": "Recettes",
+   "auteur": "Rédaction Trôofê",
+   "date": "2026-11-05T12:06:00.000Z",
+   "statut": "publie",
+   "liens": {
+    "restoId": "r2"
+   },
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "La technique de l'étouffée expliquée par un chef baoulé, avec les erreurs à éviter.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a5",
+   "titre": "Les vendeuses d'attiéké de Dabou s'organisent en coopérative",
+   "chapo": "Avec l'indication géographique, une nouvelle génération de productrices mise sur la qualité et la traçabilité.",
+   "categorie": "Histoires communautaires",
+   "auteur": "Aya Traoré",
+   "date": "2026-10-29T12:25:00.000Z",
+   "statut": "publie",
+   "liens": {},
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "Avec l'indication géographique, une nouvelle génération de productrices mise sur la qualité et la traçabilité.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a6",
+   "titre": "Annoncer sur Trôofê : comment choisir son emplacement",
+   "chapo": "Bannières, encarts, cartes sponsorisées : quel format pour quel objectif, et combien prévoir.",
+   "categorie": "Annonces",
+   "auteur": "Rédaction Trôofê",
+   "date": "2026-11-26T09:00:00.000Z",
+   "statut": "programme",
+   "liens": {},
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "Bannières, encarts, cartes sponsorisées : quel format pour quel objectif, et combien prévoir.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a7",
+   "titre": "Brouillon — Les nouvelles tables de Marcory",
+   "chapo": "Sélection de cinq adresses ouvertes cette année.",
+   "categorie": "Tendances",
+   "auteur": "Mariam Diallo",
+   "date": "2026-11-22T12:37:00.000Z",
+   "statut": "brouillon",
+   "liens": {},
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "Sélection de cinq adresses ouvertes cette année.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  },
+  {
+   "id": "a8",
+   "titre": "Bilan 2025 de la plateforme",
+   "chapo": "Commandes, restaurants inscrits et événements : les chiffres de l'année.",
+   "categorie": "Annonces",
+   "auteur": "Rédaction Trôofê",
+   "date": "2026-01-07T12:20:00.000Z",
+   "statut": "archive",
+   "liens": {},
+   "seoTitle": "",
+   "seoDesc": "",
+   "contenu": "Commandes, restaurants inscrits et événements : les chiffres de l'année.\n\nTrôofê fait de la table un lieu de rencontre entre cuisines, restaurateurs et publics. Cet article s'inscrit dans cette ligne : raconter les gens qui font la gastronomie africaine au quotidien.\n\nSur place, les cuisiniers rencontrés insistent tous sur la même chose : le produit d'abord. Un bon attiéké, un poisson frais, un piment bien choisi font plus que n'importe quelle technique.\n\nRetrouvez les adresses citées dans l'annuaire Trôofê et partagez vos propres découvertes avec la communauté."
+  }
+ ],
+ "events": [
+  {
+   "id": "e1",
+   "orgId": "u1",
+   "titre": "Nuit des saveurs d'Abidjan",
+   "theme": "Dégustation",
+   "description": "Vingt restaurants partenaires, un parcours de dégustation de 18h à minuit et un concert en plein air. Un pass donne accès à six assiettes.",
+   "lieu": "Esplanade du Palais de la Culture",
+   "ville": "Abidjan",
+   "date": "2027-01-03T18:00:00.000Z",
+   "fin": "2027-01-03T23:00:00.000Z",
+   "billetterie": true,
+   "statut": "publie",
+   "tarifs": [
+    {
+     "nom": "Pass 6 assiettes",
+     "prix": 10000,
+     "quota": 1200,
+     "vendus": 8
+    },
+    {
+     "nom": "Pass duo",
+     "prix": 18000,
+     "quota": 400,
+     "vendus": 7
+    },
+    {
+     "nom": "Table VIP",
+     "prix": 60000,
+     "quota": 30,
+     "vendus": 15
+    }
+   ],
+   "programme": "18h ouverture du parcours · 20h concert · 22h dessert géant · 23h30 clôture"
+  },
+  {
+   "id": "e2",
+   "orgId": "u4",
+   "titre": "Jollof Battle Accra",
+   "theme": "Concours",
+   "description": "Six cuisiniers, trois pays, un jury populaire. Dégustation incluse dans le billet.",
+   "lieu": "Alliance Française, Airport Residential",
+   "ville": "Accra",
+   "date": "2026-12-02T16:00:00.000Z",
+   "fin": "2026-12-02T21:00:00.000Z",
+   "billetterie": true,
+   "statut": "publie",
+   "tarifs": [
+    {
+     "nom": "Entrée + dégustation",
+     "prix": 6000,
+     "quota": 250,
+     "vendus": 10
+    }
+   ],
+   "programme": "16h accueil · 17h battle · 20h résultats et concert"
+  },
+  {
+   "id": "e3",
+   "orgId": "u4",
+   "titre": "Atelier kedjenou au canari",
+   "theme": "Atelier",
+   "description": "Atelier pratique de 3 heures avec un chef, repas partagé à la fin. Places limitées à 16 personnes.",
+   "lieu": "Le Kedjenou Royal",
+   "ville": "Abidjan",
+   "date": "2026-12-07T10:00:00.000Z",
+   "fin": "2026-12-07T13:00:00.000Z",
+   "billetterie": true,
+   "statut": "publie",
+   "tarifs": [
+    {
+     "nom": "Participant",
+     "prix": 15000,
+     "quota": 16,
+     "vendus": 9
+    }
+   ],
+   "programme": "10h accueil · 10h30 atelier · 12h30 dégustation"
+  },
+  {
+   "id": "e4",
+   "orgId": "u1",
+   "titre": "Marché des saveurs de Treichville",
+   "theme": "Marché",
+   "description": "Producteurs, épices, jus locaux et street food. Entrée libre, inscription conseillée.",
+   "lieu": "Place de la République, Treichville",
+   "ville": "Abidjan",
+   "date": "2026-11-28T09:00:00.000Z",
+   "fin": "2026-11-28T18:00:00.000Z",
+   "billetterie": false,
+   "statut": "publie",
+   "tarifs": [],
+   "programme": "9h–18h en continu"
+  },
+  {
+   "id": "e5",
+   "orgId": "u4",
+   "titre": "Dîner-concert afro-jazz",
+   "theme": "Concert",
+   "description": "Menu en quatre temps et quartet afro-jazz.",
+   "lieu": "Teranga Saveurs",
+   "ville": "Abidjan",
+   "date": "2026-12-13T20:00:00.000Z",
+   "fin": "2026-12-13T23:00:00.000Z",
+   "billetterie": true,
+   "statut": "en_attente",
+   "tarifs": [
+    {
+     "nom": "Dîner + concert",
+     "prix": 25000,
+     "quota": 60,
+     "vendus": 0
+    }
+   ],
+   "programme": "20h dîner · 21h concert"
+  },
+  {
+   "id": "e6",
+   "orgId": "u4",
+   "titre": "Brunch des chefs de Cocody",
+   "theme": "Dégustation",
+   "description": "Annulé en raison des travaux sur le site. Les billets seront remboursés selon la politique en vigueur.",
+   "lieu": "Cocody Riviera",
+   "ville": "Abidjan",
+   "date": "2026-11-25T11:00:00.000Z",
+   "fin": "2026-11-25T15:00:00.000Z",
+   "billetterie": true,
+   "statut": "annule",
+   "tarifs": [
+    {
+     "nom": "Brunch",
+     "prix": 10000,
+     "quota": 80,
+     "vendus": 6
+    }
+   ],
+   "programme": ""
+  },
+  {
+   "id": "e7",
+   "orgId": "u1",
+   "titre": "Conférence : patrimoine culinaire et IG",
+   "theme": "Conférence",
+   "description": "Table ronde sur les indications géographiques africaines (attiéké, poivre de Penja, café Ziama).",
+   "lieu": "Sofitel Hôtel Ivoire",
+   "ville": "Abidjan",
+   "date": "2026-12-20T15:00:00.000Z",
+   "fin": "2026-12-20T18:00:00.000Z",
+   "billetterie": false,
+   "statut": "publie",
+   "tarifs": [],
+   "programme": "15h table ronde · 17h cocktail"
+  }
+ ],
+ "troupes": [
+  {
+   "id": "t1",
+   "nom": "Troupe Zaouli Yohou",
+   "accroche": "Le masque zaouli, ses pas d'une vitesse vertigineuse et les tambours gouro.",
+   "categorie": "Danse de masques",
+   "styles": [
+    "Zaouli",
+    "Danses gouro"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Yopougon",
+   "annee": 2008,
+   "membres": 14,
+   "musiciens": 5,
+   "description": "Formée par des danseurs originaires de la région de Bouaflé, la troupe présente le zaouli, danse de masque gouro reconnue au patrimoine immatériel de l'UNESCO. Chaque sortie mêle danse du masque, chants et percussions, avec un temps d'explication pour le public.",
+   "repertoire": [
+    "Zaouli (masque)",
+    "Glé (danse des jeunes filles)",
+    "Percussions gouro",
+    "Chants de bienvenue"
+   ],
+   "publics": [
+    "Mariages",
+    "Festivals",
+    "Entreprises",
+    "Hôtels & réceptions"
+   ],
+   "zone": [
+    "Abidjan",
+    "Grand-Bassam",
+    "Yamoussoukro"
+   ],
+   "delai": 10,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Sortie du masque",
+     "duree": "30 min",
+     "prix": 180000,
+     "details": "1 masque, 4 danseurs, 3 musiciens. Idéal pour une ouverture de soirée."
+    },
+    {
+     "id": "f2",
+     "nom": "Spectacle complet",
+     "duree": "1 h 15",
+     "prix": 450000,
+     "details": "Zaouli et glé, 10 artistes, présentation au micro."
+    },
+    {
+     "id": "f3",
+     "nom": "Animation de journée",
+     "duree": "3 passages",
+     "prix": 780000,
+     "details": "Accueil des invités, spectacle, final avec le public."
+    }
+   ],
+   "tel": "+225 07 48 22 10 10",
+   "whatsapp": "2250748221010",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": true,
+   "vues": 2140,
+   "created": "2026-06-16T15:05:54.217Z",
+   "events": [
+    "e1"
+   ],
+   "indispo": [
+    "2026-11-29",
+    "2026-12-06",
+    "2026-12-20"
+   ]
+  },
+  {
+   "id": "t2",
+   "nom": "Les Étoiles du Goli",
+   "accroche": "Danse et masques baoulé du centre ivoirien, pour les grandes célébrations.",
+   "categorie": "Danse traditionnelle",
+   "styles": [
+    "Goli",
+    "Danses baoulé"
+   ],
+   "ville": "Bouaké",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Commerce",
+   "annee": 1999,
+   "membres": 18,
+   "musiciens": 6,
+   "description": "Le goli est la grande fête des masques baoulé. La troupe de Bouaké en propose une version scénique, avec les masques kplé-kplé et goli glin, et se déplace dans tout le centre du pays.",
+   "repertoire": [
+    "Goli",
+    "Kplé-kplé",
+    "Adjoussou",
+    "Chants akan"
+   ],
+   "publics": [
+    "Mariages",
+    "Festivals",
+    "Funérailles & hommages",
+    "Collectivités"
+   ],
+   "zone": [
+    "Bouaké",
+    "Yamoussoukro",
+    "Abidjan"
+   ],
+   "delai": 21,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Passage cérémoniel",
+     "duree": "45 min",
+     "prix": 220000,
+     "details": "Masques goli, 8 artistes."
+    },
+    {
+     "id": "f2",
+     "nom": "Grande fête du goli",
+     "duree": "2 h",
+     "prix": 620000,
+     "details": "18 artistes, défilé et spectacle."
+    }
+   ],
+   "tel": "+225 05 66 12 33 44",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 860,
+   "created": "2026-04-17T15:05:54.217Z",
+   "events": [],
+   "indispo": [
+    "2026-12-02",
+    "2026-12-03"
+   ]
+  },
+  {
+   "id": "t3",
+   "nom": "Abidjan Urban Crew",
+   "accroche": "Coupé-décalé, afro-dance et chorégraphies sur mesure pour vos soirées.",
+   "categorie": "Danse urbaine",
+   "styles": [
+    "Coupé-décalé",
+    "Afro-dance",
+    "Ndombolo"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Marcory",
+   "annee": 2016,
+   "membres": 8,
+   "musiciens": 0,
+   "description": "Huit danseurs et danseuses issus des battles d'Abidjan. Le crew anime mariages, lancements de produits et soirées d'entreprise, et peut apprendre une chorégraphie à vos invités en vingt minutes.",
+   "repertoire": [
+    "Coupé-décalé",
+    "Afro-dance",
+    "Ndombolo",
+    "Chorégraphie d'entrée des mariés"
+   ],
+   "publics": [
+    "Mariages",
+    "Entreprises",
+    "Restaurants & maquis",
+    "Anniversaires"
+   ],
+   "zone": [
+    "Abidjan",
+    "Grand-Bassam",
+    "Assinie"
+   ],
+   "delai": 5,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Show express",
+     "duree": "15 min",
+     "prix": 90000,
+     "details": "4 danseurs, playlist fournie."
+    },
+    {
+     "id": "f2",
+     "nom": "Show + initiation",
+     "duree": "45 min",
+     "prix": 200000,
+     "details": "6 danseurs, initiation des invités."
+    },
+    {
+     "id": "f3",
+     "nom": "Chorégraphie des mariés",
+     "duree": "4 répétitions",
+     "prix": 150000,
+     "details": "Création et répétitions avec le couple."
+    }
+   ],
+   "tel": "+225 01 02 03 04 05",
+   "whatsapp": "2250102030405",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 3310,
+   "created": "2026-08-25T15:05:54.217Z",
+   "events": [],
+   "indispo": [
+    "2026-11-25",
+    "2026-11-26",
+    "2026-12-09"
+   ]
+  },
+  {
+   "id": "t4",
+   "nom": "Ensemble Sabar Ndiaga",
+   "accroche": "Le sabar sénégalais : tambours, danse et énergie de Dakar.",
+   "categorie": "Danse traditionnelle",
+   "styles": [
+    "Sabar",
+    "Mbalax"
+   ],
+   "ville": "Dakar",
+   "pays": "Sénégal",
+   "quartier": "Médina",
+   "annee": 2011,
+   "membres": 10,
+   "musiciens": 6,
+   "description": "Batteurs de sabar et danseuses de la Médina. L'ensemble anime tànnëbéer, baptêmes et mariages, et se produit dans les festivals de la sous-région.",
+   "repertoire": [
+    "Sabar",
+    "Mbalax",
+    "Ndawrabine"
+   ],
+   "publics": [
+    "Mariages",
+    "Festivals",
+    "Baptêmes"
+   ],
+   "zone": [
+    "Dakar",
+    "Thiès",
+    "Abidjan (sur devis)"
+   ],
+   "delai": 14,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Tànnëbéer",
+     "duree": "2 h",
+     "prix": 260000,
+     "details": "6 batteurs, 4 danseuses."
+    },
+    {
+     "id": "f2",
+     "nom": "Spectacle festival",
+     "duree": "1 h",
+     "prix": 340000,
+     "details": "Création scénique, 10 artistes."
+    }
+   ],
+   "tel": "+221 77 455 66 77",
+   "whatsapp": "221774556677",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 540,
+   "created": "2026-09-14T15:05:54.217Z",
+   "events": [],
+   "indispo": []
+  },
+  {
+   "id": "t5",
+   "nom": "Adowa Royal Troupe",
+   "accroche": "Adowa et kete, danses de cour ashanti, en costume kente.",
+   "categorie": "Danse traditionnelle",
+   "styles": [
+    "Adowa",
+    "Kete"
+   ],
+   "ville": "Accra",
+   "pays": "Ghana",
+   "quartier": "Osu",
+   "annee": 2005,
+   "membres": 12,
+   "musiciens": 5,
+   "description": "Une troupe d'Accra spécialisée dans les danses de cour akan. Les danseurs portent le kente et les bijoux de cérémonie ; les tambours fontomfrom ouvrent chaque représentation.",
+   "repertoire": [
+    "Adowa",
+    "Kete",
+    "Fontomfrom",
+    "Agbadza"
+   ],
+   "publics": [
+    "Mariages",
+    "Festivals",
+    "Hôtels & réceptions",
+    "Entreprises"
+   ],
+   "zone": [
+    "Accra",
+    "Kumasi",
+    "Tema"
+   ],
+   "delai": 10,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Accueil royal",
+     "duree": "30 min",
+     "prix": 160000,
+     "details": "Tambours et 4 danseurs à l'arrivée des invités."
+    },
+    {
+     "id": "f2",
+     "nom": "Spectacle adowa & kete",
+     "duree": "1 h",
+     "prix": 380000,
+     "details": "12 artistes en kente."
+    }
+   ],
+   "tel": "+233 24 555 0101",
+   "whatsapp": "233245550101",
+   "ownerId": "u4",
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 1220,
+   "created": "2026-07-16T15:05:54.217Z",
+   "events": [
+    "e2"
+   ],
+   "indispo": [
+    "2026-12-01"
+   ]
+  },
+  {
+   "id": "t6",
+   "nom": "Compagnie Kôrô",
+   "accroche": "Danse contemporaine africaine : créations, ateliers et performances in situ.",
+   "categorie": "Danse contemporaine",
+   "styles": [
+    "Contemporain",
+    "Performance"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Cocody",
+   "annee": 2014,
+   "membres": 6,
+   "musiciens": 2,
+   "description": "La compagnie crée des pièces courtes pour lieux non théâtraux : galeries, restaurants, halls d'hôtel. Elle mène aussi des ateliers pour adolescents et adultes.",
+   "repertoire": [
+    "« Canari » (création 2025)",
+    "Performance in situ",
+    "Atelier corps et rythme"
+   ],
+   "publics": [
+    "Entreprises",
+    "Galeries & lieux culturels",
+    "Restaurants & maquis",
+    "Écoles"
+   ],
+   "zone": [
+    "Abidjan"
+   ],
+   "delai": 15,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Performance in situ",
+     "duree": "25 min",
+     "prix": 250000,
+     "details": "3 danseurs, adaptée au lieu."
+    },
+    {
+     "id": "f2",
+     "nom": "Atelier découverte",
+     "duree": "2 h",
+     "prix": 120000,
+     "details": "Jusqu'à 20 participants."
+    }
+   ],
+   "tel": "+225 07 11 22 99 00",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 410,
+   "created": "2026-10-14T15:05:54.217Z",
+   "events": [],
+   "indispo": []
+  },
+  {
+   "id": "t7",
+   "nom": "Ballet des échassiers de Man",
+   "accroche": "Les échassiers dan, entre ciel et terre.",
+   "categorie": "Danse de masques",
+   "styles": [
+    "Échassiers",
+    "Danses dan"
+   ],
+   "ville": "Man",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Centre",
+   "annee": 2002,
+   "membres": 9,
+   "musiciens": 4,
+   "description": "Danseurs échassiers de la région de Man. Fiche en cours de vérification.",
+   "repertoire": [
+    "Échassiers",
+    "Masques dan"
+   ],
+   "publics": [
+    "Festivals"
+   ],
+   "zone": [
+    "Man",
+    "Abidjan"
+   ],
+   "delai": 30,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Parade des échassiers",
+     "duree": "40 min",
+     "prix": 300000,
+     "details": "4 échassiers, 4 musiciens."
+    }
+   ],
+   "tel": "+225 07 00 44 55 66",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "en_attente",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 0,
+   "created": "2026-11-21T15:05:54.217Z",
+   "events": [],
+   "indispo": []
+  }
+ ],
+ "artistes": [
+  {
+   "id": "a1",
+   "nom": "Bakary Sissoko",
+   "accroche": "Kora, récit et louanges mandingues pour vos cérémonies.",
+   "categorie": "Griot & conteur",
+   "kind": "kora",
+   "disciplines": [
+    "Kora",
+    "Récit",
+    "Louanges"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Adjamé",
+   "annee": 1998,
+   "langues": [
+    "Français",
+    "Malinké",
+    "Bambara"
+   ],
+   "effectif": 1,
+   "description": "Griot et joueur de kora, Bakary accompagne mariages, baptêmes et conférences. Il adapte ses louanges aux familles et peut raconter l'histoire d'un plat ou d'une région avant le repas.",
+   "repertoire": [
+    "Kora solo",
+    "Louanges familiales",
+    "Récits de l'épopée mandingue"
+   ],
+   "publics": [
+    "Mariages",
+    "Baptêmes",
+    "Conférences",
+    "Restaurants & maquis"
+   ],
+   "zone": [
+    "Abidjan",
+    "Bouaké"
+   ],
+   "delai": 7,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Kora au dîner",
+     "duree": "1 h 30",
+     "prix": 120000,
+     "details": "Kora solo pendant le repas."
+    },
+    {
+     "id": "f2",
+     "nom": "Cérémonie avec louanges",
+     "duree": "3 h",
+     "prix": 250000,
+     "details": "Accueil, louanges, kora."
+    }
+   ],
+   "tel": "+225 05 22 33 44 55",
+   "whatsapp": "2250522334455",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 980,
+   "created": "2026-05-07T15:05:54.217Z",
+   "events": [
+    "e7"
+   ],
+   "indispo": [
+    "2026-11-27"
+   ]
+  },
+  {
+   "id": "a2",
+   "nom": "Balafon Sénoufo Express",
+   "accroche": "L'orchestre de balafons de Korhogo, en version festive.",
+   "categorie": "Musique live",
+   "kind": "balafon",
+   "disciplines": [
+    "Balafon",
+    "Percussions",
+    "Chant"
+   ],
+   "ville": "Korhogo",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Soba",
+   "annee": 2010,
+   "langues": [
+    "Français",
+    "Sénoufo"
+   ],
+   "effectif": 7,
+   "description": "Sept musiciens, trois balafons et une section rythmique. Le groupe joue les airs traditionnels sénoufo et des reprises arrangées pour les soirées.",
+   "repertoire": [
+    "Airs sénoufo",
+    "Balafon festif",
+    "Reprises arrangées"
+   ],
+   "publics": [
+    "Festivals",
+    "Mariages",
+    "Hôtels & réceptions",
+    "Restaurants & maquis"
+   ],
+   "zone": [
+    "Korhogo",
+    "Abidjan",
+    "Yamoussoukro"
+   ],
+   "delai": 14,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Set acoustique",
+     "duree": "1 h",
+     "prix": 200000,
+     "details": "4 musiciens."
+    },
+    {
+     "id": "f2",
+     "nom": "Concert complet",
+     "duree": "2 h",
+     "prix": 420000,
+     "details": "7 musiciens, sonorisation incluse."
+    }
+   ],
+   "tel": "+225 07 88 77 66 55",
+   "whatsapp": "2250788776655",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": true,
+   "vues": 1560,
+   "created": "2026-06-06T15:05:54.217Z",
+   "events": [
+    "e1"
+   ],
+   "indispo": [
+    "2026-12-05"
+   ]
+  },
+  {
+   "id": "a3",
+   "nom": "DJ Lagune",
+   "accroche": "Afrobeats, coupé-décalé et classiques : la piste ne désemplit pas.",
+   "categorie": "DJ & animation",
+   "kind": "dj",
+   "disciplines": [
+    "DJ",
+    "Animation"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Zone 4",
+   "annee": 2015,
+   "langues": [
+    "Français",
+    "Anglais"
+   ],
+   "effectif": 1,
+   "description": "Résident de plusieurs rooftops d'Abidjan, DJ Lagune se déplace avec sa sonorisation et son éclairage. Playlist construite avec vous avant l'événement.",
+   "repertoire": [
+    "Afrobeats",
+    "Coupé-décalé",
+    "Zouk & kompa",
+    "Classiques 80-90"
+   ],
+   "publics": [
+    "Mariages",
+    "Entreprises",
+    "Anniversaires",
+    "Restaurants & maquis"
+   ],
+   "zone": [
+    "Abidjan",
+    "Assinie",
+    "Grand-Bassam"
+   ],
+   "delai": 3,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Soirée 4 h",
+     "duree": "4 h",
+     "prix": 150000,
+     "details": "Sonorisation 300 personnes."
+    },
+    {
+     "id": "f2",
+     "nom": "Soirée + éclairage",
+     "duree": "6 h",
+     "prix": 260000,
+     "details": "Sono, lumières, machine à fumée."
+    }
+   ],
+   "tel": "+225 07 07 07 21 21",
+   "whatsapp": "2250707072121",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 2900,
+   "created": "2026-08-05T15:05:54.217Z",
+   "events": [],
+   "indispo": [
+    "2026-11-24",
+    "2026-11-30",
+    "2026-12-07",
+    "2026-12-14"
+   ]
+  },
+  {
+   "id": "a4",
+   "nom": "Tantie Akissi, conteuse",
+   "accroche": "Contes baoulé au clair de lune, pour petits et grands.",
+   "categorie": "Griot & conteur",
+   "kind": "conte",
+   "disciplines": [
+    "Conte",
+    "Chant"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Abobo",
+   "annee": 2003,
+   "langues": [
+    "Français",
+    "Baoulé"
+   ],
+   "effectif": 1,
+   "description": "Conteuse depuis vingt ans, Tantie Akissi fait vivre Kacou Ananzè et les animaux de la savane. Ses veillées se terminent souvent par un chant repris par tout le public.",
+   "repertoire": [
+    "Contes d'Ananzè",
+    "Proverbes",
+    "Chants à répondre"
+   ],
+   "publics": [
+    "Écoles",
+    "Anniversaires",
+    "Restaurants & maquis",
+    "Galeries & lieux culturels"
+   ],
+   "zone": [
+    "Abidjan"
+   ],
+   "delai": 5,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Veillée contée",
+     "duree": "1 h",
+     "prix": 60000,
+     "details": "Jusqu'à 80 personnes."
+    },
+    {
+     "id": "f2",
+     "nom": "Atelier conte enfants",
+     "duree": "1 h 30",
+     "prix": 80000,
+     "details": "Jusqu'à 25 enfants."
+    }
+   ],
+   "tel": "+225 01 55 44 33 22",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 420,
+   "created": "2026-09-24T15:05:54.217Z",
+   "events": [],
+   "indispo": []
+  },
+  {
+   "id": "a5",
+   "nom": "Yao Kouamé, peinture live",
+   "accroche": "Un tableau peint pendant votre événement, offert aux mariés ou à l'entreprise.",
+   "categorie": "Arts visuels live",
+   "kind": "peinture",
+   "disciplines": [
+    "Peinture live",
+    "Portrait"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Bingerville",
+   "annee": 2012,
+   "langues": [
+    "Français"
+   ],
+   "effectif": 1,
+   "description": "Peintre diplômé de l'INSAAC, Yao réalise des toiles en direct pendant les réceptions. Le tableau est remis en fin de soirée, signé et daté.",
+   "repertoire": [
+    "Peinture live",
+    "Portraits express",
+    "Fresque participative"
+   ],
+   "publics": [
+    "Mariages",
+    "Entreprises",
+    "Galeries & lieux culturels"
+   ],
+   "zone": [
+    "Abidjan",
+    "Grand-Bassam"
+   ],
+   "delai": 10,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Toile 80 × 100",
+     "duree": "3 h",
+     "prix": 300000,
+     "details": "Toile remise en fin d'événement."
+    },
+    {
+     "id": "f2",
+     "nom": "Portraits express",
+     "duree": "2 h",
+     "prix": 180000,
+     "details": "Environ 15 portraits au fusain."
+    }
+   ],
+   "tel": "+225 07 33 66 99 00",
+   "whatsapp": "2250733669900",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 760,
+   "created": "2026-09-04T15:05:54.217Z",
+   "events": [],
+   "indispo": [
+    "2026-12-04"
+   ]
+  },
+  {
+   "id": "a6",
+   "nom": "Accra Highlife Quartet",
+   "accroche": "Highlife et afro-jazz en quartet, pour les dîners qui durent.",
+   "categorie": "Musique live",
+   "kind": "jazz",
+   "disciplines": [
+    "Highlife",
+    "Afro-jazz"
+   ],
+   "ville": "Accra",
+   "pays": "Ghana",
+   "quartier": "Labone",
+   "annee": 2017,
+   "langues": [
+    "Anglais",
+    "Twi",
+    "Français"
+   ],
+   "effectif": 4,
+   "description": "Guitare, saxophone, basse et batterie. Le quartet joue highlife, afro-jazz et standards, à un volume pensé pour la conversation.",
+   "repertoire": [
+    "Highlife",
+    "Afro-jazz",
+    "Standards"
+   ],
+   "publics": [
+    "Restaurants & maquis",
+    "Hôtels & réceptions",
+    "Entreprises",
+    "Mariages"
+   ],
+   "zone": [
+    "Accra",
+    "Abidjan (sur devis)",
+    "Lomé"
+   ],
+   "delai": 14,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Dîner-concert",
+     "duree": "2 × 45 min",
+     "prix": 350000,
+     "details": "Quartet, sonorisation légère."
+    },
+    {
+     "id": "f2",
+     "nom": "Cocktail",
+     "duree": "1 h",
+     "prix": 200000,
+     "details": "Trio acoustique."
+    }
+   ],
+   "tel": "+233 20 222 3344",
+   "whatsapp": "233202223344",
+   "ownerId": "u4",
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 690,
+   "created": "2026-08-15T15:05:54.217Z",
+   "events": [
+    "e5"
+   ],
+   "indispo": [
+    "2026-12-13"
+   ]
+  },
+  {
+   "id": "a7",
+   "nom": "Les Djembés de Treichville",
+   "accroche": "Percussions mandingues et initiation au djembé.",
+   "categorie": "Percussions",
+   "kind": "djembe",
+   "disciplines": [
+    "Djembé",
+    "Doundoun"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Treichville",
+   "annee": 2009,
+   "langues": [
+    "Français",
+    "Dioula"
+   ],
+   "effectif": 6,
+   "description": "Six percussionnistes pour ouvrir un événement, rythmer un défilé ou animer un atelier d'initiation (djembés fournis).",
+   "repertoire": [
+    "Kuku",
+    "Soli",
+    "Dununba",
+    "Initiation"
+   ],
+   "publics": [
+    "Entreprises",
+    "Festivals",
+    "Écoles",
+    "Mariages"
+   ],
+   "zone": [
+    "Abidjan"
+   ],
+   "delai": 4,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Ouverture percussions",
+     "duree": "20 min",
+     "prix": 80000,
+     "details": "6 percussionnistes."
+    },
+    {
+     "id": "f2",
+     "nom": "Atelier team building",
+     "duree": "1 h 30",
+     "prix": 220000,
+     "details": "Jusqu'à 40 participants, djembés fournis."
+    }
+   ],
+   "tel": "+225 05 98 76 54 32",
+   "whatsapp": "2250598765432",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 1010,
+   "created": "2026-07-06T15:05:54.217Z",
+   "events": [
+    "e4"
+   ],
+   "indispo": []
+  },
+  {
+   "id": "a8",
+   "nom": "MC Gbê",
+   "accroche": "Maître de cérémonie et humoriste en nouchi.",
+   "categorie": "Humour & MC",
+   "kind": "mc",
+   "disciplines": [
+    "Maître de cérémonie",
+    "Humour"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Yopougon",
+   "annee": 2019,
+   "langues": [
+    "Français",
+    "Nouchi"
+   ],
+   "effectif": 1,
+   "description": "Animation de mariages et de soirées d'entreprise. Fiche en cours de vérification.",
+   "repertoire": [
+    "Animation",
+    "Stand-up"
+   ],
+   "publics": [
+    "Mariages",
+    "Entreprises"
+   ],
+   "zone": [
+    "Abidjan"
+   ],
+   "delai": 5,
+   "formules": [
+    {
+     "id": "f1",
+     "nom": "Soirée animée",
+     "duree": "5 h",
+     "prix": 150000,
+     "details": "Conduite de la soirée."
+    }
+   ],
+   "tel": "+225 07 21 21 21 21",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "en_attente",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 0,
+   "created": "2026-11-22T15:05:54.217Z",
+   "events": [],
+   "indispo": []
+  }
+ ],
+ "artisans": [
+  {
+   "id": "k1",
+   "nom": "Atelier Tissage de Waraniéné",
+   "artisan": "Coopérative des tisserands",
+   "accroche": "Pagnes sénoufo tissés à la main, au mètre ou sur mesure.",
+   "categorie": "Tissage",
+   "kind": "tissage",
+   "techniques": [
+    "Métier à tisser traditionnel",
+    "Teinture végétale"
+   ],
+   "materiaux": [
+    "Coton local",
+    "Indigo"
+   ],
+   "ville": "Korhogo",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Waraniéné",
+   "annee": 1975,
+   "description": "Le village de Waraniéné, près de Korhogo, est réputé pour ses tisserands. La coopérative vend au mètre et réalise des nappes et chemins de table pour les restaurants.",
+   "produits": [
+    {
+     "id": "k1p1",
+     "nom": "Pagne tissé (bande de 6 m)",
+     "prix": 35000,
+     "delai": "2 semaines",
+     "desc": "Motifs traditionnels, coton local.",
+     "surMesure": false
+    },
+    {
+     "id": "k1p2",
+     "nom": "Nappe de restaurant 2 × 1,2 m",
+     "prix": 28000,
+     "delai": "3 semaines",
+     "desc": "Lavable, logo brodé possible.",
+     "surMesure": true
+    },
+    {
+     "id": "k1p3",
+     "nom": "Chemin de table",
+     "prix": 12000,
+     "delai": "1 semaine",
+     "desc": "Plusieurs coloris.",
+     "surMesure": false
+    }
+   ],
+   "visite": {
+    "prix": 3000,
+    "duree": "1 h",
+    "details": "Démonstration du tissage, boutique sur place."
+   },
+   "pros": "Tarif dégressif dès 10 nappes pour les restaurants.",
+   "restos": [
+    "r1"
+   ],
+   "plats": [],
+   "tel": "+225 07 40 50 60 70",
+   "whatsapp": "2250740506070",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": true,
+   "vues": 1340,
+   "created": "2026-05-17T15:05:54.217Z",
+   "events": []
+  },
+  {
+   "id": "k2",
+   "nom": "Poterie de Katiola",
+   "artisan": "Mama Ténin Ouattara",
+   "accroche": "Les canaris en terre cuite du kedjenou, façonnés sans tour.",
+   "categorie": "Poterie",
+   "kind": "poterie",
+   "techniques": [
+    "Modelage au colombin",
+    "Cuisson en meule"
+   ],
+   "materiaux": [
+    "Argile de Katiola"
+   ],
+   "ville": "Katiola",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Kpalaga",
+   "annee": 1988,
+   "description": "Les potières de Katiola façonnent les canaris à la main, sans tour, puis les cuisent en meule à ciel ouvert. Ce sont les marmites du kedjenou, que l'on secoue au lieu de remuer.",
+   "produits": [
+    {
+     "id": "k2p1",
+     "nom": "Canari à kedjenou (4 pers.)",
+     "prix": 8000,
+     "delai": "1 semaine",
+     "desc": "Couvercle inclus.",
+     "surMesure": false
+    },
+    {
+     "id": "k2p2",
+     "nom": "Grand canari à eau",
+     "prix": 15000,
+     "delai": "2 semaines",
+     "desc": "Garde l'eau fraîche.",
+     "surMesure": false
+    },
+    {
+     "id": "k2p3",
+     "nom": "Service de 12 bols",
+     "prix": 24000,
+     "delai": "3 semaines",
+     "desc": "Pour le service en salle.",
+     "surMesure": true
+    }
+   ],
+   "visite": {
+    "prix": 2000,
+    "duree": "1 h 30",
+    "details": "Modelage et cuisson, selon la saison."
+   },
+   "pros": "Fournisseur de restaurants : livraison groupée à Abidjan chaque mois.",
+   "restos": [
+    "r2"
+   ],
+   "plats": [
+    "p2"
+   ],
+   "tel": "+225 05 77 66 55 44",
+   "whatsapp": "2250577665544",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 1810,
+   "created": "2026-06-26T15:05:54.217Z",
+   "events": [
+    "e4"
+   ]
+  },
+  {
+   "id": "k3",
+   "nom": "Atelier Gué, sculpteurs de Man",
+   "artisan": "Famille Gué",
+   "accroche": "Masques et statuettes dan sculptés dans le bois.",
+   "categorie": "Sculpture",
+   "kind": "sculpture",
+   "techniques": [
+    "Sculpture à l'herminette",
+    "Patine naturelle"
+   ],
+   "materiaux": [
+    "Bois de fromager",
+    "Bois d'ébène"
+   ],
+   "ville": "Man",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Libreville",
+   "annee": 1992,
+   "description": "Trois générations de sculpteurs. L'atelier réalise des masques décoratifs inspirés du style dan, des statuettes et des pièces de décoration pour hôtels et restaurants. Chaque pièce est accompagnée d'une fiche d'origine.",
+   "produits": [
+    {
+     "id": "k3p1",
+     "nom": "Masque décoratif 40 cm",
+     "prix": 45000,
+     "delai": "3 semaines",
+     "desc": "Pièce unique.",
+     "surMesure": false
+    },
+    {
+     "id": "k3p2",
+     "nom": "Statuette 25 cm",
+     "prix": 30000,
+     "delai": "2 semaines",
+     "desc": "Bois patiné.",
+     "surMesure": false
+    },
+    {
+     "id": "k3p3",
+     "nom": "Décor mural sur mesure",
+     "prix": 250000,
+     "delai": "2 mois",
+     "desc": "Pour hôtels et restaurants.",
+     "surMesure": true
+    }
+   ],
+   "visite": {
+    "prix": 5000,
+    "duree": "2 h",
+    "details": "Atelier et démonstration de sculpture."
+   },
+   "pros": "Décoration de salles : étude gratuite sur plan.",
+   "restos": [],
+   "plats": [],
+   "tel": "+225 07 12 34 56 78",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 930,
+   "created": "2026-07-26T15:05:54.217Z",
+   "events": []
+  },
+  {
+   "id": "k4",
+   "nom": "Kente Corner Bonwire",
+   "artisan": "Kwabena Asare",
+   "accroche": "Kente tissé à Bonwire, en bandes ou en pièces cousues.",
+   "categorie": "Tissage",
+   "kind": "tissage",
+   "techniques": [
+    "Tissage en bandes étroites"
+   ],
+   "materiaux": [
+    "Soie",
+    "Coton",
+    "Viscose"
+   ],
+   "ville": "Kumasi",
+   "pays": "Ghana",
+   "quartier": "Bonwire",
+   "annee": 2001,
+   "description": "Tisserand de Bonwire, berceau du kente. Kwabena propose des étoles, des pièces complètes pour cérémonies et des tenues pour troupes de danse.",
+   "produits": [
+    {
+     "id": "k4p1",
+     "nom": "Étole kente",
+     "prix": 40000,
+     "delai": "2 semaines",
+     "desc": "Coton et soie.",
+     "surMesure": false
+    },
+    {
+     "id": "k4p2",
+     "nom": "Pièce de cérémonie",
+     "prix": 320000,
+     "delai": "2 mois",
+     "desc": "Pièce complète cousue.",
+     "surMesure": true
+    }
+   ],
+   "visite": {
+    "prix": 3000,
+    "duree": "1 h",
+    "details": "Démonstration au métier."
+   },
+   "pros": "Costumes de scène pour troupes : sur devis.",
+   "restos": [],
+   "plats": [],
+   "tel": "+233 24 777 8899",
+   "whatsapp": "233247778899",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 610,
+   "created": "2026-08-30T15:05:54.217Z",
+   "events": []
+  },
+  {
+   "id": "k5",
+   "nom": "Vannerie de Bolgatanga",
+   "artisan": "Collectif Akolgo",
+   "accroche": "Paniers bolga tressés en herbe à éléphant, poignées en cuir.",
+   "categorie": "Vannerie",
+   "kind": "vannerie",
+   "techniques": [
+    "Tressage serré",
+    "Teinture naturelle"
+   ],
+   "materiaux": [
+    "Herbe veta vera",
+    "Cuir"
+   ],
+   "ville": "Bolgatanga",
+   "pays": "Ghana",
+   "quartier": "Centre",
+   "annee": 1996,
+   "description": "Un collectif de tresseuses du nord du Ghana. Les paniers servent de corbeilles à pain, de présentoirs ou de cache-pots dans les restaurants.",
+   "produits": [
+    {
+     "id": "k5p1",
+     "nom": "Panier bolga moyen",
+     "prix": 18000,
+     "delai": "1 semaine",
+     "desc": "Poignée cuir.",
+     "surMesure": false
+    },
+    {
+     "id": "k5p2",
+     "nom": "Corbeille à pain (lot de 6)",
+     "prix": 30000,
+     "delai": "2 semaines",
+     "desc": "Pour le service en salle.",
+     "surMesure": false
+    }
+   ],
+   "visite": null,
+   "pros": "Lots pour restaurants dès 6 pièces.",
+   "restos": [
+    "r4"
+   ],
+   "plats": [],
+   "tel": "+233 26 444 5566",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 480,
+   "created": "2026-09-09T15:05:54.217Z",
+   "events": []
+  },
+  {
+   "id": "k6",
+   "nom": "Atelier Akissi Or",
+   "artisan": "Akissi N'Guessan",
+   "accroche": "Bijoux baoulé en laiton doré et perles, à la cire perdue.",
+   "categorie": "Bijouterie",
+   "kind": "bijoux",
+   "techniques": [
+    "Fonte à la cire perdue",
+    "Enfilage"
+   ],
+   "materiaux": [
+    "Laiton",
+    "Perles de verre"
+   ],
+   "ville": "Abidjan",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Treichville",
+   "annee": 2013,
+   "description": "Pendentifs, colliers et bracelets inspirés des poids à peser l'or akan. Parures de mariage sur commande.",
+   "produits": [
+    {
+     "id": "k6p1",
+     "nom": "Collier perles et pendentif",
+     "prix": 25000,
+     "delai": "1 semaine",
+     "desc": "",
+     "surMesure": false
+    },
+    {
+     "id": "k6p2",
+     "nom": "Parure de mariée",
+     "prix": 180000,
+     "delai": "1 mois",
+     "desc": "Collier, bracelets, boucles.",
+     "surMesure": true
+    }
+   ],
+   "visite": null,
+   "pros": "",
+   "restos": [],
+   "plats": [],
+   "tel": "+225 07 66 77 88 99",
+   "whatsapp": "2250766778899",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": true,
+   "sponsorise": false,
+   "vues": 740,
+   "created": "2026-09-19T15:05:54.217Z",
+   "events": []
+  },
+  {
+   "id": "k7",
+   "nom": "Calebasses gravées de Bouaké",
+   "artisan": "Ibrahim Konaté",
+   "accroche": "Bols et louches en calebasse, gravés à la main.",
+   "categorie": "Calebasses",
+   "kind": "calebasse",
+   "techniques": [
+    "Gravure au couteau",
+    "Pyrogravure"
+   ],
+   "materiaux": [
+    "Calebasse séchée"
+   ],
+   "ville": "Bouaké",
+   "pays": "Côte d'Ivoire",
+   "quartier": "Dar-es-Salam",
+   "annee": 2006,
+   "description": "Des bols pour servir le bissap, des louches et des plats de présentation. Ibrahim grave les motifs à la main et peut reproduire le nom d'un restaurant.",
+   "produits": [
+    {
+     "id": "k7p1",
+     "nom": "Bol gravé (lot de 4)",
+     "prix": 10000,
+     "delai": "1 semaine",
+     "desc": "",
+     "surMesure": false
+    },
+    {
+     "id": "k7p2",
+     "nom": "Plat de présentation gravé au nom du restaurant",
+     "prix": 15000,
+     "delai": "2 semaines",
+     "desc": "",
+     "surMesure": true
+    }
+   ],
+   "visite": {
+    "prix": 1500,
+    "duree": "45 min",
+    "details": "Gravure en direct."
+   },
+   "pros": "Vaisselle de service pour maquis.",
+   "restos": [
+    "r1",
+    "r3"
+   ],
+   "plats": [],
+   "tel": "+225 05 10 20 30 40",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "publie",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 390,
+   "created": "2026-10-04T15:05:54.217Z",
+   "events": [
+    "e4"
+   ]
+  },
+  {
+   "id": "k8",
+   "nom": "Maroquinerie Soumbédioune",
+   "artisan": "Moussa Diop",
+   "accroche": "Sacs et sandales en cuir, cousus main à Dakar.",
+   "categorie": "Maroquinerie",
+   "kind": "maroquinerie",
+   "techniques": [
+    "Couture main"
+   ],
+   "materiaux": [
+    "Cuir de chèvre"
+   ],
+   "ville": "Dakar",
+   "pays": "Sénégal",
+   "quartier": "Soumbédioune",
+   "annee": 2010,
+   "description": "Fiche en cours de vérification.",
+   "produits": [
+    {
+     "id": "k8p1",
+     "nom": "Sac besace",
+     "prix": 35000,
+     "delai": "2 semaines",
+     "desc": "",
+     "surMesure": false
+    }
+   ],
+   "visite": null,
+   "pros": "",
+   "restos": [],
+   "plats": [],
+   "tel": "+221 77 123 45 67",
+   "whatsapp": "",
+   "ownerId": null,
+   "statut": "en_attente",
+   "verifie": false,
+   "sponsorise": false,
+   "vues": 0,
+   "created": "2026-11-20T15:05:54.217Z",
+   "events": []
+  }
+ ],
+ "reviews": [
+  {
+   "id": "v1",
+   "userId": "u3",
+   "cible": "restaurant",
+   "cibleId": "r1",
+   "note": 5,
+   "texte": "Le meilleur capitaine braisé d'Angré, attiéké toujours frais. Service rapide même le samedi.",
+   "date": "2026-11-19T12:28:00.000Z",
+   "statut": "publie"
+  },
+  {
+   "id": "v2",
+   "userId": "u7",
+   "cible": "restaurant",
+   "cibleId": "r1",
+   "note": 4,
+   "texte": "Très bon, un peu d'attente le soir. Le bissap est top.",
+   "date": "2026-11-14T12:33:00.000Z",
+   "statut": "publie"
+  },
+  {
+   "id": "v3",
+   "userId": "u9",
+   "cible": "restaurant",
+   "cibleId": "r4",
+   "note": 5,
+   "texte": "Waakye comme à la maison. Shito parfait.",
+   "date": "2026-11-11T12:24:00.000Z",
+   "statut": "publie"
+  },
+  {
+   "id": "v4",
+   "userId": "u3",
+   "cible": "restaurant",
+   "cibleId": "r3",
+   "note": 4,
+   "texte": "Thiéb généreux, prévoir de venir tôt le vendredi.",
+   "date": "2026-11-08T12:15:00.000Z",
+   "statut": "publie"
+  },
+  {
+   "id": "v5",
+   "userId": "u8",
+   "cible": "restaurant",
+   "cibleId": "r2",
+   "note": 1,
+   "texte": "Arnaque !!! Allez voir ailleurs sur monsite-pascher.com",
+   "date": "2026-11-20T12:51:00.000Z",
+   "statut": "signale"
+  },
+  {
+   "id": "v6",
+   "userId": "u7",
+   "cible": "restaurant",
+   "cibleId": "r7",
+   "note": 5,
+   "texte": "Garba à 1000 qui cale pour la journée.",
+   "date": "2026-11-03T12:20:00.000Z",
+   "statut": "publie"
+  },
+  {
+   "id": "v7",
+   "userId": "u9",
+   "cible": "restaurant",
+   "cibleId": "r6",
+   "note": 3,
+   "texte": "Jollof bon mais un peu cher.",
+   "date": "2026-10-24T12:30:00.000Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv1",
+   "userId": "u3",
+   "cible": "troupe",
+   "cibleId": "t1",
+   "note": 5,
+   "texte": "Le masque zaouli a fait lever toute la salle. Très professionnels, à l'heure.",
+   "date": "2026-10-14T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv2",
+   "userId": "u7",
+   "cible": "troupe",
+   "cibleId": "t3",
+   "note": 5,
+   "texte": "Initiation coupé-décalé parfaite pour notre séminaire, tout le monde a dansé.",
+   "date": "2026-11-01T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv3",
+   "userId": "u9",
+   "cible": "troupe",
+   "cibleId": "t5",
+   "note": 4,
+   "texte": "Superbes costumes kente. Prévoir de l'espace pour les tambours.",
+   "date": "2026-10-19T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv4",
+   "userId": "u3",
+   "cible": "artiste",
+   "cibleId": "a3",
+   "note": 5,
+   "texte": "DJ Lagune a lu la salle toute la nuit. Playlist validée ensemble avant.",
+   "date": "2026-09-24T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv5",
+   "userId": "u7",
+   "cible": "artiste",
+   "cibleId": "a1",
+   "note": 5,
+   "texte": "Des louanges émouvantes pour le baptême de ma nièce, et la kora pendant le repas.",
+   "date": "2026-11-05T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv6",
+   "userId": "u2",
+   "cible": "artisan",
+   "cibleId": "k2",
+   "note": 5,
+   "texte": "Nos canaris de service viennent de Katiola : solides, et les clients les adorent.",
+   "date": "2026-10-26T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv7",
+   "userId": "u7",
+   "cible": "artisan",
+   "cibleId": "k2",
+   "note": 4,
+   "texte": "Belle pièce, délai respecté. Livraison à Abidjan un peu longue.",
+   "date": "2026-10-29T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv8",
+   "userId": "u3",
+   "cible": "artisan",
+   "cibleId": "k1",
+   "note": 5,
+   "texte": "Nappe magnifique, le tissage est serré et les couleurs tiennent au lavage.",
+   "date": "2026-11-08T15:05:54.217Z",
+   "statut": "publie"
+  },
+  {
+   "id": "cv9",
+   "userId": "u9",
+   "cible": "artiste",
+   "cibleId": "a2",
+   "note": 4,
+   "texte": "Le balafon en ouverture de soirée, quelle énergie !",
+   "date": "2026-10-04T15:05:54.217Z",
+   "statut": "publie"
+  }
+ ],
+ "adSlots": [
+  {
+   "id": "home_hero",
+   "nom": "Accueil — slide du carrousel",
+   "page": "Accueil",
+   "format": "slide",
+   "dims": "Plein écran · 1600×640",
+   "prixJour": 50000,
+   "actif": true
+  },
+  {
+   "id": "home_leader",
+   "nom": "Accueil — bannière horizontale",
+   "page": "Accueil",
+   "format": "leaderboard",
+   "dims": "970×120",
+   "prixJour": 25000,
+   "actif": true
+  },
+  {
+   "id": "annuaire_native",
+   "nom": "Annuaire — carte sponsorisée",
+   "page": "Restaurants",
+   "format": "native",
+   "dims": "Carte 4:3",
+   "prixJour": 15000,
+   "actif": true
+  },
+  {
+   "id": "annuaire_leader",
+   "nom": "Annuaire — bannière haute",
+   "page": "Restaurants",
+   "format": "leaderboard",
+   "dims": "970×120",
+   "prixJour": 15000,
+   "actif": true
+  },
+  {
+   "id": "resto_side",
+   "nom": "Fiche restaurant — encart latéral",
+   "page": "Fiche restaurant",
+   "format": "rectangle",
+   "dims": "300×250",
+   "prixJour": 10000,
+   "actif": true
+  },
+  {
+   "id": "plat_side",
+   "nom": "Encyclopédie — encart latéral",
+   "page": "Fiche plat",
+   "format": "rectangle",
+   "dims": "300×250",
+   "prixJour": 8000,
+   "actif": true
+  },
+  {
+   "id": "article_side",
+   "nom": "Article — encart latéral",
+   "page": "Article",
+   "format": "rectangle",
+   "dims": "300×250",
+   "prixJour": 10000,
+   "actif": true
+  },
+  {
+   "id": "article_inline",
+   "nom": "Article — bannière dans le texte",
+   "page": "Article",
+   "format": "leaderboard",
+   "dims": "728×120",
+   "prixJour": 12000,
+   "actif": true
+  },
+  {
+   "id": "events_native",
+   "nom": "Agenda — carte sponsorisée",
+   "page": "Événements",
+   "format": "native",
+   "dims": "Carte 4:3",
+   "prixJour": 12000,
+   "actif": true
+  },
+  {
+   "id": "events_banner",
+   "nom": "Agenda — bannière haute",
+   "page": "Événements",
+   "format": "leaderboard",
+   "dims": "970×120",
+   "prixJour": 20000,
+   "actif": true
+  },
+  {
+   "id": "home_native",
+   "nom": "Accueil — carte dans la sélection",
+   "page": "Accueil",
+   "format": "native",
+   "dims": "Carte 4:3",
+   "prixJour": 20000,
+   "actif": true
+  },
+  {
+   "id": "home_duo",
+   "nom": "Accueil — encart partenaires",
+   "page": "Accueil",
+   "format": "rectangle",
+   "dims": "600×300",
+   "prixJour": 18000,
+   "actif": true
+  },
+  {
+   "id": "member_dash",
+   "nom": "Espace membre — encart",
+   "page": "Mon compte",
+   "format": "rectangle",
+   "dims": "300×250",
+   "prixJour": 8000,
+   "actif": true
+  },
+  {
+   "id": "footer_leader",
+   "nom": "Pied de page — bannière",
+   "page": "Toutes les pages",
+   "format": "leaderboard",
+   "dims": "970×120",
+   "prixJour": 8000,
+   "actif": true
+  },
+  {
+   "id": "culture_leader",
+   "nom": "Culture — bannière haute",
+   "page": "Danse, prestations, artisans",
+   "format": "leaderboard",
+   "dims": "970×120",
+   "prixJour": 15000,
+   "actif": true
+  },
+  {
+   "id": "culture_native",
+   "nom": "Culture — carte sponsorisée",
+   "page": "Danse, prestations, artisans",
+   "format": "native",
+   "dims": "Carte 4:3",
+   "prixJour": 12000,
+   "actif": true
+  },
+  {
+   "id": "culture_side",
+   "nom": "Fiche artiste / artisan — encart latéral",
+   "page": "Fiches culture",
+   "format": "rectangle",
+   "dims": "300×250",
+   "prixJour": 9000,
+   "actif": true
+  }
+ ],
+ "campagnes": [
+  {
+   "id": "k1",
+   "annonceur": "Banque Atlantique Lagune",
+   "userId": null,
+   "slotId": "home_hero",
+   "debut": "2026-11-13T12:10:00.000Z",
+   "fin": "2026-12-23T18:00:00.000Z",
+   "statut": "active",
+   "montant": 2000000,
+   "creative": {
+    "titre": "Payez vos sorties en un geste",
+    "texte": "Carte Lagune sans contact : -10 % sur les billets des événements Trôofê.",
+    "cta": "Découvrir l'offre",
+    "lien": "#evenements",
+    "couleur": "nuit",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 2593,
+     "c": 27
+    },
+    "2026-11-11": {
+     "i": 3230,
+     "c": 36
+    },
+    "2026-11-12": {
+     "i": 3868,
+     "c": 46
+    },
+    "2026-11-13": {
+     "i": 2380,
+     "c": 30
+    },
+    "2026-11-14": {
+     "i": 3018,
+     "c": 41
+    },
+    "2026-11-15": {
+     "i": 3655,
+     "c": 53
+    },
+    "2026-11-16": {
+     "i": 4293,
+     "c": 41
+    },
+    "2026-11-17": {
+     "i": 2805,
+     "c": 29
+    },
+    "2026-11-18": {
+     "i": 3443,
+     "c": 39
+    },
+    "2026-11-19": {
+     "i": 4080,
+     "c": 49
+    },
+    "2026-11-20": {
+     "i": 2593,
+     "c": 33
+    },
+    "2026-11-21": {
+     "i": 3230,
+     "c": 44
+    },
+    "2026-11-22": {
+     "i": 3868,
+     "c": 56
+    },
+    "2026-11-23": {
+     "i": 2380,
+     "c": 23
+    }
+   }
+  },
+  {
+   "id": "k2",
+   "annonceur": "Maquis Chez Tantie Rose",
+   "userId": "u2",
+   "slotId": "annuaire_native",
+   "debut": "2026-11-03T12:20:00.000Z",
+   "fin": "2026-12-03T18:00:00.000Z",
+   "statut": "active",
+   "montant": 450000,
+   "creative": {
+    "titre": "Le capitaine braisé d'Angré",
+    "texte": "Attiéké frais du jour, livraison à Cocody en 35 min.",
+    "cta": "Commander",
+    "lien": "#restaurant--r1",
+    "couleur": "terre",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 1144,
+     "c": 51
+    },
+    "2026-11-11": {
+     "i": 1425,
+     "c": 68
+    },
+    "2026-11-12": {
+     "i": 1706,
+     "c": 87
+    },
+    "2026-11-13": {
+     "i": 1050,
+     "c": 57
+    },
+    "2026-11-14": {
+     "i": 1331,
+     "c": 77
+    },
+    "2026-11-15": {
+     "i": 1613,
+     "c": 99
+    },
+    "2026-11-16": {
+     "i": 1894,
+     "c": 77
+    },
+    "2026-11-17": {
+     "i": 1238,
+     "c": 55
+    },
+    "2026-11-18": {
+     "i": 1519,
+     "c": 72
+    },
+    "2026-11-19": {
+     "i": 1800,
+     "c": 92
+    },
+    "2026-11-20": {
+     "i": 1144,
+     "c": 62
+    },
+    "2026-11-21": {
+     "i": 1425,
+     "c": 82
+    },
+    "2026-11-22": {
+     "i": 1706,
+     "c": 104
+    },
+    "2026-11-23": {
+     "i": 1050,
+     "c": 43
+    }
+   }
+  },
+  {
+   "id": "k3",
+   "annonceur": "Accra Chop Bar",
+   "userId": null,
+   "slotId": "annuaire_native",
+   "debut": "2026-11-18T12:05:00.000Z",
+   "fin": "2026-12-18T18:00:00.000Z",
+   "statut": "active",
+   "montant": 450000,
+   "creative": {
+    "titre": "Waakye du matin à Osu",
+    "texte": "Le chop bar qui nourrit Osu depuis 2009.",
+    "cta": "Voir la fiche",
+    "lien": "#restaurant--r4",
+    "couleur": "vert",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 610,
+     "c": 20
+    },
+    "2026-11-11": {
+     "i": 760,
+     "c": 27
+    },
+    "2026-11-12": {
+     "i": 910,
+     "c": 35
+    },
+    "2026-11-13": {
+     "i": 560,
+     "c": 23
+    },
+    "2026-11-14": {
+     "i": 710,
+     "c": 31
+    },
+    "2026-11-15": {
+     "i": 860,
+     "c": 39
+    },
+    "2026-11-16": {
+     "i": 1010,
+     "c": 31
+    },
+    "2026-11-17": {
+     "i": 660,
+     "c": 22
+    },
+    "2026-11-18": {
+     "i": 810,
+     "c": 29
+    },
+    "2026-11-19": {
+     "i": 960,
+     "c": 36
+    },
+    "2026-11-20": {
+     "i": 610,
+     "c": 25
+    },
+    "2026-11-21": {
+     "i": 760,
+     "c": 33
+    },
+    "2026-11-22": {
+     "i": 910,
+     "c": 41
+    },
+    "2026-11-23": {
+     "i": 560,
+     "c": 17
+    }
+   }
+  },
+  {
+   "id": "k4",
+   "annonceur": "Orange Money CI",
+   "userId": null,
+   "slotId": "article_side",
+   "debut": "2026-11-28T18:00:00.000Z",
+   "fin": "2026-12-28T18:00:00.000Z",
+   "statut": "programmee",
+   "montant": 300000,
+   "creative": {
+    "titre": "Payez vos maquis en Mobile Money",
+    "texte": "Zéro frais sur les paiements Trôofê jusqu'au 31 décembre.",
+    "cta": "En savoir plus",
+    "lien": "#partenaire",
+    "couleur": "ocre",
+    "image": null
+   },
+   "stats": {}
+  },
+  {
+   "id": "k5",
+   "annonceur": "Brasserie du Golfe",
+   "userId": null,
+   "slotId": "events_banner",
+   "debut": "2026-11-08T12:15:00.000Z",
+   "fin": "2027-01-07T18:00:00.000Z",
+   "statut": "active",
+   "montant": 1350000,
+   "creative": {
+    "titre": "Brasserie du Golfe",
+    "texte": "Gingembre, bissap et bière locale servis frais à tous vos événements.",
+    "cta": "Voir l'agenda",
+    "lien": "#evenements",
+    "couleur": "brun",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 1601,
+     "c": 26
+    },
+    "2026-11-11": {
+     "i": 1995,
+     "c": 35
+    },
+    "2026-11-12": {
+     "i": 2389,
+     "c": 45
+    },
+    "2026-11-13": {
+     "i": 1470,
+     "c": 30
+    },
+    "2026-11-14": {
+     "i": 1864,
+     "c": 40
+    },
+    "2026-11-15": {
+     "i": 2258,
+     "c": 51
+    },
+    "2026-11-16": {
+     "i": 2651,
+     "c": 40
+    },
+    "2026-11-17": {
+     "i": 1733,
+     "c": 29
+    },
+    "2026-11-18": {
+     "i": 2126,
+     "c": 38
+    },
+    "2026-11-19": {
+     "i": 2520,
+     "c": 48
+    },
+    "2026-11-20": {
+     "i": 1601,
+     "c": 32
+    },
+    "2026-11-21": {
+     "i": 1995,
+     "c": 43
+    },
+    "2026-11-22": {
+     "i": 2389,
+     "c": 54
+    },
+    "2026-11-23": {
+     "i": 1470,
+     "c": 22
+    }
+   }
+  },
+  {
+   "id": "k6",
+   "annonceur": "Café Ziama",
+   "userId": null,
+   "slotId": "resto_side",
+   "debut": "2026-11-15T12:56:00.000Z",
+   "fin": "2026-12-15T18:00:00.000Z",
+   "statut": "active",
+   "montant": 300000,
+   "creative": {
+    "titre": "Café Ziama, origine Guinée",
+    "texte": "Arabica de montagne torréfié à Abidjan. Livré en 24 h.",
+    "cta": "Goûter",
+    "lien": "#partenaire",
+    "couleur": "terre",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 686,
+     "c": 16
+    },
+    "2026-11-11": {
+     "i": 855,
+     "c": 22
+    },
+    "2026-11-12": {
+     "i": 1024,
+     "c": 28
+    },
+    "2026-11-13": {
+     "i": 630,
+     "c": 18
+    },
+    "2026-11-14": {
+     "i": 799,
+     "c": 24
+    },
+    "2026-11-15": {
+     "i": 968,
+     "c": 31
+    },
+    "2026-11-16": {
+     "i": 1136,
+     "c": 25
+    },
+    "2026-11-17": {
+     "i": 743,
+     "c": 17
+    },
+    "2026-11-18": {
+     "i": 911,
+     "c": 23
+    },
+    "2026-11-19": {
+     "i": 1080,
+     "c": 29
+    },
+    "2026-11-20": {
+     "i": 686,
+     "c": 20
+    },
+    "2026-11-21": {
+     "i": 855,
+     "c": 26
+    },
+    "2026-11-22": {
+     "i": 1024,
+     "c": 33
+    },
+    "2026-11-23": {
+     "i": 630,
+     "c": 14
+    }
+   }
+  },
+  {
+   "id": "k7",
+   "annonceur": "Moulins d'Abidjan",
+   "userId": null,
+   "slotId": "home_leader",
+   "debut": "2026-11-11T12:24:00.000Z",
+   "fin": "2026-12-11T18:00:00.000Z",
+   "statut": "active",
+   "montant": 750000,
+   "creative": {
+    "titre": "Ateliers pâtisserie Moulins d'Abidjan",
+    "texte": "Inscription gratuite : 20 places par session, chaque samedi.",
+    "cta": "Réserver",
+    "lien": "#evenements",
+    "couleur": "ocre",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 1982,
+     "c": 27
+    },
+    "2026-11-11": {
+     "i": 2470,
+     "c": 37
+    },
+    "2026-11-12": {
+     "i": 2958,
+     "c": 47
+    },
+    "2026-11-13": {
+     "i": 1820,
+     "c": 31
+    },
+    "2026-11-14": {
+     "i": 2308,
+     "c": 42
+    },
+    "2026-11-15": {
+     "i": 2795,
+     "c": 54
+    },
+    "2026-11-16": {
+     "i": 3283,
+     "c": 42
+    },
+    "2026-11-17": {
+     "i": 2145,
+     "c": 30
+    },
+    "2026-11-18": {
+     "i": 2633,
+     "c": 39
+    },
+    "2026-11-19": {
+     "i": 3120,
+     "c": 50
+    },
+    "2026-11-20": {
+     "i": 1982,
+     "c": 34
+    },
+    "2026-11-21": {
+     "i": 2470,
+     "c": 45
+    },
+    "2026-11-22": {
+     "i": 2958,
+     "c": 57
+    },
+    "2026-11-23": {
+     "i": 1820,
+     "c": 23
+    }
+   }
+  },
+  {
+   "id": "k8",
+   "annonceur": "Teranga Saveurs",
+   "userId": "u5",
+   "slotId": "events_native",
+   "debut": "2026-11-20T12:51:00.000Z",
+   "fin": "2026-12-20T18:00:00.000Z",
+   "statut": "active",
+   "montant": 360000,
+   "creative": {
+    "titre": "Dîner-concert afro-jazz",
+    "texte": "Menu sénégalais en quatre temps et quartet live.",
+    "cta": "Réserver",
+    "lien": "#restaurant--r3",
+    "couleur": "vert",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 458,
+     "c": 17
+    },
+    "2026-11-11": {
+     "i": 570,
+     "c": 23
+    },
+    "2026-11-12": {
+     "i": 683,
+     "c": 30
+    },
+    "2026-11-13": {
+     "i": 420,
+     "c": 20
+    },
+    "2026-11-14": {
+     "i": 533,
+     "c": 27
+    },
+    "2026-11-15": {
+     "i": 645,
+     "c": 34
+    },
+    "2026-11-16": {
+     "i": 758,
+     "c": 27
+    },
+    "2026-11-17": {
+     "i": 495,
+     "c": 19
+    },
+    "2026-11-18": {
+     "i": 608,
+     "c": 25
+    },
+    "2026-11-19": {
+     "i": 720,
+     "c": 32
+    },
+    "2026-11-20": {
+     "i": 458,
+     "c": 21
+    },
+    "2026-11-21": {
+     "i": 570,
+     "c": 28
+    },
+    "2026-11-22": {
+     "i": 683,
+     "c": 36
+    },
+    "2026-11-23": {
+     "i": 420,
+     "c": 15
+    }
+   }
+  },
+  {
+   "id": "k9",
+   "annonceur": "Le Kedjenou Royal",
+   "userId": "u2",
+   "slotId": "member_dash",
+   "debut": "2026-11-25T18:00:00.000Z",
+   "fin": "2026-12-09T18:00:00.000Z",
+   "statut": "en_attente",
+   "montant": 112000,
+   "creative": {
+    "titre": "-15 % le midi au Plateau",
+    "texte": "Sur présentation de votre compte Trôofê, du lundi au vendredi.",
+    "cta": "Voir le menu",
+    "lien": "#restaurant--r2",
+    "couleur": "brun",
+    "image": null
+   },
+   "stats": {}
+  },
+  {
+   "id": "k11",
+   "annonceur": "Kpata Jus",
+   "userId": null,
+   "slotId": "annuaire_leader",
+   "debut": "2026-11-17T12:42:00.000Z",
+   "fin": "2026-12-17T18:00:00.000Z",
+   "statut": "active",
+   "montant": 450000,
+   "creative": {
+    "titre": "Bissap, gingembre, tamarin",
+    "texte": "Jus pressés à Abidjan, livrés frais en bouteille consignée.",
+    "cta": "Commander",
+    "lien": "#annonceurs",
+    "couleur": "vert",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 991,
+     "c": 27
+    },
+    "2026-11-11": {
+     "i": 1235,
+     "c": 36
+    },
+    "2026-11-12": {
+     "i": 1479,
+     "c": 46
+    },
+    "2026-11-13": {
+     "i": 910,
+     "c": 30
+    },
+    "2026-11-14": {
+     "i": 1154,
+     "c": 41
+    },
+    "2026-11-15": {
+     "i": 1398,
+     "c": 52
+    },
+    "2026-11-16": {
+     "i": 1641,
+     "c": 41
+    },
+    "2026-11-17": {
+     "i": 1073,
+     "c": 29
+    },
+    "2026-11-18": {
+     "i": 1316,
+     "c": 38
+    },
+    "2026-11-19": {
+     "i": 1560,
+     "c": 48
+    },
+    "2026-11-20": {
+     "i": 991,
+     "c": 33
+    },
+    "2026-11-21": {
+     "i": 1235,
+     "c": 43
+    },
+    "2026-11-22": {
+     "i": 1479,
+     "c": 55
+    },
+    "2026-11-23": {
+     "i": 910,
+     "c": 23
+    }
+   }
+  },
+  {
+   "id": "k12",
+   "annonceur": "Café Ziama",
+   "userId": null,
+   "slotId": "home_native",
+   "debut": "2026-11-19T12:28:00.000Z",
+   "fin": "2026-12-19T18:00:00.000Z",
+   "statut": "active",
+   "montant": 600000,
+   "creative": {
+    "titre": "Le café de montagne, torréfié à Abidjan",
+    "texte": "Arabica de Guinée livré en 24 h dans tout Abidjan.",
+    "cta": "Goûter",
+    "lien": "#annonceurs",
+    "couleur": "terre",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 1678,
+     "c": 49
+    },
+    "2026-11-11": {
+     "i": 2090,
+     "c": 66
+    },
+    "2026-11-12": {
+     "i": 2503,
+     "c": 85
+    },
+    "2026-11-13": {
+     "i": 1540,
+     "c": 56
+    },
+    "2026-11-14": {
+     "i": 1953,
+     "c": 75
+    },
+    "2026-11-15": {
+     "i": 2365,
+     "c": 96
+    },
+    "2026-11-16": {
+     "i": 2778,
+     "c": 76
+    },
+    "2026-11-17": {
+     "i": 1815,
+     "c": 53
+    },
+    "2026-11-18": {
+     "i": 2228,
+     "c": 71
+    },
+    "2026-11-19": {
+     "i": 2640,
+     "c": 90
+    },
+    "2026-11-20": {
+     "i": 1678,
+     "c": 61
+    },
+    "2026-11-21": {
+     "i": 2090,
+     "c": 81
+    },
+    "2026-11-22": {
+     "i": 2503,
+     "c": 102
+    },
+    "2026-11-23": {
+     "i": 1540,
+     "c": 42
+    }
+   }
+  },
+  {
+   "id": "k13",
+   "annonceur": "Orange Money CI",
+   "userId": null,
+   "slotId": "home_duo",
+   "debut": "2026-11-16T12:19:00.000Z",
+   "fin": "2026-12-16T18:00:00.000Z",
+   "statut": "active",
+   "montant": 540000,
+   "creative": {
+    "titre": "Zéro frais sur vos commandes",
+    "texte": "Payez vos maquis en Mobile Money, sans frais jusqu'au 31 décembre.",
+    "cta": "En savoir plus",
+    "lien": "#restaurants",
+    "couleur": "ocre",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 1449,
+     "c": 36
+    },
+    "2026-11-11": {
+     "i": 1805,
+     "c": 49
+    },
+    "2026-11-12": {
+     "i": 2161,
+     "c": 63
+    },
+    "2026-11-13": {
+     "i": 1330,
+     "c": 41
+    },
+    "2026-11-14": {
+     "i": 1686,
+     "c": 55
+    },
+    "2026-11-15": {
+     "i": 2043,
+     "c": 71
+    },
+    "2026-11-16": {
+     "i": 2399,
+     "c": 56
+    },
+    "2026-11-17": {
+     "i": 1568,
+     "c": 39
+    },
+    "2026-11-18": {
+     "i": 1924,
+     "c": 52
+    },
+    "2026-11-19": {
+     "i": 2280,
+     "c": 66
+    },
+    "2026-11-20": {
+     "i": 1449,
+     "c": 45
+    },
+    "2026-11-21": {
+     "i": 1805,
+     "c": 59
+    },
+    "2026-11-22": {
+     "i": 2161,
+     "c": 75
+    },
+    "2026-11-23": {
+     "i": 1330,
+     "c": 31
+    }
+   }
+  },
+  {
+   "id": "k14",
+   "annonceur": "Moulins d'Abidjan",
+   "userId": null,
+   "slotId": "home_duo",
+   "debut": "2026-11-21T12:14:00.000Z",
+   "fin": "2026-12-21T18:00:00.000Z",
+   "statut": "active",
+   "montant": 540000,
+   "creative": {
+    "titre": "La farine des pâtissiers d'Abidjan",
+    "texte": "Recettes, ateliers et livraison aux professionnels.",
+    "cta": "Découvrir",
+    "lien": "#evenements",
+    "couleur": "vert",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 1296,
+     "c": 25
+    },
+    "2026-11-11": {
+     "i": 1615,
+     "c": 33
+    },
+    "2026-11-12": {
+     "i": 1934,
+     "c": 43
+    },
+    "2026-11-13": {
+     "i": 1190,
+     "c": 28
+    },
+    "2026-11-14": {
+     "i": 1509,
+     "c": 38
+    },
+    "2026-11-15": {
+     "i": 1828,
+     "c": 48
+    },
+    "2026-11-16": {
+     "i": 2146,
+     "c": 38
+    },
+    "2026-11-17": {
+     "i": 1403,
+     "c": 27
+    },
+    "2026-11-18": {
+     "i": 1721,
+     "c": 35
+    },
+    "2026-11-19": {
+     "i": 2040,
+     "c": 45
+    },
+    "2026-11-20": {
+     "i": 1296,
+     "c": 30
+    },
+    "2026-11-21": {
+     "i": 1615,
+     "c": 40
+    },
+    "2026-11-22": {
+     "i": 1934,
+     "c": 51
+    },
+    "2026-11-23": {
+     "i": 1190,
+     "c": 21
+    }
+   }
+  },
+  {
+   "id": "k10",
+   "annonceur": "Brasserie du Golfe",
+   "userId": null,
+   "slotId": "footer_leader",
+   "debut": "2026-09-24T12:00:00.000Z",
+   "fin": "2026-11-08T12:15:00.000Z",
+   "statut": "terminee",
+   "montant": 360000,
+   "creative": {
+    "titre": "Bissap Golfe",
+    "texte": "Le bissap en bouteille consignée.",
+    "cta": "Découvrir",
+    "lien": "#evenements",
+    "couleur": "brun",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 534,
+     "c": 10
+    },
+    "2026-11-11": {
+     "i": 665,
+     "c": 13
+    },
+    "2026-11-12": {
+     "i": 796,
+     "c": 17
+    },
+    "2026-11-13": {
+     "i": 490,
+     "c": 11
+    },
+    "2026-11-14": {
+     "i": 621,
+     "c": 15
+    },
+    "2026-11-15": {
+     "i": 753,
+     "c": 19
+    },
+    "2026-11-16": {
+     "i": 884,
+     "c": 15
+    },
+    "2026-11-17": {
+     "i": 578,
+     "c": 11
+    },
+    "2026-11-18": {
+     "i": 709,
+     "c": 14
+    },
+    "2026-11-19": {
+     "i": 840,
+     "c": 18
+    },
+    "2026-11-20": {
+     "i": 534,
+     "c": 12
+    },
+    "2026-11-21": {
+     "i": 665,
+     "c": 16
+    },
+    "2026-11-22": {
+     "i": 796,
+     "c": 20
+    },
+    "2026-11-23": {
+     "i": 490,
+     "c": 8
+    }
+   }
+  },
+  {
+   "id": "kc1",
+   "annonceur": "Brasserie du Golfe",
+   "userId": null,
+   "slotId": "culture_leader",
+   "debut": "2026-11-17T15:05:54.217Z",
+   "fin": "2026-12-17T12:00:00.000Z",
+   "statut": "active",
+   "montant": 450000,
+   "creative": {
+    "titre": "La fête a sa boisson",
+    "texte": "Gingembre, bissap et bière locale servis frais à vos mariages et soirées.",
+    "cta": "Découvrir",
+    "lien": "#culture",
+    "couleur": "brun",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 686,
+     "c": 19
+    },
+    "2026-11-11": {
+     "i": 855,
+     "c": 24
+    },
+    "2026-11-12": {
+     "i": 1024,
+     "c": 29
+    },
+    "2026-11-13": {
+     "i": 630,
+     "c": 18
+    },
+    "2026-11-14": {
+     "i": 799,
+     "c": 22
+    },
+    "2026-11-15": {
+     "i": 968,
+     "c": 27
+    },
+    "2026-11-16": {
+     "i": 1136,
+     "c": 32
+    },
+    "2026-11-17": {
+     "i": 743,
+     "c": 21
+    },
+    "2026-11-18": {
+     "i": 911,
+     "c": 26
+    },
+    "2026-11-19": {
+     "i": 1080,
+     "c": 30
+    },
+    "2026-11-20": {
+     "i": 686,
+     "c": 19
+    },
+    "2026-11-21": {
+     "i": 855,
+     "c": 24
+    },
+    "2026-11-22": {
+     "i": 1024,
+     "c": 29
+    },
+    "2026-11-23": {
+     "i": 630,
+     "c": 18
+    }
+   }
+  },
+  {
+   "id": "kc2",
+   "annonceur": "Orange Money CI",
+   "userId": null,
+   "slotId": "culture_side",
+   "debut": "2026-11-20T15:05:54.217Z",
+   "fin": "2026-12-20T12:00:00.000Z",
+   "statut": "active",
+   "montant": 270000,
+   "creative": {
+    "titre": "Payez l'acompte en Mobile Money",
+    "texte": "Réglez vos artistes et artisans sans frais jusqu'au 31 décembre.",
+    "cta": "En savoir plus",
+    "lien": "#culture",
+    "couleur": "ocre",
+    "image": null
+   },
+   "stats": {
+    "2026-11-10": {
+     "i": 458,
+     "c": 13
+    },
+    "2026-11-11": {
+     "i": 570,
+     "c": 16
+    },
+    "2026-11-12": {
+     "i": 683,
+     "c": 19
+    },
+    "2026-11-13": {
+     "i": 420,
+     "c": 12
+    },
+    "2026-11-14": {
+     "i": 533,
+     "c": 15
+    },
+    "2026-11-15": {
+     "i": 645,
+     "c": 18
+    },
+    "2026-11-16": {
+     "i": 758,
+     "c": 21
+    },
+    "2026-11-17": {
+     "i": 495,
+     "c": 14
+    },
+    "2026-11-18": {
+     "i": 608,
+     "c": 17
+    },
+    "2026-11-19": {
+     "i": 720,
+     "c": 20
+    },
+    "2026-11-20": {
+     "i": 458,
+     "c": 13
+    },
+    "2026-11-21": {
+     "i": 570,
+     "c": 16
+    },
+    "2026-11-22": {
+     "i": 683,
+     "c": 19
+    },
+    "2026-11-23": {
+     "i": 420,
+     "c": 12
+    }
+   }
+  }
+ ],
+ "extractedAt": "2026-11-23T15:06:17Z"
+}

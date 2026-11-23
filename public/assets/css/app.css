@@ -1,0 +1,36 @@
+/* Trôofê — compléments au thème pour la version Laravel */
+.avatar-i{ display:inline-grid; place-items:center; border-radius:50%; background:var(--brun); color:var(--brun-ink); font-weight:700; flex:none; }
+.date-chip{ position:absolute; left:.75rem; bottom:.75rem; background:var(--surface); color:var(--ink); border-radius:10px; padding:.25rem .55rem; text-align:center; line-height:1.05; box-shadow:var(--shadow); }
+.date-chip b{ display:block; font-family:var(--f-display); font-size:1.2rem; } .date-chip span{ font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; }
+.review-reply{ background:var(--surface-2); border-left:3px solid var(--ocre); border-radius:8px; padding:.6rem .8rem; }
+.rating-input{ display:inline-flex; flex-direction:row-reverse; gap:.15rem; }
+.rating-input input{ position:absolute; opacity:0; pointer-events:none; }
+.rating-input label{ font-size:1.5rem; color:var(--line); cursor:pointer; transition:color .15s; }
+.rating-input input:checked ~ label,.rating-input label:hover,.rating-input label:hover ~ label{ color:var(--ocre); }
+.rating-input input:focus-visible + label{ outline:2px solid var(--ocre); border-radius:4px; }
+.foot-news .form-control{ background:rgba(255,255,255,.08); border-color:rgba(251,244,234,.25); color:var(--brand-ink, #FBF4EA); }
+.foot-news .form-control::placeholder{ color:rgba(251,244,234,.55); }
+.flash{ animation:flashIn .4s ease both; } @keyframes flashIn{ from{ opacity:0; transform:translateY(-6px); } }
+.notice.ok{ background:color-mix(in srgb, var(--ok, #2F7A4A) 12%, var(--surface)); } .notice.ok i{ color:var(--ok, #2F7A4A); }
+.pal-res .pal-group{ font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:1rem 0 .4rem; }
+.pal-res a{ display:flex; gap:.75rem; align-items:center; padding:.5rem .6rem; border-radius:10px; color:var(--ink); }
+.pal-res a:hover,.pal-res a.on{ background:var(--surface-2); }
+.pal-res img{ width:44px; height:44px; border-radius:8px; object-fit:cover; flex:none; }
+.qty{ display:inline-flex; align-items:center; gap:.25rem; } .qty input{ width:3rem; text-align:center; padding:.25rem; }
+.order-bar{ position:sticky; bottom:0; z-index:20; background:var(--surface); border-top:1px solid var(--line); box-shadow:0 -8px 24px rgba(0,0,0,.06); }
+.ticket-card{ border:1px dashed var(--line); border-radius:var(--r); padding:1.25rem; background:var(--surface); display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:center; }
+.ticket-card svg{ width:140px; height:140px; }
+.ticket-card.used{ opacity:.55; }
+.space{ display:grid; grid-template-columns:240px minmax(0,1fr); gap:1.5rem; align-items:start; }
+@media (max-width:900px){ .space{ grid-template-columns:1fr; } }
+.space-nav a{ display:flex; gap:.6rem; align-items:center; padding:.55rem .75rem; border-radius:10px; color:var(--ink); }
+.space-nav a.on,.space-nav a:hover{ background:var(--ocre-soft); color:var(--ink); }
+.space-nav .n{ margin-left:auto; font-size:.72rem; background:var(--bad); color:#fff; border-radius:999px; padding:0 .45rem; }
+.plan-card{ border:1px solid var(--line); border-radius:var(--r); padding:1.5rem; background:var(--surface); display:flex; flex-direction:column; gap:.5rem; height:100%; }
+.plan-card.feat{ border-color:var(--brun); box-shadow:0 0 0 1px var(--brun) inset; }
+.plan-card .price{ font-family:var(--f-display); font-weight:800; font-size:2rem; color:var(--brun); line-height:1; }
+.plan-card ul{ list-style:none; padding:0; margin:.5rem 0 1rem; display:grid; gap:.35rem; font-size:.92rem; }
+.plan-card li i{ color:var(--ok, #2F7A4A); margin-right:.35rem; }
+.form-label{ font-weight:600; font-size:.88rem; }
+.auth-card{ max-width:480px; margin-inline:auto; }
+.min-w-0{ min-width:0; }

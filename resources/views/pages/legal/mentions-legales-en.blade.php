@@ -1,0 +1,1 @@
+<div class="notice warn"><i class="bi bi-pencil-square"></i><div>Text to be written and approved by your legal adviser before going live (company details, registration number, host, publisher, data retention, user rights, terms of sale and refunds).</div></div>
