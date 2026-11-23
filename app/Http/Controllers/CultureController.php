@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Restaurant;
 use App\Models\Talent;
+use App\Support\SchemaOrg;
+use App\Support\Faq;
 use Illuminate\Http\Request;
 
 class CultureController extends Controller
@@ -11,6 +13,10 @@ class CultureController extends Controller
     public function hub()
     {
         $byType = collect(array_keys(Talent::TYPES))->mapWithKeys(fn ($t) => [$t => Talent::published()->ofType($t)->with('offers')->orderByDesc('is_featured')->orderByDesc('views')->get()]);
+
+        seo()->title(__('Groupes de danse, artistes et artisans africains à réserver'))
+            ->description(__('Réservez une troupe de danse traditionnelle, un griot, un DJ ou un orchestre, commandez aux artisans d\'Afrique de l\'Ouest. Disponibilités en direct et devis en ligne.'))
+            ->schema(SchemaOrg::breadcrumbs([__('Culture') => null]));
 
         return view('culture.hub', [
             'byType' => $byType,
@@ -45,10 +51,18 @@ class CultureController extends Controller
 
         $all = Talent::published()->ofType($t);
 
+        $meta = Talent::TYPES[$t];
+        $city = $f['ville'] ?? null;
+        $list = $query->paginate(12)->withQueryString();
+        seo()->title($city ? __(':type à :city', ['type' => __($meta['plural']), 'city' => $city]) : __(':type : annuaire et réservation en ligne', ['type' => __($meta['plural'])]))
+            ->description(__($meta['lead']))
+            ->schema(SchemaOrg::breadcrumbs([__('Culture') => route('culture.hub'), __($meta['plural']) => null]))
+            ->schema(SchemaOrg::itemList($list->getCollection(), fn ($x) => $x->url(), fn ($x) => $x->name));
+
         return view('culture.index', [
             'type' => $t,
             'meta' => Talent::TYPES[$t],
-            'talents' => $query->paginate(12)->withQueryString(),
+            'talents' => $list,
             'categories' => (clone $all)->distinct()->orderBy('category')->pluck('category'),
             'cities' => (clone $all)->distinct()->orderBy('city')->pluck('city'),
             'occasions' => (clone $all)->pluck('audiences')->flatten()->filter()->unique()->sort()->values(),
@@ -78,6 +92,16 @@ class CultureController extends Controller
             return ['date' => $k, 'day' => $d->day, 'month' => $i === 0 || $d->day === 1 ? $d->locale(app()->getLocale())->isoFormat('MMM') : null,
                 'state' => $busy->contains($k) ? 'busy' : ($k < now()->toDateString() || $k < $earliest ? 'off' : 'free'), 'today' => $d->isToday()];
         });
+
+        seo()->title($talent->tr('seo_title') ?: __(':name — :category à :city', ['name' => $talent->name, 'category' => mb_strtolower(__($talent->category)), 'city' => $talent->city]))
+            ->description($talent->tr('seo_description') ?: $talent->tr('tagline').' '.$talent->tr('description'))
+            ->image($talent->coverUrl())->type('profile')
+            ->schema(SchemaOrg::talent($talent))
+            ->schema(SchemaOrg::breadcrumbs([__('Culture') => route('culture.hub'), __($talent->meta('plural')) => route('culture.index', $talent->meta('route')), $talent->name => null]))
+            ->faq(Faq::talent($talent));
+        if (! $talent->isPublished()) {
+            seo()->noindex();
+        }
 
         return view('culture.show', [
             'talent' => $talent,

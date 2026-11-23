@@ -17,6 +17,8 @@ class AdController extends Controller
 
     public function index()
     {
+        seo()->title(__('Publicité : annoncer sur Trôofê'))->description(__('Bannières, cartes sponsorisées et encarts sur les pages restaurants, culture et agenda. Tarifs à la journée, paiement Mobile Money.'));
+
         return view('pages.advertise', ['slots' => AdSlot::where('is_active', true)->withCount(['campaigns as live_count' => fn ($q) => $q->live()])->orderBy('price_per_day', 'desc')->get()]);
     }
 

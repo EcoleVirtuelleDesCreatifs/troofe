@@ -1,6 +1,13 @@
 <?php
 
 return [
+    // SEO / GEO
+    'social_profiles' => env('TROOFE_SOCIAL_PROFILES', ''), // URLs séparées par des virgules (Facebook, Instagram, LinkedIn…)
+    'google_site_verification' => env('GOOGLE_SITE_VERIFICATION'),
+    'bing_site_verification' => env('BING_SITE_VERIFICATION'),
+    'indexnow_key' => env('INDEXNOW_KEY'),
+    'twitter' => env('TROOFE_TWITTER'),
+
     'admin_email' => env('TROOFE_ADMIN_EMAIL', 'contact@troofe.net'),
     'currency' => env('TROOFE_CURRENCY', 'XOF'),
     'commission_rate' => (float) env('TROOFE_COMMISSION_RATE', 8),

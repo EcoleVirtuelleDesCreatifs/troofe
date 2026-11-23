@@ -3,6 +3,7 @@
 namespace App\Filament\Admin\Resources;
 
 use App\Filament\Admin\Resources\DishResource\Pages;
+use App\Filament\Schemas\ListingForms;
 use App\Models\Dish;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -45,6 +46,7 @@ class DishResource extends Resource
                 Tabs\Tab::make('Français')->schema([TextInput::make('summary')->label(__('Résumé'))->required(), RichEditor::make('history')->label(__('Histoire')), RichEditor::make('recipe')->label(__('Recette'))]),
                 Tabs\Tab::make('English')->schema([TextInput::make('summary_en')->label(__('Résumé')), RichEditor::make('history_en')->label(__('Histoire')), RichEditor::make('recipe_en')->label(__('Recette'))]),
             ]),
+            ListingForms::seo()->columnSpanFull(),
         ]);
     }
 

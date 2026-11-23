@@ -16,13 +16,20 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\SeoController;
 use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 
 /* ---------- Pages publiques ---------- */
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/recherche', [HomeController::class, 'search'])->name('search');
-Route::get('/sitemap.xml', [HomeController::class, 'sitemap'])->name('sitemap');
+Route::get('/sitemap.xml', [SeoController::class, 'sitemapIndex'])->name('sitemap');
+Route::get('/sitemaps/{section}.xml', [SeoController::class, 'sitemap'])->name('sitemap.section');
+Route::get('/robots.txt', [SeoController::class, 'robots'])->name('robots');
+Route::get('/llms.txt', [SeoController::class, 'llms'])->name('llms');
+Route::get('/llms-full.txt', [SeoController::class, 'llmsFull'])->name('llms.full');
+Route::get('/feed.xml', [SeoController::class, 'feed'])->name('feed');
+Route::get('/indexnow.txt', [SeoController::class, 'indexNowKey'])->name('indexnow.key');
 Route::get('/illustration/{visual}/{seed}.svg', [HomeController::class, 'placeholder'])->name('placeholder')->where(['visual' => '[a-z]+', 'seed' => '[a-z0-9]+']);
 Route::get('/page/{page}', [HomeController::class, 'page'])->name('page')->whereIn('page', ['mentions-legales', 'confidentialite', 'conditions', 'a-propos']);
 

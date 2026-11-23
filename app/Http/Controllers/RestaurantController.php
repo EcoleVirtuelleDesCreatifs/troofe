@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Restaurant;
+use App\Support\SchemaOrg;
+use App\Support\Faq;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -32,8 +34,15 @@ class RestaurantController extends Controller
             default => $query->orderByDesc('is_featured')->orderByDesc('is_verified')->orderByDesc('views'),
         };
 
+        $page = $query->paginate(12)->withQueryString();
+        $city = $f['city'] ?? null;
+        seo()->title($city ? __('Restaurants africains à :city', ['city' => $city]) : __('Restaurants africains : annuaire et commande en ligne'))
+            ->description(__(':n restaurants africains :where : cuisine ivoirienne, sénégalaise, ghanéenne… Avis, carte, horaires et commande en ligne avec paiement Mobile Money.', ['n' => $page->total(), 'where' => $city ? __('à :city', ['city' => $city]) : __('en Afrique de l\'Ouest')]))
+            ->schema(SchemaOrg::breadcrumbs([__('Restaurants') => null]))
+            ->schema(SchemaOrg::itemList($page->getCollection(), fn ($r) => route('restaurants.show', $r), fn ($r) => $r->name));
+
         return view('pages.restaurants.index', [
-            'restaurants' => $query->paginate(12)->withQueryString(),
+            'restaurants' => $page,
             'cities' => Restaurant::published()->distinct()->orderBy('city')->pluck('city'),
             'cuisines' => Restaurant::published()->distinct()->orderBy('cuisine')->pluck('cuisine'),
             'filters' => $f,
@@ -45,6 +54,16 @@ class RestaurantController extends Controller
         abort_unless($restaurant->isPublished() || auth()->user()?->isAdmin() || auth()->id() === $restaurant->owner_id, 404);
         $restaurant->increment('views');
         $restaurant->load(['menuItems' => fn ($q) => $q->where('is_available', true), 'dishes', 'craftsmen' => fn ($q) => $q->published()]);
+
+        seo()->title($restaurant->tr('seo_title') ?: __(':name — restaurant :cuisine à :city', ['name' => $restaurant->name, 'cuisine' => mb_strtolower(__($restaurant->cuisine)), 'city' => $restaurant->city]))
+            ->description($restaurant->tr('seo_description') ?: ($restaurant->tr('description') ?: $restaurant->tr('tagline')))
+            ->image($restaurant->coverUrl())->type('restaurant')
+            ->schema(SchemaOrg::restaurant($restaurant))
+            ->schema(SchemaOrg::breadcrumbs([__('Restaurants') => route('restaurants.index'), $restaurant->city => route('restaurants.index', ['city' => $restaurant->city]), $restaurant->name => null]))
+            ->faq(Faq::restaurant($restaurant));
+        if (! $restaurant->isPublished()) {
+            seo()->noindex();
+        }
 
         return view('pages.restaurants.show', [
             'restaurant' => $restaurant,

@@ -15,6 +15,8 @@ class ContactController extends Controller
 {
     public function create()
     {
+        seo()->title(__('Contact'))->description(__('Écrivez à l\'équipe Trôofê : question, partenariat ou signalement. Réponse sous 48 h ouvrées.'));
+
         return view('pages.contact');
     }
 
@@ -35,6 +37,8 @@ class ContactController extends Controller
 
     public function partner()
     {
+        seo()->title(__('Devenir partenaire Trôofê'))->description(__('Restaurants, troupes, artistes, artisans et organisateurs : créez votre fiche, recevez commandes et réservations, encaissez en Mobile Money.'));
+
         return view('pages.partner', ['plans' => Plan::where('is_active', true)->orderBy('position')->get()]);
     }
 

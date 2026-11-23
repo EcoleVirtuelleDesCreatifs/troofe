@@ -44,6 +44,23 @@ class ListingForms
         ])->columnSpanFull();
     }
 
+    /** Titre et description affichés dans Google et les moteurs IA (facultatifs) */
+    public static function seo(): Section
+    {
+        return Section::make(__('Référencement (SEO)'))->collapsed()->description(__('Facultatif : par défaut, le titre et la description sont générés automatiquement.'))->schema([
+            Tabs::make('seo-langues')->tabs([
+                Tabs\Tab::make('Français')->schema([
+                    TextInput::make('seo_title')->label(__('Titre SEO'))->maxLength(70)->helperText(__('50 à 60 caractères recommandés.')),
+                    Textarea::make('seo_description')->label(__('Description SEO'))->maxLength(170)->rows(2)->helperText(__('120 à 158 caractères recommandés.')),
+                ]),
+                Tabs\Tab::make('English')->schema([
+                    TextInput::make('seo_title_en')->label(__('Titre SEO'))->maxLength(70),
+                    Textarea::make('seo_description_en')->label(__('Description SEO'))->maxLength(170)->rows(2),
+                ]),
+            ]),
+        ]);
+    }
+
     public static function moderation(bool $admin): array
     {
         if (! $admin) {
@@ -86,6 +103,7 @@ class ListingForms
                 Toggle::make('delivery')->label(__('Livraison'))->live(),
                 TextInput::make('delivery_fee')->label(__('Frais de livraison (FCFA)'))->numeric()->default(0)->visible(fn (Get $get) => $get('delivery')),
             ]),
+            self::seo(),
             ...self::moderation($admin),
         ];
     }
@@ -130,6 +148,7 @@ class ListingForms
                 TextInput::make('phone')->label(__('Téléphone'))->tel()->required(),
                 TextInput::make('whatsapp')->label('WhatsApp')->helperText(__('Indicatif compris, sans +')),
             ]),
+            self::seo(),
             ...self::moderation($admin),
         ];
     }
@@ -163,6 +182,7 @@ class ListingForms
                 Select::make('performers')->label(__('Artistes et troupes à l\'affiche'))->relationship('performers', 'name', fn ($query) => $query->published()->whereIn('type', ['troupe', 'artiste']))->multiple()->searchable()->preload()->columnSpanFull(),
                 $admin ? Select::make('organizer_id')->label(__('Organisateur'))->relationship('organizer', 'name')->searchable()->preload() : Grid::make(1),
             ]),
+            self::seo(),
             ...($admin ? [Section::make(__('Publication'))->columns(3)->schema([
                 Select::make('status')->label(__('Statut'))->options(collect(Event::statusOptions())->map(fn ($l) => __($l)))->required(),
                 TextInput::make('moderation_note')->label(__('Note de modération')),

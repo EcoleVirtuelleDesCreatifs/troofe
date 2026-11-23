@@ -96,6 +96,48 @@ Chaque membre règle ses e-mails dans *Mon compte → Notifications*. Les catég
 | `troofe:cleanup-orders` | 30 min | Annule les commandes impayées après 2 h et libère les billets |
 | `troofe:newsletter` | jeudi 9 h / 1er du mois | Lettre hebdomadaire et mensuelle |
 
+## Référencement SEO / GEO (moteurs de recherche et IA)
+
+**Ce qui est en place**
+
+- Balises par page : titre ≤ 60 caractères, description ≤ 158, canonique absolue, `hreflang` fr / en / x-default (le français à l'URL nue, l'anglais en `?lang=en`), Open Graph et Twitter (PNG 1200 px par défaut, jamais de SVG).
+- `noindex` automatique sur les pages privées (compte, paiement, billets, connexion), la recherche interne et les listes filtrées.
+- Données structurées JSON-LD (`@graph`) : Organization, WebSite + SearchAction, Restaurant + Menu + horaires + avis, Event (FoodEvent, Festival, MusicEvent…) avec billets, Recipe, NewsArticle, PerformingGroup / Person / LocalBusiness avec offres, BreadcrumbList, ItemList, FAQPage.
+- FAQ visible générée à partir des données réelles (adresse, prix, horaires, livraison) : c'est le format que reprennent Google et les moteurs IA.
+- `/sitemap.xml` : index de 6 plans (pages, restaurants, culture, événements, encyclopédie, actualités), avec images et versions anglaises.
+- `/robots.txt` dynamique : contenu public ouvert, y compris aux robots IA (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended…), espaces privés fermés.
+- `/llms.txt` (sommaire) et `/llms-full.txt` (fiches complètes : adresses, horaires, prix, offres, ingrédients) au format llmstxt.org, pour ChatGPT, Claude, Perplexity.
+- `/feed.xml` : flux RSS des actualités et événements.
+- IndexNow : Bing, Yandex, Seznam et Naver sont prévenus à chaque publication ou modification (file d'attente, production uniquement).
+- Champs « Référencement (SEO) » FR / EN dans l'administration pour forcer un titre ou une description ; sinon tout est généré.
+- Performance : dimensions et `alt` sur les images, `fetchpriority` sur le visuel principal, compression et cache navigateur dans `public/.htaccess`.
+
+**Variables `.env`**
+
+```
+TROOFE_SOCIAL_PROFILES="https://facebook.com/troofe,https://instagram.com/troofe"
+TROOFE_TWITTER=@troofe
+GOOGLE_SITE_VERIFICATION=   # code de Google Search Console
+BING_SITE_VERIFICATION=     # code de Bing Webmaster Tools
+INDEXNOW_KEY=               # 32 caractères hexadécimaux : php -r "echo bin2hex(random_bytes(16));"
+```
+
+**Après la mise en ligne**
+
+1. Ajouter le domaine dans Google Search Console et Bing Webmaster Tools, puis soumettre `https://votre-domaine/sitemap.xml`.
+2. Lancer le diagnostic :
+
+```bash
+php artisan troofe:seo-audit                     # requêtes internes, sans réseau
+php artisan troofe:seo-audit --base=https://troofe.net --links --json=storage/app/seo-audit.json
+```
+
+Le diagnostic parcourt toutes les URL du sitemap en français et en anglais et contrôle : statut HTTP, titre, description, h1 unique, attribut `lang`, canonique, hreflang, noindex, Open Graph, validité et complétude du JSON-LD par type de page, FAQ, images sans `alt`, volume de texte, doublons de titres et descriptions, traductions manquantes, liens internes cassés (`--links`), robots.txt, llms.txt, RSS, page 404, HTTPS et redirection www. Il affiche un score sur 100 et la liste des problèmes les plus fréquents.
+
+3. Les tests automatiques : `php artisan test --filter=SeoTest`.
+
+**À savoir sur LWS** : `public/.htaccess` force HTTPS et le domaine sans `www`. Si l'hébergement termine le HTTPS en amont et provoque une boucle de redirection, remplacer la condition `%{HTTPS} off` par `%{HTTP:X-Forwarded-Proto} !https`.
+
 ## Organisation du code
 
 ```

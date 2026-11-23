@@ -3,6 +3,7 @@
 namespace App\Filament\Admin\Resources;
 
 use App\Filament\Admin\Resources\ArticleResource\Pages;
+use App\Filament\Schemas\ListingForms;
 use App\Models\Article;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
@@ -43,6 +44,7 @@ class ArticleResource extends Resource
                 Tabs\Tab::make('Français')->schema([TextInput::make('title')->label(__('Titre'))->required(), Textarea::make('excerpt')->label(__('Chapô'))->rows(2), RichEditor::make('body')->label(__('Texte'))->required()->fileAttachmentsDirectory('articles')]),
                 Tabs\Tab::make('English')->schema([TextInput::make('title_en')->label(__('Titre')), Textarea::make('excerpt_en')->label(__('Chapô'))->rows(2), RichEditor::make('body_en')->label(__('Texte'))->fileAttachmentsDirectory('articles')]),
             ]),
+            ListingForms::seo()->columnSpanFull(),
         ]);
     }
 

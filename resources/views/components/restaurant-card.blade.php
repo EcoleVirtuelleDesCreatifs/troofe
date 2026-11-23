@@ -1,7 +1,7 @@
 @props(['restaurant' => null, 'r' => null])
 @php $r = $r ?? $restaurant; $avg = $r->rating ?? $r->ratingAverage(); @endphp
 <a class="card-x" href="{{ route('restaurants.show', $r) }}">
-  <div class="cover"><img src="{{ $r->coverUrl() }}" alt="" loading="lazy">
+  <div class="cover"><img src="{{ $r->coverUrl() }}" alt="{{ $r->name }}" loading="lazy" decoding="async" width="800" height="500">
     <div class="tag-float">@if ($r->is_featured)<span class="tag spon">{{ __('Sélection') }}</span>@endif<span class="tag">{{ __($r->cuisine) }}</span></div>
     <x-fav-button type="restaurant" :model="$r" />
   </div>

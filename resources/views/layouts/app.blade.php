@@ -4,17 +4,45 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>{{ isset($title) ? $title.' — ' : '' }}Trôofê</title>
-<meta name="description" content="{{ $description ?? __('Trôofê, la maison numérique de la gastronomie africaine : restaurants, encyclopédie culinaire, groupes de danse, artistes, artisans et agenda.') }}">
-<link rel="canonical" href="{{ url()->current() }}">
+@php
+  $seo = seo();
+  if (! $seo->title && isset($title)) { $seo->title($title); }
+  if (! $seo->description) { $seo->description($description ?? __('Trôofê, la maison numérique de la gastronomie africaine : restaurants, encyclopédie culinaire, groupes de danse, artistes, artisans et agenda.')); }
+  if (! $seo->image && isset($ogImage)) { $seo->image($ogImage); }
+  if (request()->routeIs('account.*', 'login', 'register', 'password.*', 'verification.*', 'payments.*', 'tickets.*', 'checkin*', 'newsletter.*', 'search')) { $seo->noindex(); }
+@endphp
+<title>{{ $seo->fullTitle() }}</title>
+<meta name="description" content="{{ $seo->description }}">
+<meta name="robots" content="{{ $seo->resolveRobots() }}">
+<link rel="canonical" href="{{ $seo->canonical() }}">
 @foreach (\App\Http\Middleware\SetLocale::LOCALES as $code => $label)
-<link rel="alternate" hreflang="{{ $code }}" href="{{ url()->current() }}?lang={{ $code }}">
+<link rel="alternate" hreflang="{{ $code }}" href="{{ $seo->urlFor($code) }}">
 @endforeach
-<meta property="og:title" content="{{ $title ?? 'Trôofê' }}">
-<meta property="og:description" content="{{ $description ?? __('La table africaine, en un seul lieu.') }}">
-@isset($ogImage)<meta property="og:image" content="{{ $ogImage }}">@endisset
+<link rel="alternate" hreflang="x-default" href="{{ $seo->urlFor('fr') }}">
+<link rel="alternate" type="application/rss+xml" title="Trôofê" href="{{ route('feed') }}">
+<meta property="og:site_name" content="Trôofê">
+<meta property="og:type" content="{{ $seo->type }}">
+<meta property="og:title" content="{{ $seo->title ?? 'Trôofê' }}">
+<meta property="og:description" content="{{ $seo->description }}">
+<meta property="og:url" content="{{ $seo->canonical() }}">
+<meta property="og:image" content="{{ $seo->ogImage() }}">
+<meta property="og:image:alt" content="{{ $seo->title ?? 'Trôofê' }}">
 <meta property="og:locale" content="{{ app()->getLocale() === 'en' ? 'en_US' : 'fr_FR' }}">
+<meta property="og:locale:alternate" content="{{ app()->getLocale() === 'en' ? 'fr_FR' : 'en_US' }}">
+@if ($seo->published)<meta property="article:published_time" content="{{ $seo->published }}"><meta property="article:modified_time" content="{{ $seo->modified }}">@endif
+<meta name="twitter:card" content="summary_large_image">
+@if (config('troofe.twitter'))<meta name="twitter:site" content="{{ config('troofe.twitter') }}">@endif
+<meta name="twitter:title" content="{{ $seo->title ?? 'Trôofê' }}">
+<meta name="twitter:description" content="{{ $seo->description }}">
+<meta name="twitter:image" content="{{ $seo->ogImage() }}">
+<meta name="theme-color" content="#5A1E0E">
+@if (config('troofe.google_site_verification'))<meta name="google-site-verification" content="{{ config('troofe.google_site_verification') }}">@endif
+@if (config('troofe.bing_site_verification'))<meta name="msvalidate.01" content="{{ config('troofe.bing_site_verification') }}">@endif
+<script type="application/ld+json">{!! json_encode($seo->graph(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG) !!}</script>
 <link rel="icon" href="{{ asset('assets/img/logo/favicon.svg') }}" type="image/svg+xml">
+<link rel="icon" href="{{ asset('assets/img/logo/png/favicon-32.png') }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ asset('assets/img/logo/png/app-icon-180.png') }}">
+<link rel="manifest" href="{{ asset('site.webmanifest') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -93,6 +121,7 @@
 <main id="main">
   @include('partials.flash')
   @yield('content')
+  @include('partials.faq')
 </main>
 
 <footer class="site">

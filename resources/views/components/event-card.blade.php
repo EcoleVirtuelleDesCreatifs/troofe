@@ -1,7 +1,7 @@
 @props(['event'])
 @php $e = $event; $min = $e->minPrice(); @endphp
 <a class="card-x" href="{{ route('events.show', $e) }}">
-  <div class="cover"><img src="{{ $e->coverUrl() }}" alt="" loading="lazy">
+  <div class="cover"><img src="{{ $e->coverUrl() }}" alt="{{ $e->tr('title') }}" loading="lazy" decoding="async" width="800" height="500">
     <div class="tag-float"><span class="tag">{{ __($e->category) }}</span></div>
     <span class="date-chip"><b>{{ $e->starts_at->format('d') }}</b><span>{{ $e->starts_at->locale(app()->getLocale())->isoFormat('MMM') }}</span></span>
   </div>

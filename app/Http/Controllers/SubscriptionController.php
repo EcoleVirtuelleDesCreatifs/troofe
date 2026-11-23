@@ -14,6 +14,13 @@ class SubscriptionController extends Controller
 
     public function pricing(Request $request)
     {
+        seo()->title(__('Formules pro : restaurants, artistes, organisateurs'))->description(__('Publiez votre restaurant, votre troupe ou votre atelier sur Trôofê : gratuit pour commencer, paiement Mobile Money, sans engagement.'))->faq([
+            [__('Puis-je commencer gratuitement ?'), __('Oui : la formule Découverte permet de publier une fiche et de recevoir commandes et réservations, avec une commission sur les ventes.')],
+            [__('Comment payer mon abonnement ?'), __('Par Orange Money, MTN MoMo, Moov Money, Wave ou carte bancaire. La facture PDF est envoyée par e-mail.')],
+            [__('Que se passe-t-il à l\'échéance ?'), __('Vous êtes prévenu par e-mail 7, 3 et 1 jour avant, puis vous disposez de 3 jours de grâce. Rien n\'est supprimé : les fiches au-delà de la limite gratuite sont simplement masquées.')],
+            [__('Puis-je résilier ?'), __('Oui, en un clic depuis votre espace. La formule reste active jusqu\'à la fin de la période payée.')],
+        ]);
+
         return view('pages.pricing', [
             'plans' => Plan::where('is_active', true)->orderBy('position')->get(),
             'current' => $request->user()?->activeSubscription,

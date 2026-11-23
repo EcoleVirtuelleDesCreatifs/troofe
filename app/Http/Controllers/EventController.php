@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Support\SchemaOrg;
+use App\Support\Faq;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -22,8 +24,17 @@ class EventController extends Controller
             $query->where('starts_at', '<=', now()->endOfMonth());
         }
 
+        $list = $query->paginate(12)->withQueryString();
+        seo()->title(__('Agenda des événements culinaires et culturels'))
+            ->description(__('Festivals, dégustations, dîners-concerts, ateliers et marchés à venir à Abidjan, Accra, Dakar et Lagos. Billets en ligne avec QR code.'))
+            ->schema(SchemaOrg::breadcrumbs([__('Événements') => null]))
+            ->schema(SchemaOrg::itemList($list->getCollection(), fn ($e) => route('events.show', $e), fn ($e) => $e->tr('title')));
+        foreach ($list->getCollection()->take(6) as $e) {
+            seo()->schema(SchemaOrg::event($e->loadMissing('organizer', 'performers')));
+        }
+
         return view('pages.events.index', [
-            'events' => $query->paginate(12)->withQueryString(),
+            'events' => $list,
             'cities' => Event::published()->upcoming()->distinct()->orderBy('city')->pluck('city'),
             'categories' => Event::published()->upcoming()->distinct()->pluck('category'),
         ]);
@@ -34,6 +45,16 @@ class EventController extends Controller
         abort_unless($event->isPublished() || auth()->user()?->isAdmin() || auth()->id() === $event->organizer_id, 404);
         $event->increment('views');
         $event->load('ticketTypes', 'restaurant', 'organizer', 'performers');
+
+        seo()->title($event->tr('seo_title') ?: __(':event — :date, :city', ['event' => $event->tr('title'), 'date' => date_human($event->starts_at, 'D MMM YYYY'), 'city' => $event->city]))
+            ->description($event->tr('seo_description') ?: $event->tr('excerpt'))
+            ->image($event->coverUrl())->type('event')
+            ->schema(SchemaOrg::event($event))
+            ->schema(SchemaOrg::breadcrumbs([__('Événements') => route('events.index'), $event->tr('title') => null]))
+            ->faq(Faq::event($event));
+        if (! $event->isPublished() || $event->starts_at->isPast()) {
+            seo()->noindex();
+        }
 
         return view('pages.events.show', [
             'event' => $event,

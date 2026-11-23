@@ -1,7 +1,7 @@
 @props(['talent'])
 @php $t = $talent; $p = $t->min_price ?? $t->offers->min('price'); $avg = $t->rating ?? null; @endphp
 <a class="card-x cu-card" href="{{ $t->url() }}">
-  <div class="cover"><img src="{{ $t->coverUrl() }}" alt="" loading="lazy">
+  <div class="cover"><img src="{{ $t->coverUrl() }}" alt="{{ $t->name }}" loading="lazy" decoding="async" width="800" height="500">
     <div class="tag-float">@if ($t->is_featured)<span class="tag spon">{{ __('Sélection') }}</span>@endif<span class="tag">{{ __($t->category) }}</span></div>
     <x-fav-button type="talent" :model="$t" />
   </div>

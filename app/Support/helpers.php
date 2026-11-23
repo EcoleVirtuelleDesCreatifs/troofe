@@ -51,3 +51,11 @@ if (! function_exists('date_fr')) {
         return $date ? \Illuminate\Support\Carbon::parse($date)->locale(app()->getLocale())->isoFormat($format) : '';
     }
 }
+
+if (! function_exists('seo')) {
+    /** Métadonnées SEO de la page courante */
+    function seo(): \App\Support\Seo
+    {
+        return app(\App\Support\Seo::class);
+    }
+}

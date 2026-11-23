@@ -34,3 +34,7 @@
 .form-label{ font-weight:600; font-size:.88rem; }
 .auth-card{ max-width:480px; margin-inline:auto; }
 .min-w-0{ min-width:0; }
+.faq-item{ border-top:1px solid var(--line); padding:.8rem 0; }
+.faq-item summary{ cursor:pointer; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:1rem; }
+.faq-item summary::after{ content:"+"; color:var(--ocre); font-weight:700; } .faq-item[open] summary::after{ content:"–"; }
+.faq-item p{ margin-top:.5rem; color:var(--muted); }

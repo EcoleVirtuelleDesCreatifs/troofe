@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\Restaurant;
 use App\Models\Talent;
 use App\Support\Placeholder;
+use App\Support\SchemaOrg;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -28,6 +29,10 @@ class HomeController extends Controller
                 'talents' => Talent::published()->count(),
             ],
         ]);
+
+        seo()->title(__('Restaurants, culture et gastronomie africaine'))
+            ->description(__('Restaurants africains avec commande en ligne, encyclopédie des plats, agenda des événements, groupes de danse, artistes et artisans à réserver à Abidjan, Accra, Dakar et Lagos.'))
+            ->schema(SchemaOrg::itemList($data['restaurants'], fn ($r) => route('restaurants.show', $r), fn ($r) => $r->name));
 
         return view('pages.home', $data);
     }
@@ -56,6 +61,8 @@ class HomeController extends Controller
             return response()->json($results->map(fn ($items, $group) => ['group' => $group, 'items' => $items->values()])->values());
         }
 
+        seo()->title($q ? __('Recherche : :q', ['q' => $q]) : __('Recherche'))->noindex();
+
         return view('pages.search', compact('q', 'results'));
     }
 
@@ -68,19 +75,11 @@ class HomeController extends Controller
 
     public function page(string $page)
     {
+        seo()->title(['mentions-legales' => __('Mentions légales'), 'confidentialite' => __('Politique de confidentialité'), 'conditions' => __('Conditions d\'utilisation'), 'a-propos' => __('À propos')][$page]);
+        if ($page !== 'a-propos') {
+            seo()->noindex();
+        }
+
         return view('pages.static', ['page' => $page]);
-    }
-
-    public function sitemap()
-    {
-        $urls = collect([route('home'), route('restaurants.index'), route('dishes.index'), route('events.index'), route('articles.index'), route('culture.hub'), route('pricing'), route('advertise')])
-            ->merge(array_map(fn ($t) => route('culture.index', $t['route']), Talent::TYPES))
-            ->merge(Restaurant::published()->get()->map(fn ($r) => route('restaurants.show', $r)))
-            ->merge(Talent::published()->get()->map->url())
-            ->merge(Event::published()->upcoming()->get()->map(fn ($e) => route('events.show', $e)))
-            ->merge(Dish::published()->get()->map(fn ($d) => route('dishes.show', $d)))
-            ->merge(Article::published()->get()->map(fn ($a) => route('articles.show', $a)));
-
-        return response()->view('pages.sitemap', compact('urls'))->header('Content-Type', 'application/xml');
     }
 }

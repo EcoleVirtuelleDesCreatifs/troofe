@@ -1,6 +1,6 @@
 @props(['img', 'eyebrow' => null, 'title', 'lead' => null, 'stats' => [], 'short' => false, 'verified' => false])
 <section class="ent-hero {{ $short ? 'short' : '' }}">
-  <img src="{{ $img }}" alt="">
+  <img src="{{ $img }}" alt="{{ $title }}" width="1600" height="1000" fetchpriority="high" decoding="async">
   <div class="ent-shade"></div>
   <div class="wrap gutter ent-in">
     @if ($eyebrow)<div class="eyebrow">{{ $eyebrow }}</div>@endif

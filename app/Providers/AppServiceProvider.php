@@ -13,6 +13,12 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+    public function register(): void
+    {
+        // Une instance par requête (scoped : remise à zéro entre deux tâches de file d'attente)
+        $this->app->scoped(\App\Support\Seo::class);
+    }
+
     public function boot(): void
     {
         Paginator::useBootstrapFive();
@@ -36,8 +42,27 @@ class AppServiceProvider extends ServiceProvider
         ]);
 
         // Toute modification de contenu public vide le cache de l'accueil
+        // et les caches SEO (sitemaps, llms.txt, flux RSS) ; les moteurs IndexNow sont prévenus
         foreach ([Restaurant::class, Talent::class, Event::class, \App\Models\Dish::class, \App\Models\Article::class] as $model) {
-            $model::saved(fn () => collect(['fr', 'en'])->each(fn ($l) => Cache::forget("home:$l")));
+            $model::saved(function ($m) {
+                foreach (['home:fr', 'home:en', 'feed:fr', 'feed:en', 'llms:short', 'llms:full', 'sitemap:index'] as $key) {
+                    Cache::forget($key);
+                }
+                foreach (['pages', 'restaurants', 'culture', 'evenements', 'encyclopedie', 'actualites'] as $section) {
+                    Cache::forget("sitemap:$section");
+                }
+                $public = ($m->status ?? null) === 'published' && ($m->wasChanged('status') || $m->wasRecentlyCreated || $m->wasChanged(['name', 'title', 'description', 'tagline', 'body', 'summary']));
+                if ($public) {
+                    $url = match (true) {
+                        $m instanceof Restaurant => route('restaurants.show', $m),
+                        $m instanceof Talent => $m->url(),
+                        $m instanceof Event => route('events.show', $m),
+                        $m instanceof \App\Models\Dish => route('dishes.show', $m),
+                        default => route('articles.show', $m),
+                    };
+                    \App\Jobs\PingIndexNow::urls($url);
+                }
+            });
         }
 
         // Compteur de notifications non lues pour la barre du haut
