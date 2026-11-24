@@ -61,9 +61,12 @@ class OrderController extends Controller
     /** Contrôle d'accès : un billet ne peut être validé qu'une fois */
     public function checkin(Request $request)
     {
-        $code = trim((string) $request->validate(['code' => 'required|string|max:64'])['code']);
+        $code = strtolower(trim((string) $request->validate(['code' => 'required|string|max:64'])['code']));
         // Code complet (QR) ou 8 premiers caractères imprimés sur le billet
-        $ticket = mb_strlen($code) >= 8 ? Ticket::with('type.event')->where('code', $code)->orWhere('code', 'like', strtolower($code).'%')->first() : null;
+        $matches = preg_match('/\A[0-9a-f]{8}(?:-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})?\z/', $code)
+            ? Ticket::with('type.event')->where('code', strlen($code) === 8 ? 'like' : '=', strlen($code) === 8 ? $code.'%' : $code)->limit(2)->get()
+            : collect();
+        $ticket = $matches->count() === 1 ? $matches->first() : null;
         $user = $request->user();
 
         $result = match (true) {
@@ -73,8 +76,10 @@ class OrderController extends Controller
             default => null,
         };
         if (! $result) {
-            $ticket->update(['checked_in_at' => now(), 'checked_in_by' => $user->id]);
-            $result = ['ok', __('Entrée validée : :name (:type).', ['name' => $ticket->holder_name, 'type' => $ticket->type->name])];
+            $updated = Ticket::whereKey($ticket->id)->whereNull('checked_in_at')->update(['checked_in_at' => now(), 'checked_in_by' => $user->id]);
+            $result = $updated
+                ? ['ok', __('Entrée validée : :name (:type).', ['name' => $ticket->holder_name, 'type' => $ticket->type->name])]
+                : ['warn', __('Déjà utilisé le :date.', ['date' => date_human($ticket->fresh()->checked_in_at, 'D MMM, HH:mm')])];
         }
 
         return back()->with('checkin', $result)->withInput();

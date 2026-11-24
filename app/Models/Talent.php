@@ -34,6 +34,8 @@ class Talent extends Model
         'sculpture' => 'Sculpture', 'vannerie' => 'Vannerie', 'bijoux' => 'Bijouterie', 'calebasse' => 'Calebasses', 'maroquinerie' => 'Cuir',
     ];
 
+    protected $table = 'talents';
+
     protected $guarded = ['id', 'views'];
 
     protected function casts(): array

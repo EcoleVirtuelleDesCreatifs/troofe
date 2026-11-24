@@ -36,7 +36,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors(['primary' => Color::hex('#5A1E0E'), 'warning' => Color::hex('#B5802A'), 'gray' => Color::Stone])
             ->navigationGroups([0])
             ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\\Filament\\Admin\\Resources')
-            ->pages([Pages\Dashboard::class])
+            ->pages([\App\Filament\Admin\Dashboard::class])
             ->widgets([\App\Filament\Admin\Widgets\AdminStats::class])
             ->userMenuItems([
                 MenuItem::make()->label(fn () => __('Voir le site'))->url('/')->icon('heroicon-o-globe-alt'),

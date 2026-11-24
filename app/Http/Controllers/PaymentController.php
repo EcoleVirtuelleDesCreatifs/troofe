@@ -17,6 +17,7 @@ class PaymentController extends Controller
     /** Page de test (pilote « simulation » uniquement) */
     public function simulate(Request $request, Payment $payment)
     {
+        abort_if(app()->isProduction(), 404);
         abort_unless($payment->user_id === $request->user()->id && $payment->provider === 'simulation' && $payment->status === 'pending', 404);
 
         return view('pages.payment-simulate', compact('payment'));
@@ -24,6 +25,7 @@ class PaymentController extends Controller
 
     public function decide(Request $request, Payment $payment)
     {
+        abort_if(app()->isProduction(), 404);
         abort_unless($payment->user_id === $request->user()->id && $payment->provider === 'simulation' && $payment->status === 'pending', 404);
         $data = $request->validate(['decision' => 'required|in:paid,failed', 'method' => 'nullable|in:OM,MOMO,MOOV,WAVE,CARD']);
         $payment->update(['provider_payload' => ['simulation' => $data['decision'], 'method' => $data['method'] ?? 'OM']]);

@@ -56,7 +56,7 @@ return new class extends Migration
         // Formules (prestations) ou créations (catalogue artisan)
         Schema::create('talent_offers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('talent_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('talent_id')->constrained('talents')->cascadeOnDelete();
             $table->string('name');
             $table->string('name_en')->nullable();
             $table->string('duration', 60)->nullable();
@@ -72,27 +72,27 @@ return new class extends Migration
 
         Schema::create('talent_unavailabilities', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('talent_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('talent_id')->constrained('talents')->cascadeOnDelete();
             $table->date('date');
             $table->string('note')->nullable();
             $table->unique(['talent_id', 'date']);
         });
 
-        Schema::create('talent_event', function (Blueprint $table) {
-            $table->foreignId('talent_id')->constrained()->cascadeOnDelete();
+        Schema::create('event_talent', function (Blueprint $table) {
+            $table->foreignId('talent_id')->constrained('talents')->cascadeOnDelete();
             $table->foreignId('event_id')->constrained()->cascadeOnDelete();
             $table->primary(['talent_id', 'event_id']);
         });
 
         Schema::create('restaurant_talent', function (Blueprint $table) {
             $table->foreignId('restaurant_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('talent_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('talent_id')->constrained('talents')->cascadeOnDelete();
             $table->primary(['restaurant_id', 'talent_id']);
         });
 
         Schema::create('dish_talent', function (Blueprint $table) {
             $table->foreignId('dish_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('talent_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('talent_id')->constrained('talents')->cascadeOnDelete();
             $table->primary(['dish_id', 'talent_id']);
         });
 
@@ -100,7 +100,7 @@ return new class extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->string('reference', 20)->unique();
-            $table->foreignId('talent_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('talent_id')->constrained('talents')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('talent_offer_id')->nullable()->constrained()->nullOnDelete();
             $table->string('kind', 20)->default('prestation'); // prestation, commande, visite
@@ -124,7 +124,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        foreach (['bookings', 'dish_talent', 'restaurant_talent', 'talent_event', 'talent_unavailabilities', 'talent_offers', 'talents'] as $t) {
+        foreach (['bookings', 'dish_talent', 'restaurant_talent', 'event_talent', 'talent_unavailabilities', 'talent_offers', 'talents'] as $t) {
             Schema::dropIfExists($t);
         }
     }

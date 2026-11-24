@@ -66,7 +66,7 @@ class CultureController extends Controller
             'categories' => (clone $all)->distinct()->orderBy('category')->pluck('category'),
             'cities' => (clone $all)->distinct()->orderBy('city')->pluck('city'),
             'occasions' => (clone $all)->pluck('audiences')->flatten()->filter()->unique()->sort()->values(),
-            'stats' => ['count' => (clone $all)->count(), 'cities' => (clone $all)->distinct()->count('city'), 'verified' => (clone $all)->where('is_verified', true)->count()],
+            'stats' => ['count' => (clone $all)->count(), 'cities' => (clone $all)->distinct()->count('city'), 'verified' => (clone $all)->where('is_verified', true)->count(), 'min' => \App\Models\TalentOffer::whereHas('talent', fn ($q) => $q->published()->ofType($t))->min('price')],
             'filters' => $f,
         ]);
     }

@@ -3,7 +3,7 @@
 @php
   $t = $talent; $craft = $t->isCraft(); $p = $t->minPrice();
   $gallery = collect($t->gallery ?? [])->map(fn ($g) => \Illuminate\Support\Facades\Storage::disk('public')->url($g));
-  if ($gallery->isEmpty()) { $gallery = collect(range(0, 3))->map(fn ($i) => $t->coverUrl('g'.$i)); }
+  if ($gallery->isEmpty()) { $gallery = collect(range(0, 3))->map(fn ($i) => $t->coverUrl('g'.$i))->unique()->values(); }
   $facts = array_filter([
     [__('Basé à'), trim(($t->district ? $t->district.', ' : '').$t->city)],
     $craft && $t->maker_name ? [__('Artisan'), $t->maker_name] : null,

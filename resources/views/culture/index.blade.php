@@ -2,7 +2,7 @@
 @section('content')
 @php $top = $talents->first(); @endphp
 <x-hero-band short :img="$top?->coverUrl('band') ?? media_url(null, $type === 'troupe' ? 'danse' : 'tissage', $type)" :eyebrow="__('Culture & savoir-faire')" :title="__($meta['plural'])" :lead="__($meta['lead'])"
-  :stats="[[$stats['count'], $type === 'artisan' ? __('ateliers') : __('fiches')], [$stats['cities'], __('villes')], [$stats['verified'], __('profils vérifiés')]]" />
+  :stats="[[$stats['count'], $type === 'artisan' ? __('ateliers') : __('fiches')], [$stats['cities'], __('villes')], [$stats['verified'], __('profils vérifiés')], [$stats['min'] ? money($stats['min']) : '—', __('à partir de')]]" />
 <section class="section"><div class="wrap gutter">
   @include('partials.crumbs', ['items' => [__('Culture') => route('culture.hub'), __($meta['plural']) => null]])
   @include('culture._switch', ['current' => $type])

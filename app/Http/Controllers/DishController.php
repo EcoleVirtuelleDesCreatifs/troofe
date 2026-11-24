@@ -18,6 +18,9 @@ class DishController extends Controller
         if ($c = $request->query('pays')) {
             $query->where('origin_country', $c);
         }
+        if ($c = $request->query('famille')) {
+            $query->where('category', $c);
+        }
 
         seo()->title(__('Encyclopédie des plats africains : histoire et recettes'))
             ->description(__('Attiéké, thiéboudienne, jollof, ndolé, kedjenou… L\'origine, les ingrédients et la recette des grands plats d\'Afrique de l\'Ouest et centrale.'))
@@ -26,6 +29,7 @@ class DishController extends Controller
         return view('pages.dishes.index', [
             'dishes' => $query->orderBy('name')->paginate(18)->withQueryString(),
             'countries' => Dish::published()->distinct()->orderBy('origin_country')->pluck('origin_country'),
+            'categories' => Dish::published()->distinct()->orderBy('category')->pluck('category'),
         ]);
     }
 

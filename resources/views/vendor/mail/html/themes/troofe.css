@@ -1,38 +1,60 @@
 /* Thème e-mail Trôofê (dérivé du thème par défaut de Laravel) */
-body, body *:not(html):not(style):not(br):not(tr):not(code) { box-sizing: border-box; font-family: 'Figtree', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; position: relative; }
-body { -webkit-text-size-adjust: none; background-color: #FBF6F0; color: #2A1A12; height: 100%; line-height: 1.5; margin: 0; padding: 0; width: 100% !important; }
-p, ul, ol, blockquote { line-height: 1.55; text-align: left; }
+body, body *:not(html):not(style):not(br):not(tr):not(code) { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; position: relative; }
+body { -webkit-text-size-adjust: none; background-color: #F5F1EB; color: #493D35; font-weight: 400; height: 100%; line-height: 1.6; margin: 0; padding: 0; width: 100% !important; }
+p, ul, ol, blockquote { font-weight: 400; line-height: 1.7; text-align: left; }
 a { color: #5A1E0E; }
 a img { border: none; }
-h1 { color: #2A1A12; font-size: 20px; font-weight: bold; margin-top: 0; text-align: left; }
-h2 { font-size: 16px; font-weight: bold; margin-top: 0; text-align: left; }
-p { font-size: 15px; line-height: 1.6em; margin-top: 0; text-align: left; }
+h1 { color: #321D13; font-size: 28px; font-weight: 700; line-height: 1.25; margin: 0 0 24px; text-align: left; }
+h2 { color: #321D13; font-size: 18px; font-weight: 700; margin: 0 0 12px; text-align: left; }
+p { font-size: 15px; font-weight: 400; line-height: 1.7; margin: 0 0 20px; text-align: left; }
 p.sub { font-size: 12px; }
 img { max-width: 100%; }
-.wrapper { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #FBF6F0; margin: 0; padding: 0; width: 100%; }
+.wrapper { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #F5F1EB; margin: 0; padding: 0; width: 100%; }
 .content { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 0; padding: 0; width: 100%; }
-.header { padding: 28px 0; text-align: center; }
-.header a { color: #5A1E0E; font-size: 19px; font-weight: bold; text-decoration: none; }
+.header { padding: 36px 0 28px; text-align: center; }
+.header a { color: #5A1E0E; font-size: 34px; font-weight: 700; letter-spacing: -1.5px; text-decoration: none; }
+.brand-dot { color: #B5802A; }
+.brand-caption { color: #7A6A60; font-size: 11px; font-weight: 400; letter-spacing: .5px; margin: 8px 16px 0; text-align: center; }
 .logo { height: auto; max-height: 60px; width: 180px; }
-.body { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #FBF6F0; border-bottom: 1px solid #FBF6F0; border-top: 1px solid #FBF6F0; margin: 0; padding: 0; width: 100%; }
-.inner-body { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; background-color: #ffffff; border-color: #EADFD4; border-radius: 14px; border-width: 1px; box-shadow: 0 2px 0 rgba(90, 30, 14, .04); margin: 0 auto; padding: 0; width: 570px; border-top: 5px solid #5A1E0E; }
-.inner-body a { word-break: break-all; }
-.subcopy { border-top: 1px solid #EADFD4; margin-top: 25px; padding-top: 25px; }
-.subcopy p { font-size: 13px; color: #7A6A60; }
-.footer { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; margin: 0 auto; padding: 0; text-align: center; width: 570px; }
-.footer p { color: #9A8A80; font-size: 12px; text-align: center; }
-.footer a { color: #9A8A80; text-decoration: underline; }
-.table table { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 30px auto; width: 100%; }
-.table th { border-bottom: 1px solid #EADFD4; margin: 0; padding-bottom: 8px; }
-.table td { color: #2A1A12; font-size: 15px; line-height: 18px; margin: 0; padding: 10px 0; }
-.content-cell { max-width: 100vw; padding: 34px; }
-.action { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 30px auto; padding: 0; text-align: center; width: 100%; float: unset; }
-.button { -webkit-text-size-adjust: none; border-radius: 10px; color: #fff; display: inline-block; overflow: hidden; text-decoration: none; font-weight: 600; }
-.button-blue, .button-primary { background-color: #5A1E0E; border-bottom: 10px solid #5A1E0E; border-left: 20px solid #5A1E0E; border-right: 20px solid #5A1E0E; border-top: 10px solid #5A1E0E; }
-.button-green, .button-success { background-color: #2F7A4A; border-bottom: 10px solid #2F7A4A; border-left: 20px solid #2F7A4A; border-right: 20px solid #2F7A4A; border-top: 10px solid #2F7A4A; }
-.button-red, .button-error { background-color: #B04A23; border-bottom: 10px solid #B04A23; border-left: 20px solid #B04A23; border-right: 20px solid #B04A23; border-top: 10px solid #B04A23; }
-.panel { border-left: #B5802A solid 4px; margin: 21px 0; }
-.panel-content { background-color: #F6EEE6; color: #2A1A12; padding: 16px; }
-.panel-content p { color: #2A1A12; }
-.panel-item { padding: 0; } .panel-item p:last-of-type { margin-bottom: 0; padding-bottom: 0; }
-.break-all { word-break: break-all; }
+.body { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #F5F1EB; margin: 0; padding: 0 16px; width: 100%; }
+.inner-body { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 600px; background-color: #FFFFFF; border: 1px solid #E9E0D7; border-top: 4px solid #B5802A; border-radius: 12px; margin: 0 auto; padding: 0; width: 600px; }
+.inner-body a { overflow-wrap: break-word; word-break: normal; }
+.content-cell { font-weight: 400; max-width: 100vw; padding: 40px; }
+.eyebrow { color: #95651C; font-size: 10px; font-weight: 700; letter-spacing: 1.8px; margin-bottom: 12px; }
+.greeting { color: #321D13; margin-bottom: 12px; }
+.subcopy { border-top: 1px solid #E9E0D7; margin-top: 28px; padding-top: 20px; }
+.subcopy p { color: #837267; font-size: 11px; line-height: 1.6; margin-bottom: 0; }
+.footer { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 600px; margin: 0 auto; padding: 0; text-align: center; width: 600px; }
+.footer .content-cell { padding: 24px; }
+.footer p { color: #837267; font-size: 11px; font-weight: 400; line-height: 1.7; text-align: center; }
+.footer a { color: #837267; text-decoration: underline; }
+.table table { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 24px auto; width: 100%; }
+.table th { border-bottom: 1px solid #E9E0D7; margin: 0; padding-bottom: 8px; }
+.table td { color: #493D35; font-size: 14px; font-weight: 400; line-height: 1.6; margin: 0; padding: 10px 0; }
+.action { -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 26px auto 32px; padding: 0; text-align: center; width: 100%; float: unset; }
+.button { -webkit-text-size-adjust: none; border-radius: 6px; color: #FFFFFF; display: inline-block; font-size: 14px; font-weight: 700; line-height: 1.5; overflow: hidden; text-align: center; text-decoration: none; }
+.button-blue, .button-primary { background-color: #5A1E0E; border: 12px solid #5A1E0E; border-left-width: 24px; border-right-width: 24px; }
+.button-green, .button-success { background-color: #2F7A4A; border: 12px solid #2F7A4A; border-left-width: 24px; border-right-width: 24px; }
+.button-red, .button-error { background-color: #B04A23; border: 12px solid #B04A23; border-left-width: 24px; border-right-width: 24px; }
+.feature-list { border-collapse: collapse; margin: 0 0 28px; width: 100%; }
+.feature-list td { border-bottom: 1px solid #F0EAE3; font-size: 13px; font-weight: 400; line-height: 1.7; padding: 18px 0; vertical-align: top; }
+.feature-list .feature-number { color: #B5802A; font-size: 12px; font-weight: 700; padding-right: 16px; width: 36px; }
+.feature-list strong { color: #321D13; font-size: 14px; font-weight: 700; }
+.feature-copy { color: #7A6A60; }
+.panel { border-left: #B5802A solid 3px; margin: 24px 0; }
+.panel-content { background-color: #FAF6F0; color: #493D35; padding: 20px; }
+.panel-content p { color: #493D35; font-size: 13px; }
+.panel-item { padding: 0; }
+.panel-item p:last-of-type { margin-bottom: 0; padding-bottom: 0; }
+.signature { color: #7A6A60; font-size: 13px; margin-top: 28px; }
+.break-all, .inner-body .break-all { word-break: break-all; }
+@media only screen and (max-width: 640px) {
+  .inner-body, .footer { width: 100% !important; }
+  .content-cell { padding: 28px 22px !important; }
+  .header { padding: 28px 0 24px !important; }
+  .body { padding: 0 10px !important; }
+  h1 { font-size: 25px !important; }
+}
+@media only screen and (max-width: 500px) {
+  .button { max-width: 100% !important; }
+}

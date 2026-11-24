@@ -25,6 +25,9 @@ trait CreatesListing
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
+        if (! auth()->user()->canCreateListing()) {
+            $this->halt();
+        }
         $data[static::$ownerColumn ?? 'owner_id'] = auth()->id();
         $data['status'] = 'pending';
 

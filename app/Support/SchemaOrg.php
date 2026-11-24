@@ -73,7 +73,7 @@ class SchemaOrg
     /** @param array<string,?string> $items libellé => URL (null = page courante) */
     public static function breadcrumbs(array $items): array
     {
-        $list = [['@type' => 'ListItem', 'position' => 1, 'name' => __('Accueil'), 'item' => url('/')]];
+        $list = [['@type' => 'ListItem', 'position' => 1, 'name' => __('Accueil'), 'item' => route('home')]];
         $i = 2;
         foreach ($items as $label => $url) {
             $list[] = array_filter(['@type' => 'ListItem', 'position' => $i++, 'name' => $label, 'item' => $url ?? url()->current()]);

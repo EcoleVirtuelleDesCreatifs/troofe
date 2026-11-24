@@ -49,7 +49,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="{{ asset('assets/css/troofe.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/culture.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/app.css') }}?v={{ filemtime(public_path('assets/css/app.css')) }}">
 @stack('head')
 </head>
 <body>
@@ -124,21 +124,18 @@
   @include('partials.faq')
 </main>
 
-<footer class="site">
+<footer class="site" id="footer">
   <div class="wrap gutter cols">
     <div>
       <img src="{{ asset('assets/img/logo/logo-horizontal-negatif.svg') }}" alt="Trôofê" class="foot-logo">
       <p class="small muted mt-3" style="max-width:36ch">{{ __('La maison numérique de la gastronomie, de la culture et des savoir-faire africains.') }}</p>
-      <form method="post" action="{{ route('newsletter.subscribe') }}" class="foot-news mt-3">@csrf
-        <label for="nl-email" class="small fw-semibold d-block mb-2">{{ __('La lettre Trôofê, chaque jeudi') }}</label>
-        <div class="d-flex gap-2"><input type="email" required name="email" id="nl-email" class="form-control form-control-sm" placeholder="{{ __('votre@email.com') }}"><input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off"><button class="btn btn-ocre btn-sm">{{ __('S\'inscrire') }}</button></div>
-      </form>
     </div>
     <div><h6>{{ __('Découvrir') }}</h6><a href="{{ route('restaurants.index') }}">{{ __('Restaurants') }}</a><a href="{{ route('dishes.index') }}">{{ __('Encyclopédie') }}</a><a href="{{ route('articles.index') }}">{{ __('Actualités') }}</a><a href="{{ route('events.index') }}">{{ __('Agenda') }}</a></div>
-    <div><h6>{{ __('Culture') }}</h6><a href="{{ route('culture.index', 'danse') }}">{{ __('Groupes de danse') }}</a><a href="{{ route('culture.index', 'prestations') }}">{{ __('Prestations artistiques') }}</a><a href="{{ route('culture.index', 'artisans') }}">{{ __('Artisans') }}</a><a href="{{ route('culture.hub') }}#pack">{{ __('Composer ma soirée') }}</a></div>
-    <div><h6>{{ __('Professionnels') }}</h6><a href="{{ route('partner') }}">{{ __('Devenir partenaire') }}</a><a href="{{ route('pricing') }}">{{ __('Formules pro') }}</a><a href="{{ route('advertise') }}">{{ __('Annoncer sur Trôofê') }}</a><a href="{{ url('/pro') }}">{{ __('Espace pro') }}</a></div>
-    <div><h6>{{ __('Trôofê') }}</h6><a href="{{ route('page', 'a-propos') }}">{{ __('À propos') }}</a><a href="{{ route('contact') }}">{{ __('Contact') }}</a><a href="{{ route('page', 'conditions') }}">{{ __('Conditions') }}</a><a href="{{ route('page', 'confidentialite') }}">{{ __('Confidentialité') }}</a><a href="{{ route('page', 'mentions-legales') }}">{{ __('Mentions légales') }}</a></div>
+    <div><h6>{{ __('Publicité') }}</h6><a href="{{ route('advertise') }}">{{ __('Nos emplacements') }}</a><a href="{{ route('advertise') }}#home_hero">{{ __('Réserver un espace') }}</a><a href="{{ url('/pro') }}">{{ __('Mes campagnes') }}</a></div>
+    <div><h6>{{ __('Professionnels') }}</h6><a href="{{ route('partner') }}">{{ __('Devenir partenaire') }}</a><a href="{{ route('advertise') }}">{{ __('Annoncer sur Trôofê') }}</a><a href="{{ url('/pro') }}">{{ __('Portail pro') }}</a><a href="{{ url('/admin') }}">{{ __('Administration') }}</a><span class="small muted d-block mt-2 user-select-all">{{ config('troofe.admin_email', 'contact@troofe.net') }}</span></div>
+    <div><h6>{{ __('Trôofê') }}</h6><a href="{{ route('culture.hub') }}">{{ __('Culture & savoir-faire') }}</a><a href="{{ route('page', 'a-propos') }}">{{ __('À propos') }}</a><a href="{{ route('contact') }}">{{ __('Contact') }}</a><a href="{{ route('page', 'conditions') }}">{{ __('Conditions') }}</a><a href="{{ route('page', 'confidentialite') }}">{{ __('Confidentialité') }}</a><a href="{{ route('page', 'mentions-legales') }}">{{ __('Mentions légales') }}</a></div>
   </div>
+  @include('partials.photo-credits')
   <div class="wrap gutter d-flex justify-content-between flex-wrap gap-2 small muted pb-4 pt-3"><span>© {{ date('Y') }} Trôofê</span><span>@foreach (\App\Http\Middleware\SetLocale::LOCALES as $code => $label)<a href="{{ locale_url($code) }}" class="d-inline ms-2 {{ app()->getLocale() === $code ? 'fw-bold' : '' }}">{{ $label }}</a>@endforeach</span></div>
 </footer>
 
@@ -151,7 +148,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>window.TROOFE = { searchUrl: @json(route('search')), locale: @json(app()->getLocale()), i18n: { noResult: @json(__('Aucun résultat.')), error: @json(__('Une erreur est survenue. Réessayez.')) } };</script>
-<script src="{{ asset('assets/js/troofe.js') }}" defer></script>
+<script src="{{ asset('assets/js/troofe.js') }}?v={{ filemtime(public_path('assets/js/troofe.js')) }}" defer></script>
+<script src="{{ asset('assets/js/motion.js') }}?v={{ filemtime(public_path('assets/js/motion.js')) }}" defer></script>
 @stack('scripts')
 </body>
 </html>

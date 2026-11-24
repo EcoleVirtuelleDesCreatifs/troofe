@@ -19,15 +19,21 @@ class HomeController extends Controller
         $data = Cache::remember('home:'.app()->getLocale(), 600, fn () => [
             'restaurants' => Restaurant::published()->orderByDesc('is_featured')->orderByDesc('views')->take(8)->get(),
             'events' => Event::published()->upcoming()->with('ticketTypes')->orderBy('starts_at')->take(6)->get(),
-            'dishes' => Dish::published()->orderByDesc('views')->take(6)->get(),
+            'dishes' => Dish::published()->withCount('restaurants')->orderByDesc('views')->take(6)->get(),
             'articles' => Article::published()->latest('published_at')->take(3)->get(),
-            'talents' => collect(array_keys(Talent::TYPES))->mapWithKeys(fn ($t) => [$t => Talent::published()->ofType($t)->orderByDesc('is_featured')->orderByDesc('views')->take(3)->get()]),
+            'talents' => collect(array_keys(Talent::TYPES))->mapWithKeys(fn ($t) => [$t => Talent::published()->ofType($t)->with('offers')->orderByDesc('is_featured')->orderByDesc('views')->take(3)->get()]),
             'counts' => [
                 'restaurants' => Restaurant::published()->count(),
                 'dishes' => Dish::published()->count(),
                 'events' => Event::published()->upcoming()->count(),
                 'talents' => Talent::published()->count(),
             ],
+            'avgRating' => round((float) \App\Models\Review::where('status', 'published')->avg('rating'), 1),
+            'adStats' => [
+                'slots' => \App\Models\AdSlot::where('is_active', true)->count(),
+                'minPrice' => (int) \App\Models\AdSlot::where('is_active', true)->min('price_per_day'),
+            ],
+            'heroAd' => \App\Models\AdCampaign::live()->whereHas('slot', fn ($q) => $q->where('code', 'home_hero')->where('is_active', true))->with('slot')->inRandomOrder()->first(),
         ]);
 
         seo()->title(__('Restaurants, culture et gastronomie africaine'))
@@ -40,6 +46,12 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $q = trim((string) $request->query('q'));
+        if ($request->query('scope') === 'restaurants') {
+            return redirect()->route('restaurants.index', ['q' => $q]);
+        }
+        if ($request->query('scope') === 'plats') {
+            return redirect()->route('dishes.index', ['q' => $q]);
+        }
         $results = collect();
         if (mb_strlen($q) >= 2) {
             $like = '%'.str_replace(['%', '_'], ['\%', '\_'], $q).'%';

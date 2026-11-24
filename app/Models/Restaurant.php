@@ -69,6 +69,20 @@ class Restaurant extends Model
         return media_url($this->cover, 'restaurant', $this->slug);
     }
 
+    public function isOpenNow(): bool
+    {
+        $day = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'][(int) now()->format('N') - 1];
+        $h = ($this->opening_hours ?? [])[$day] ?? null;
+        if (! $h || ! preg_match('/(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})/', $h, $m)) {
+            return false;
+        }
+        $cur = now()->format('H:i');
+        $open = sprintf('%02d:%02d', $m[1], $m[2]);
+        $close = sprintf('%02d:%02d', $m[3], $m[4]);
+
+        return $close <= $open ? ($cur >= $open || $cur <= $close) : ($cur >= $open && $cur <= $close);
+    }
+
     public function whatsappUrl(): ?string
     {
         return $this->whatsapp ? 'https://wa.me/'.preg_replace('/\D/', '', $this->whatsapp).'?text='.rawurlencode("Bonjour, je vous contacte depuis Trôofê au sujet de « {$this->name} ».") : null;

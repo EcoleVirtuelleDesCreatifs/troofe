@@ -28,8 +28,8 @@ class SeoTest extends TestCase
 
     public function test_home_has_complete_head_in_both_languages(): void
     {
-        $fr = $this->get('/')->assertOk()->getContent();
-        $this->assertStringContainsString('<link rel="canonical" href="'.url('/').'"', $fr);
+        $fr = $this->get('/fr')->assertOk()->getContent();
+        $this->assertStringContainsString('<link rel="canonical" href="'.url('/fr').'"', $fr);
         $this->assertStringContainsString('hreflang="en"', $fr);
         $this->assertStringContainsString('hreflang="x-default"', $fr);
         $this->assertStringContainsString('<meta name="description"', $fr);
@@ -39,15 +39,16 @@ class SeoTest extends TestCase
         $this->assertContains('Organization', $types);
         $this->assertContains('WebSite', $types);
 
-        $en = $this->get('/?lang=en')->assertOk()->getContent();
+        $this->get('/?lang=en')->assertStatus(301)->assertRedirect('/en');
+        $en = $this->get('/en')->assertOk()->getContent();
         $this->assertStringContainsString('<html lang="en"', $en);
-        $this->assertStringContainsString('<link rel="canonical" href="'.url('/').'?lang=en"', $en);
+        $this->assertStringContainsString('<link rel="canonical" href="'.url('/en').'"', $en);
     }
 
     public function test_filtered_and_private_pages_are_noindex(): void
     {
-        $this->assertStringContainsString('noindex', $this->get('/recherche?q=attieke')->getContent());
-        $this->assertStringContainsString('noindex', $this->get('/restaurants?city=Abidjan&sort=note')->getContent());
+        $this->assertStringContainsString('noindex', $this->get('/fr/recherche?q=attieke')->getContent());
+        $this->assertStringContainsString('noindex', $this->get('/fr/restaurants?city=Abidjan&sort=note')->getContent());
         $this->assertStringContainsString('noindex', $this->get('/connexion')->getContent());
 
         $user = User::factory()->create();

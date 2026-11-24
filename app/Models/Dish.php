@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\Engageable;
 use App\Models\Concerns\HasSlug;
 use App\Models\Concerns\Moderated;
 use App\Models\Concerns\Translatable;
@@ -10,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Dish extends Model
 {
-    use HasSlug, Moderated, Translatable;
+    use Engageable, HasSlug, Moderated, Translatable;
 
     protected $guarded = ['id', 'views'];
 

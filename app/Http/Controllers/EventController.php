@@ -33,8 +33,19 @@ class EventController extends Controller
             seo()->schema(SchemaOrg::event($e->loadMissing('organizer', 'performers')));
         }
 
+        $monthEvents = collect(); $calMonth = now()->startOfMonth();
+        if ($request->query('view') === 'calendrier') {
+            try { $calMonth = \Carbon\Carbon::createFromFormat('Y-m', $request->query('mois', now()->format('Y-m')))->startOfMonth(); } catch (\Throwable) {}
+            $monthEvents = Event::published()->whereBetween('starts_at', [$calMonth->copy()->startOfMonth(), $calMonth->copy()->endOfMonth()])
+                ->when($request->query('ville'), fn ($q, $v) => $q->where('city', $v))
+                ->when($request->query('categorie'), fn ($q, $v) => $q->where('category', $v))
+                ->orderBy('starts_at')->get()->groupBy(fn ($e) => $e->starts_at->toDateString());
+        }
+
         return view('pages.events.index', [
             'events' => $list,
+            'monthEvents' => $monthEvents,
+            'calMonth' => $calMonth,
             'cities' => Event::published()->upcoming()->distinct()->orderBy('city')->pluck('city'),
             'categories' => Event::published()->upcoming()->distinct()->pluck('category'),
         ]);

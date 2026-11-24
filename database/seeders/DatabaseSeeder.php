@@ -35,6 +35,9 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
+        if (app()->isProduction()) {
+            throw new \LogicException('Demo data cannot be seeded in production.');
+        }
         $this->call(PlanSeeder::class);
         $this->d = json_decode(file_get_contents(__DIR__.'/data/demo.json'), true);
         $this->shift = (int) now()->diffInSeconds(Carbon::parse($this->d['extractedAt']), true);

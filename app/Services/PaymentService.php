@@ -25,15 +25,20 @@ class PaymentService
 
     public function gateway(?string $provider = null): PaymentGateway
     {
-        return match ($provider ?? config('services.payments.driver')) {
+        $provider ??= config('services.payments.driver');
+        abort_if($provider === 'simulation' && app()->isProduction(), 503, __('Les paiements de démonstration sont désactivés en production.'));
+
+        return match ($provider) {
             'cinetpay' => app(CinetPayGateway::class),
-            default => app(SimulationGateway::class),
+            'simulation' => app(SimulationGateway::class),
+            default => throw new \InvalidArgumentException('Unsupported payment provider.'),
         };
     }
 
     /** Crée le paiement et renvoie l'URL vers laquelle rediriger le client */
     public function start(User $user, Model $payable, int $amount, string $description): string
     {
+        $gateway = $amount === 0 ? null : $this->gateway();
         $payment = Payment::create([
             'reference' => 'TRF'.now()->format('ymd').strtoupper(Str::random(8)),
             'user_id' => $user->id,
@@ -53,7 +58,7 @@ class PaymentService
             return route('payments.return', $payment);
         }
 
-        return $this->gateway($payment->provider)->initiate($payment);
+        return $gateway->initiate($payment);
     }
 
     /** Vérifie l'état auprès du prestataire et applique le résultat (idempotent) */
@@ -103,11 +108,22 @@ class PaymentService
 
     public function markFailed(Payment $payment, array $payload): void
     {
-        $payment->update(['status' => 'failed', 'provider_payload' => array_merge($payment->provider_payload ?? [], ['result' => $payload])]);
-        if ($payment->payable instanceof Order) {
-            $this->orders->releaseStock($payment->payable);
+        $applied = DB::transaction(function () use ($payment, $payload) {
+            $locked = Payment::whereKey($payment->id)->lockForUpdate()->firstOrFail();
+            if ($locked->status !== 'pending') {
+                return false;
+            }
+            $locked->update(['status' => 'failed', 'provider_payload' => array_merge($locked->provider_payload ?? [], ['result' => $payload])]);
+            if ($locked->payable instanceof Order) {
+                $this->orders->releaseStock($locked->payable);
+            }
+
+            return true;
+        });
+        $payment->refresh();
+        if ($applied) {
+            $payment->user->notify(new PaymentFailed($payment));
         }
-        $payment->user->notify(new PaymentFailed($payment));
     }
 
     /** Effets du paiement selon l'objet payé */

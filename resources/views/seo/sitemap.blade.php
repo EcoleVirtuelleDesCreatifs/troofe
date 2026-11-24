@@ -1,16 +1,17 @@
 {!! '<'.'?xml version="1.0" encoding="UTF-8"?>' !!}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 @foreach ($entries as $e)
-  @php $sep = str_contains($e['loc'], '?') ? '&amp;' : '?'; @endphp
+  @foreach (['fr', 'en'] as $locale)
   <url>
-    <loc>{{ $e['loc'] }}</loc>
+    <loc>{{ \App\Support\Seo::localizedUrl($e['loc'], $locale) }}</loc>
     @if ($e['lastmod'])<lastmod>{{ $e['lastmod'] }}</lastmod>@endif
     <changefreq>{{ $e['freq'] }}</changefreq>
     <priority>{{ $e['priority'] }}</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="{{ $e['loc'] }}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="{{ $e['loc'] }}{!! $sep !!}lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ $e['loc'] }}"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ \App\Support\Seo::localizedUrl($e['loc'], 'fr') }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ \App\Support\Seo::localizedUrl($e['loc'], 'en') }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ \App\Support\Seo::localizedUrl($e['loc'], 'fr') }}"/>
     @if ($e['image'])<image:image><image:loc>{{ $e['image'] }}</image:loc>@if ($e['title'])<image:title>{{ $e['title'] }}</image:title>@endif</image:image>@endif
   </url>
+  @endforeach
 @endforeach
 </urlset>

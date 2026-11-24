@@ -14,6 +14,9 @@ class ArticleController extends Controller
         if ($c = $request->query('rubrique')) {
             $query->where('category', $c);
         }
+        if ($q = $request->string('q')->trim()->value()) {
+            $query->where(fn ($w) => $w->where('title', 'like', "%$q%")->orWhere('excerpt', 'like', "%$q%")->orWhere('body', 'like', "%$q%"));
+        }
 
         seo()->title(__('Actualités de la gastronomie africaine'))->description(__('Portraits de chefs, tendances, recettes et annonces : le magazine Trôofê de la table africaine.'))->schema(SchemaOrg::breadcrumbs([__('Actualités') => null]));
 

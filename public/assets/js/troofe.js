@@ -7,7 +7,7 @@
 
   /* Barre du haut au défilement */
   const top = $('#topbar');
-  addEventListener('scroll', () => top && top.classList.toggle('scrolled', scrollY > 8), { passive: true });
+  if (!document.querySelector('[data-home-motion]')) addEventListener('scroll', () => top && top.classList.toggle('scrolled', scrollY > 8), { passive: true });
 
   /* Favoris et « Suivre » sans rechargement */
   document.addEventListener('click', async e => {
@@ -82,6 +82,17 @@
     tickets.addEventListener('input', draw); draw();
   }
 
+  /* Onglets de la carte (filtrage par catégorie) */
+  $$('#menu-tabs button').forEach(b => b.addEventListener('click', () => {
+    $$('#menu-tabs button').forEach(x => x.classList.toggle('on', x === b));
+    $$('#menu-list .menu-item').forEach(m => m.hidden = b.dataset.cat && m.dataset.cat !== b.dataset.cat);
+  }));
+
+  /* Partager : copie le lien */
+  $$('[data-share]').forEach(b => b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(location.href); b.classList.add('text-success'); setTimeout(() => b.classList.remove('text-success'), 1500); } catch {}
+  }));
+
   /* Calendrier de disponibilités → formulaire de réservation */
   $$('[data-day]').forEach(b => b.addEventListener('click', () => {
     const f = $('#booking-form'); if (!f) return;
@@ -125,4 +136,82 @@
     e.preventDefault();
     const m = $('#lightbox'); $('img', m).src = a.href; bootstrap.Modal.getOrCreateInstance(m).show();
   }));
+
+  /* ---------- Thème clair/sombre : synchronise Bootstrap ---------- */
+  const syncTheme = () => {
+    const t = document.documentElement.getAttribute('data-theme');
+    const dark = t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+  };
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncTheme);
+  new MutationObserver(syncTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  syncTheme();
+
+  const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Apparition au défilement (.rv) */
+  if (!reduced() && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('rv-in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -6% 0px' });
+    $$('.rv').filter(el => !el.closest('[data-home-motion]')).forEach((el, k) => { const r = el.getBoundingClientRect(); if (r.top > innerHeight) { el.classList.add('rv-pre'); el.style.transitionDelay = (k % 4) * 60 + 'ms'; io.observe(el); } });
+  }
+
+  /* Compteurs animés */
+  const animateCount = el => {
+    const to = +el.dataset.count, pre = el.dataset.prefix || '', fmt = v => pre + new Intl.NumberFormat('fr-FR').format(v).replace(/ | /g, ' ');
+    if (reduced()) { el.textContent = fmt(to); return; }
+    const t0 = performance.now(), d = 1100;
+    const tick = t => { const p = reduced() ? 1 : Math.min(1, (t - t0) / d), e = 1 - Math.pow(1 - p, 3); el.textContent = fmt(Math.round(to * e)); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  };
+  const counts = 'IntersectionObserver' in window && !reduced() ? new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { counts.unobserve(entry.target); animateCount(entry.target); }
+  }), { threshold:.4 }) : null;
+  $$('[data-count]').forEach(el => counts ? counts.observe(el) : animateCount(el));
+
+  /* Rails horizontaux : flèches, glisser, progression, auto */
+  $$('.rail-wrap').forEach(root => {
+    const sc = $('.rail', root), prev = $('[data-rail="-1"]', root), next = $('[data-rail="1"]', root), bar = $('.rail-progress i', root);
+    const upd = () => { const max = sc.scrollWidth - sc.clientWidth; if (prev) prev.disabled = sc.scrollLeft <= 4; if (next) next.disabled = sc.scrollLeft >= max - 4;
+      if (bar) { const vis = sc.clientWidth / sc.scrollWidth; bar.style.width = Math.max(12, vis * 100) + '%'; bar.style.transform = `translateX(${max > 0 ? (sc.scrollLeft / max) * (100 / Math.max(vis, .12) - 100) : 0}%)`; } };
+    const step = d => { const card = sc.firstElementChild; const cw = card ? card.getBoundingClientRect().width + 20 : sc.clientWidth * .8; const per = Math.max(1, Math.floor(sc.clientWidth / cw)); sc.scrollBy({ left: d * cw * per, behavior: reduced() ? 'auto' : 'smooth' }); };
+    if (prev) prev.onclick = () => step(-1); if (next) next.onclick = () => step(1);
+    let railPending = false;
+    sc.addEventListener('scroll', () => { if (railPending) return; railPending = true; requestAnimationFrame(() => { upd(); railPending = false; }); }, { passive: true }); window.addEventListener('resize', upd);
+    let down = false, sx = 0, sl = 0, moved = false;
+    sc.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse' || e.button) return; down = true; moved = false; sx = e.clientX; sl = sc.scrollLeft; });
+    window.addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 5 && !moved) { moved = true; sc.classList.add('dragging'); } if (moved) sc.scrollLeft = sl - dx; });
+    window.addEventListener('pointerup', () => { if (!down) return; down = false; if (moved) { sc.classList.remove('dragging'); const card = sc.firstElementChild; if (card) { const cw = card.getBoundingClientRect().width + 20; sc.scrollTo({ left: Math.round(sc.scrollLeft / cw) * cw, behavior: 'smooth' }); } } });
+    sc.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+    sc.addEventListener('dragstart', e => e.preventDefault());
+    if (root.dataset.auto && !reduced()) { let hover = false, visible = false; root.addEventListener('mouseenter', () => hover = true); root.addEventListener('mouseleave', () => hover = false);
+      if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; }, { threshold:.15 }).observe(root);
+      setInterval(() => { if (!visible || hover || reduced() || document.hidden || down || root.contains(document.activeElement)) return; const max = sc.scrollWidth - sc.clientWidth; if (sc.scrollLeft >= max - 4) sc.scrollTo({ left: 0, behavior: 'smooth' }); else step(1); }, +root.dataset.auto || 4500); }
+    upd(); setTimeout(upd, 300);
+  });
+
+  /* Carrousel d'en-tête (hs2) : textes en fondu, parallaxe curseur, glisser */
+  $$('.hs2').forEach(root => {
+    const slides = $$('.hs2-slide', root), dots = $$('.hs2-dot', root), n = slides.length; let i = 0, sx = null, sy = null;
+    if (reduced()) root.classList.add('no-auto');
+    const go = k => { const prev = i; i = (k + n) % n; if (prev === i) return;
+      slides[prev].classList.remove('on'); slides[prev].classList.add('leaving'); setTimeout(() => slides[prev].classList.remove('leaving'), 900);
+      slides.forEach((s, j) => { s.setAttribute('aria-hidden', j !== i); s.inert = j !== i; });
+      slides[i].classList.add('on');
+      dots.forEach((d, j) => { d.classList.remove('on'); d.classList.toggle('done', j < i); if (j === i) { void d.offsetWidth; d.classList.add('on'); } }); };
+    slides.forEach((s, j) => s.inert = j !== 0);
+    dots.forEach((d, k) => { d.onclick = () => go(k); const b = d.querySelector('i'); if (b) b.addEventListener('animationend', () => { if (k === i) go(i + 1); }); });
+    $$('[data-step]', root).forEach(b => b.onclick = () => go(i + +b.dataset.step));
+    let offscreen = false;
+    const pause = v => root.classList.toggle('paused', v || offscreen || document.hidden);
+    const syncPause = () => pause(root.matches(':hover') || root.contains(document.activeElement));
+    if ('IntersectionObserver' in window) new IntersectionObserver(entries => { offscreen = !entries[0].isIntersecting; syncPause(); }).observe(root);
+    document.addEventListener('visibilitychange', syncPause);
+    matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => root.classList.toggle('no-auto', e.matches));
+    root.addEventListener('mouseenter', () => pause(true)); root.addEventListener('mouseleave', () => { syncPause(); root.style.setProperty('--px', 0); root.style.setProperty('--py', 0); });
+    root.addEventListener('focusin', () => pause(true)); root.addEventListener('focusout', () => requestAnimationFrame(syncPause));
+    root.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(i + 1); if (e.key === 'ArrowLeft') go(i - 1); });
+    root.addEventListener('mousemove', e => { if (reduced()) return; const b = root.getBoundingClientRect(); root.style.setProperty('--px', ((e.clientX - b.left) / b.width - .5).toFixed(3)); root.style.setProperty('--py', ((e.clientY - b.top) / b.height - .5).toFixed(3)); });
+    root.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; });
+    root.addEventListener('pointerup', e => { if (sx === null) return; const dx = e.clientX - sx, dy = e.clientY - sy; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(i + (dx < 0 ? 1 : -1)); sx = null; });
+  });
 })();

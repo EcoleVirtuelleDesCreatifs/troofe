@@ -94,20 +94,22 @@ class Seo
         return $this;
     }
 
-    /** URL de la page dans une langue donnée (français = URL nue, anglais = ?lang=en) */
+    /** URL de la page dans une langue donnée, préfixée par /fr ou /en pour les pages publiques */
     public function urlFor(string $locale): string
     {
-        $query = collect(request()->query())->only(['page'])->filter();
-        if ($locale !== 'fr') {
-            $query->put('lang', $locale);
-        }
-
-        return url()->current().($query->isNotEmpty() ? '?'.http_build_query($query->all()) : '');
+        return locale_url($locale, collect(request()->query())->only(['page'])->filter()->all());
     }
 
     public function canonical(): string
     {
         return $this->urlFor(app()->getLocale());
+    }
+
+    public static function localizedUrl(string $url, string $locale): string
+    {
+        $root = rtrim(url('/'), '/');
+
+        return preg_replace('~^'.preg_quote($root, '~').'/(?:fr|en)(?=/|\?|$)~', $root.'/'.$locale, $url, 1);
     }
 
     /** Pages filtrées (paramètres autres que page/lang) : pas d'indexation, liens suivis */

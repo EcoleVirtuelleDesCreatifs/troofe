@@ -11,7 +11,7 @@ class RestaurantController extends Controller
 {
     public function index(Request $request)
     {
-        $f = $request->validate(['q' => 'nullable|string|max:80', 'city' => 'nullable|string|max:80', 'cuisine' => 'nullable|string|max:80', 'price' => 'nullable|integer|between:1,4', 'delivery' => 'nullable|boolean', 'sort' => 'nullable|in:pertinence,note,nom']);
+        $f = $request->validate(['q' => 'nullable|string|max:80', 'city' => 'nullable|string|max:80', 'cuisine' => 'nullable|string|max:80', 'price' => 'nullable|integer|between:1,4', 'delivery' => 'nullable|boolean', 'service' => 'nullable|in:livraison,retrait,sur_place', 'open' => 'nullable|boolean', 'sort' => 'nullable|in:pertinence,note,nom,prix']);
 
         $query = Restaurant::published()->withAvg(['reviews as rating' => fn ($q) => $q->where('status', 'published')], 'rating')->withCount(['reviews as reviews_count' => fn ($q) => $q->where('status', 'published')]);
         if ($q = $f['q'] ?? null) {
@@ -28,13 +28,28 @@ class RestaurantController extends Controller
         if (! empty($f['delivery'])) {
             $query->where('delivery', true);
         }
+        if (($f['service'] ?? '') === 'livraison') {
+            $query->where('delivery', true);
+        } elseif (($f['service'] ?? '') === 'retrait') {
+            $query->where('accepts_orders', true);
+        }
         match ($f['sort'] ?? 'pertinence') {
             'note' => $query->orderByDesc('rating'),
             'nom' => $query->orderBy('name'),
+            'prix' => $query->orderBy('price_level'),
             default => $query->orderByDesc('is_featured')->orderByDesc('is_verified')->orderByDesc('views'),
         };
 
-        $page = $query->paginate(12)->withQueryString();
+        if (! empty($f['open'])) {
+            $filtered = $query->get()->filter->isOpenNow()->values();
+            $page = new \Illuminate\Pagination\LengthAwarePaginator(
+                $filtered->forPage($request->integer('page', 1), 12)->values(),
+                $filtered->count(), 12, $request->integer('page', 1),
+                ['path' => $request->url(), 'query' => $request->query()]
+            );
+        } else {
+            $page = $query->paginate(12)->withQueryString();
+        }
         $city = $f['city'] ?? null;
         seo()->title($city ? __('Restaurants africains à :city', ['city' => $city]) : __('Restaurants africains : annuaire et commande en ligne'))
             ->description(__(':n restaurants africains :where : cuisine ivoirienne, sénégalaise, ghanéenne… Avis, carte, horaires et commande en ligne avec paiement Mobile Money.', ['n' => $page->total(), 'where' => $city ? __('à :city', ['city' => $city]) : __('en Afrique de l\'Ouest')]))

@@ -57,10 +57,29 @@ class AdController extends Controller
         return redirect()->away($this->payments->start($request->user(), $campaign, $campaign->amount, __('Campagne « :title » — :slot', ['title' => $campaign->title, 'slot' => $campaign->slot->name])));
     }
 
-    public function click(AdCampaign $campaign)
+    public function click(Request $request, AdCampaign $campaign)
     {
-        $campaign->increment('clicks');
+        $agent = $request->userAgent() ?? '';
+        $purpose = implode(' ', array_map(fn ($header) => $request->header($header, ''), ['Purpose', 'Sec-Purpose', 'X-Purpose', 'X-Moz']));
+        $automated = $agent === '' || preg_match('/bot|crawl|spider|slurp|preview|facebookexternalhit|whatsapp|telegram|embedly|iframely|headless|lighthouse|inspectiontool|pagespeed|curl|wget|python|httpclient|validator|monitor|pingdom|uptime/i', $agent)
+            || preg_match('/prefetch|prerender|preview/i', $purpose)
+            || ($request->hasHeader('Sec-Fetch-Mode') && $request->header('Sec-Fetch-Mode') !== 'navigate');
+        $live = $campaign->status === 'active' && $campaign->starts_on->lte(today()) && $campaign->ends_on->gte(today()) && $campaign->slot?->is_active;
 
-        return redirect()->away($campaign->url);
+        if ($request->isMethod('GET') && ! $automated && $live) {
+            $prefix = 'ad-click:'.$campaign->id.':';
+            $ip = hash_hmac('sha256', (string) $request->ip(), config('app.key'));
+            $session = hash_hmac('sha256', $request->session()->getId(), config('app.key'));
+            $expires = now()->addDay();
+            if (\Illuminate\Support\Facades\Cache::add($prefix.'ip:'.$ip, true, $expires)
+                && \Illuminate\Support\Facades\Cache::add($prefix.'session:'.$session, true, $expires)) {
+                $campaign->increment('clicks');
+            }
+        }
+
+        return redirect()->away($campaign->url)->withHeaders([
+            'Cache-Control' => 'no-store, private',
+            'X-Robots-Tag' => 'noindex, nofollow',
+        ]);
     }
 }

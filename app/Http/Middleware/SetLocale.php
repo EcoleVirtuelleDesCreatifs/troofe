@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Langue : ?lang=fr|en > session > profil > navigateur > français.
+ * Langue publique déterminée par /fr ou /en ; anciennes URL redirigées, français par défaut.
  */
 class SetLocale
 {
@@ -15,23 +15,23 @@ class SetLocale
 
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = $request->query('lang');
+        $queryLocale = $request->query('lang');
+        $locale = $request->route('locale') ?? (is_string($queryLocale) && isset(self::LOCALES[$queryLocale]) ? $queryLocale : 'fr');
+        app()->setLocale($locale);
+        \Illuminate\Support\Carbon::setLocale($locale);
+        \Illuminate\Support\Facades\URL::defaults(['locale' => $locale]);
 
-        if ($locale && array_key_exists($locale, self::LOCALES)) {
-            $request->session()->put('locale', $locale);
-            if ($request->user() && $request->user()->locale !== $locale) {
-                $request->user()->forceFill(['locale' => $locale])->save();
-            }
-        } else {
-            $locale = $request->session()->get('locale')
-                ?? $request->user()?->locale
-                ?? $request->getPreferredLanguage(array_keys(self::LOCALES))
-                ?? 'fr';
+        if ($request->routeIs('legacy.*')) {
+            return redirect()->to(locale_url($locale), 301);
         }
+        if ($request->route('locale') && $request->query->has('lang')) {
+            return redirect()->to($request->fullUrlWithoutQuery('lang'), 301);
+        }
+        $request->route()?->forgetParameter('locale');
 
-        app()->setLocale(array_key_exists($locale, self::LOCALES) ? $locale : 'fr');
-        \Illuminate\Support\Carbon::setLocale(app()->getLocale());
+        $response = $next($request);
+        $response->headers->set('Content-Language', $locale);
 
-        return $next($request);
+        return $response;
     }
 }

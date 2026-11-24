@@ -22,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
+        \Illuminate\Support\Facades\URL::defaults(['locale' => 'fr']);
 
         // Noms courts et stables pour les relations polymorphes
         Relation::enforceMorphMap([
@@ -45,11 +46,11 @@ class AppServiceProvider extends ServiceProvider
         // et les caches SEO (sitemaps, llms.txt, flux RSS) ; les moteurs IndexNow sont prévenus
         foreach ([Restaurant::class, Talent::class, Event::class, \App\Models\Dish::class, \App\Models\Article::class] as $model) {
             $model::saved(function ($m) {
-                foreach (['home:fr', 'home:en', 'feed:fr', 'feed:en', 'llms:short', 'llms:full', 'sitemap:index'] as $key) {
+                foreach (['home:fr', 'home:en', 'feed:fr', 'feed:en', 'llms:short', 'llms:full', 'sitemap:v2:index'] as $key) {
                     Cache::forget($key);
                 }
                 foreach (['pages', 'restaurants', 'culture', 'evenements', 'encyclopedie', 'actualites'] as $section) {
-                    Cache::forget("sitemap:$section");
+                    Cache::forget("sitemap:v2:$section");
                 }
                 $public = ($m->status ?? null) === 'published' && ($m->wasChanged('status') || $m->wasRecentlyCreated || $m->wasChanged(['name', 'title', 'description', 'tagline', 'body', 'summary']));
                 if ($public) {

@@ -139,3 +139,16 @@ Route::middleware('auth')->prefix('compte')->name('account.')->controller(Accoun
 });
 
 Route::get('/compte/connexion', fn () => redirect()->route('login'));
+
+$localizedPages = ['home', 'search', 'page', 'restaurants.index', 'restaurants.show', 'dishes.index', 'dishes.show', 'articles.index', 'articles.show', 'events.index', 'events.show', 'culture.hub', 'culture.index', 'culture.show', 'pricing', 'advertise', 'partner', 'contact'];
+foreach (Route::getRoutes()->getRoutes() as $publicRoute) {
+    if (! in_array($publicRoute->getName(), $localizedPages, true)) {
+        continue;
+    }
+    $localizedRoute = clone $publicRoute;
+    $localizedRoute->setUri('{locale}'.($publicRoute->uri() === '/' ? '' : '/'.$publicRoute->uri()));
+    $localizedRoute->where('locale', 'fr|en');
+    $publicRoute->setAction(array_replace($publicRoute->getAction(), ['as' => 'legacy.'.$publicRoute->getName()]));
+    Route::getRoutes()->add($localizedRoute);
+}
+Route::getRoutes()->refreshNameLookups();

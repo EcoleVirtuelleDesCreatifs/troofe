@@ -18,15 +18,25 @@ if (! function_exists('media_url')) {
             return str_starts_with($path, 'http') ? $path : Storage::disk('public')->url($path);
         }
 
-        return route('placeholder', ['visual' => $visual, 'seed' => substr(md5($seed), 0, 12)]);
+        return \App\Support\PhotoLibrary::url($visual, $seed);
     }
 }
 
 if (! function_exists('locale_url')) {
     /** URL de la page courante dans l'autre langue */
-    function locale_url(string $locale): string
+    function locale_url(string $locale, ?array $query = null): string
     {
-        return request()->fullUrlWithQuery(['lang' => $locale]);
+        $route = request()->route();
+        $name = preg_replace('/^legacy\./', '', $route?->getName() ?? '');
+        $target = app('router')->getRoutes()->getByName($name);
+        $query ??= request()->query();
+        unset($query['lang']);
+
+        if ($target && str_starts_with($target->uri(), '{locale}')) {
+            return route($name, array_merge($query, $route->parameters(), ['locale' => $locale]));
+        }
+
+        return url()->current().'?'.http_build_query(array_merge($query, ['lang' => $locale]));
     }
 }
 

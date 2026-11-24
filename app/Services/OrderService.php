@@ -118,9 +118,16 @@ class OrderService
     /** Étape suivante côté restaurateur (ou annulation) */
     public function advance(Order $order, string $status): void
     {
-        $allowed = array_merge(array_values(Order::KITCHEN_FLOW), ['annulee', 'livree']);
-        abort_unless(in_array($status, $allowed, true), 422);
-        $order->update(['status' => $status]);
+        $current = $order->fresh();
+        $allowed = $current && $current->type === 'repas' && (
+            (Order::KITCHEN_FLOW[$current->status] ?? null) === $status
+            || ($current->status === 'payee' && $status === 'annulee')
+            || ($current->status === 'prete' && $current->fulfilment === 'livraison' && $status === 'livree')
+        );
+        abort_unless($allowed, 422);
+        $updated = Order::whereKey($current->id)->where('status', $current->status)->update(['status' => $status]);
+        abort_unless($updated === 1, 409);
+        $order->refresh();
         $order->user->notify(new OrderStatusChanged($order));
     }
 

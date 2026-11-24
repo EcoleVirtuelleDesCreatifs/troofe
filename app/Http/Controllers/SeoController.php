@@ -20,7 +20,7 @@ class SeoController extends Controller
     public function robots()
     {
         $sitemap = route('sitemap');
-        $private = "Disallow: /admin\nDisallow: /pro\nDisallow: /compte\nDisallow: /connexion\nDisallow: /inscription\nDisallow: /paiement\nDisallow: /billet\nDisallow: /recherche\nDisallow: /controle-acces\nDisallow: /newsletter/\nDisallow: /*?*q=\n";
+        $private = "Disallow: /admin\nDisallow: /pro\nDisallow: /compte\nDisallow: /connexion\nDisallow: /inscription\nDisallow: /paiement\nDisallow: /billet\nDisallow: /recherche\nDisallow: /controle-acces\nDisallow: /newsletter/\nDisallow: /pub\nDisallow: /fr/recherche\nDisallow: /en/recherche\nDisallow: /*?*q=\n";
         // Robots des moteurs génératifs explicitement autorisés sur le contenu public (visibilité dans ChatGPT, Claude, Perplexity, Gemini…)
         $ai = collect(['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'meta-externalagent', 'cohere-ai', 'MistralAI-User', 'DuckAssistBot'])
             ->map(fn ($bot) => "User-agent: $bot\nAllow: /\n$private")->implode("\n");
@@ -32,7 +32,7 @@ class SeoController extends Controller
 
     public function sitemapIndex()
     {
-        $xml = Cache::remember('sitemap:index', 3600, fn () => view('seo.sitemap-index', ['sections' => self::SECTIONS])->render());
+        $xml = Cache::remember('sitemap:v2:index', 3600, fn () => view('seo.sitemap-index', ['sections' => self::SECTIONS])->render());
 
         return response($xml, 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
     }
@@ -40,7 +40,7 @@ class SeoController extends Controller
     public function sitemap(string $section)
     {
         abort_unless(in_array($section, self::SECTIONS, true), 404);
-        $xml = Cache::remember("sitemap:$section", 3600, fn () => view('seo.sitemap', ['entries' => $this->entries($section)])->render());
+        $xml = Cache::remember("sitemap:v2:$section", 3600, fn () => view('seo.sitemap', ['entries' => $this->entries($section)])->render());
 
         return response($xml, 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
     }

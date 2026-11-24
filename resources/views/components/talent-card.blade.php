@@ -1,7 +1,7 @@
 @props(['talent'])
 @php $t = $talent; $p = $t->min_price ?? $t->offers->min('price'); $avg = $t->rating ?? null; @endphp
 <a class="card-x cu-card" href="{{ $t->url() }}">
-  <div class="cover"><img src="{{ $t->coverUrl() }}" alt="{{ $t->name }}" loading="lazy" decoding="async" width="800" height="500">
+  <div class="cover"><img src="{{ $t->coverUrl() }}" @if ($srcset = \App\Support\PhotoLibrary::srcset($t->coverUrl()))srcset="{{ $srcset }}" sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 400px"@endif alt="{{ $t->name }}" loading="lazy" decoding="async" width="800" height="500">
     <div class="tag-float">@if ($t->is_featured)<span class="tag spon">{{ __('Sélection') }}</span>@endif<span class="tag">{{ __($t->category) }}</span></div>
     <x-fav-button type="talent" :model="$t" />
   </div>

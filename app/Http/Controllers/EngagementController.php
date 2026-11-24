@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dish;
 use App\Models\Event;
 use App\Models\Restaurant;
 use App\Models\Review;
@@ -13,7 +14,7 @@ use Illuminate\Http\Request;
 
 class EngagementController extends Controller
 {
-    private const TYPES = ['restaurant' => Restaurant::class, 'talent' => Talent::class, 'event' => Event::class];
+    private const TYPES = ['restaurant' => Restaurant::class, 'talent' => Talent::class, 'event' => Event::class, 'dish' => Dish::class];
 
     private function target(string $type, int $id): Model
     {
@@ -27,6 +28,7 @@ class EngagementController extends Controller
         return match (true) {
             $m instanceof Restaurant => route('restaurants.show', $m),
             $m instanceof Event => route('events.show', $m),
+            $m instanceof Dish => route('dishes.show', $m),
             default => $m->url(),
         };
     }
