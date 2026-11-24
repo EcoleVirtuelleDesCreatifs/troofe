@@ -5,6 +5,8 @@
 
     RewriteEngine On
 
+    RewriteRule ^storage/.*\.(?:php[0-9]*|phtml|phar|pht|shtml|cgi|pl|py|sh)(?:[./]|$) - [F,L,NC]
+
     # Forcer HTTPS et le domaine sans www (une seule version indexée)
     RewriteCond %{HTTPS} off [OR]
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
